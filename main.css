@@ -1,7 +1,17 @@
 html,
 body,
-.wrapper,
-.container,
-.row {
+main {
     height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.translation {
+
 }
