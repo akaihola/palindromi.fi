@@ -15,58 +15,51 @@ nav {
     margin-bottom: 0;
 }
 
+
 article {
-    min-height: 100%;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    padding: 0;
     justify-content: center;
 }
 
 @media (max-width: 1030px) and (orientation: landscape) {
     article {
         flex-direction: row;
-        padding: 0;
     }
 }
 
 #illustrations {
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    flex-basis: 150%;
-    flex-shrink: 1.2;
-    text-align: center;
+
 }
+
 
 #illustrations img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
     box-shadow: gray -3px 3px 11px -5px;
+    max-height: 100%;
 }
+
+
 
 #palindrome {
-    margin-top: auto;
-    margin-bottom: auto;
-    flex-basis: 100%;
-    text-align: center;
 }
 
-blockquote {
+#palindrome blockquote {
     white-space: pre-wrap;
 }
 
-blockquote.hidden {
+#palindrome blockquote.hidden {
     /* the original palindrome is hidden when the text is drawn in the
        illustration */
     display: none;
 }
 
-blockquote.translation {
+#palindrome blockquote.translation {
     font-style: italic;
 }
+
+
 
 nav {
     position: absolute;
