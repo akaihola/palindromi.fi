@@ -1,0 +1,32 @@
+- text: |
+    Piratoi Leonard Cohenia vain.
+    Eho CD-R ano.
+    Eli ota "rip".
+  author: Antti Kaihola
+  translations:
+    - language: en
+      text: |
+        Go ahead and pirate Leonard Cohen.
+        Request an intact CD-R.
+        In other words, take a "rip".
+      author: Antti Kaihola
+- text: "Allani dokaus. Asunnon ei hienonnus: asua kodin alla."
+  author: Antti Kaihola
+  illustrations:
+    - image: allani_dokaus.jpg
+      author: Markku Mujunen
+      has_text: True
+  translations:
+    - language: en
+      text: "Heavy drinking under me. Not a frill for an apartment: to live under a home."
+      author: Antti Kaihola
+- text: '"Neito!", syyttää pappi, hippa päättyy sotien.'
+  author: Antti Kaiholag
+  illustrations:
+    - image: neito.jpg
+      author: Markku Mujunen
+      has_text: True
+  translations:
+    - language: en
+      text: '"Maiden!", accuses the priest. The tag ends in warfare.'
+      author: Antti Kaihola
