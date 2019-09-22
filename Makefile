@@ -17,7 +17,6 @@ html/index.html: palindromi_fi_builder/static/__target__/palindrome.js
 	  -o $(ROOT_DIR)html
 
 upload:
-	BOTO_FILE=$(ROOT_DIR).boto ; \
 	gsutil \
 	  -o "GSUtil:use_magicfile=True" \
 	  rsync \
