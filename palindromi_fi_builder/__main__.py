@@ -15,6 +15,9 @@ from palindromi_fi_builder.typography import typographic_quotes
 yaml = ruamel.yaml.YAML()
 
 
+PAGE_EXTENSION = ''
+
+
 def read_database(database_directory: Path):
     palindromes = None
     yaml_paths = (database_directory / 'palindromes').glob('*.yaml')
@@ -65,7 +68,8 @@ def render_palindrome(palindrome: Dict,
     template = env.get_template('palindrome.html')
     html = template.render(static_url=static_url,
                            illustrations=illustrations,
-                           palindrome=palindrome)
+                           palindrome=palindrome,
+                           PAGE_EXTENSION=PAGE_EXTENSION)
     with palindrome_path.open('w'):
         palindrome_path.write_text(html)
 
@@ -96,7 +100,7 @@ def render(database_directory: str,
             shutil.copy(ill_dir / illustration['image'],
                         static_destination / dest_name)
             illustrations_paths.append(dest_name)
-        palindrome_path = html_root / f'{identifier}.html'
+        palindrome_path = html_root / f'{identifier}{PAGE_EXTENSION}'
         render_palindrome(palindrome,
                           palindrome_path,
                           illustrations_paths,
