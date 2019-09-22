@@ -16,10 +16,19 @@ html/index.html: palindromi_fi_builder/static/__target__/palindrome.js
 	  $(ROOT_DIR)database \
 	  -o $(ROOT_DIR)html
 
-upload:
+upload: upload-files fix-content-types
+
+upload-files:
 	gsutil \
-	  -o "GSUtil:use_magicfile=True" \
 	  rsync \
 		-R \
 		-d $(ROOT_DIR)html \
 		gs://www.palindromi.fi
+
+fix-content-types:
+	gsutil setmeta \
+	  -h "Content-Type:text/html" \
+	  gs://www.palindromi.fi/*
+	gsutil setmeta \
+	  -h "Content-Type:text/css" \
+	  gs://www.palindromi.fi/static/*.css
