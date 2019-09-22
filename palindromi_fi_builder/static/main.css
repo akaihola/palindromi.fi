@@ -78,17 +78,17 @@ nav a:active, nav a:focus {
     outline: 0;
 }
 
-nav .go-to {
+nav #go-to-next, nav #go-to-previous {
     position: absolute;
     top: 0;
     width: 50%;
     height: 100%;
 }
 
-nav .go-to.previous {
+nav #go-to-previous {
     left: 0;
 }
 
-nav .go-to.next {
+nav #go-to-next {
     right: 0;
 }
