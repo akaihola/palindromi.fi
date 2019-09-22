@@ -28,10 +28,10 @@ def read_database(database_directory: Path):
     for palindrome in palindromes:
         palindrome['identifier'] = calculate_identifier(palindrome['text'])
         palindrome['links'] = {}
-    for nxt, prev in zip(palindromes, palindromes[1:] + [palindromes[0]]):
+    for older, newer in zip(palindromes, palindromes[1:] + [palindromes[0]]):
         # reverse order: last one is newest, forwards goes back in time
-        prev['links']['next'] = nxt['identifier']
-        nxt['links']['previous'] = prev['identifier']
+        newer['links']['next'] = older['identifier']
+        older['links']['previous'] = newer['identifier']
     return palindromes
 
 
