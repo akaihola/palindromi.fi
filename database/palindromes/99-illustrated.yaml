@@ -1,15 +1,3 @@
-- text: |
-    Piratoi Leonard Cohenia vain.
-    Eho CD-R ano.
-    Eli ota "rip".
-  author: Antti Kaihola
-  translations:
-    - language: en
-      text: |
-        Go ahead and pirate Leonard Cohen.
-        Request an intact CD-R.
-        In other words, take a "rip".
-      author: Antti Kaihola
 - text: "Allani dokaus. Asunnon ei hienonnus: asua kodin alla."
   author: Antti Kaihola
   illustrations:
@@ -29,4 +17,24 @@
   translations:
     - language: en
       text: '"Maiden!", accuses the priest. The tag ends in warfare.'
+      author: Antti Kaihola
+- text: "Inuiittiomaisia moittii uni."
+  author: Antti Kaihola
+  illustrations:
+    - image: inuiitti.jpg
+      author: Markku Mujunen
+      has_text: True
+  translations:
+    - language: en
+      text: "The dream criticizes inuit loved ones."
+      author: Antti Kaihola
+- text: "Asuu demomaassa rassaamomeduusa."
+  author: Antti Kaihola
+  illustrations:
+    - image: rassaamomeduusa.jpg
+      author: Markku Mujunen
+      has_text: True
+  translations:
+    - language: en
+      text: "A tinkering workshop jelly fish lives in the demo land."
       author: Antti Kaihola
