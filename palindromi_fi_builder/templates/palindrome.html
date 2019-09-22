@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.7.2/tufte.min.css">
+        <link rel="stylesheet" href="{{ static_url }}/main.css">
+        <script type="module">import * as hello from './{{ static_url }}/__target__/palindrome.js'; window.hello = hello;</script>
+    </head>
+    <body>
+        <main>
+            <article>
+                {% if illustrations %}
+                <section id="illustrations">
+                    {% for path in illustrations %}
+                    <img src="{{ static_url }}/{{ path }}"
+                         title="{{ palindrome.text }}">
+                    {% endfor %}
+                </section>
+                {% endif %}
+                <section id="palindrome">
+                    <blockquote class="{{ 'hidden' if illustrations and palindrome.illustrations[0].has_text else '' }}">{{ palindrome.text | typographic_quotes }}</blockquote>
+                    <blockquote class="translation">{{ palindrome.translations[0].text | typographic_quotes }}</blockquote>
+                </section>
+            </article>
+        </main>
+        <nav>
+            <a id="go-to-previous"
+               href="{{ palindrome.links.previous }}{{ PAGE_EXTENSION }}">&nbsp;</a>
+            <a id="go-to-next"
+               href="{{ palindrome.links.next }}{{ PAGE_EXTENSION }}">&nbsp;</a>
+        </nav>
+    </body>
+</html>

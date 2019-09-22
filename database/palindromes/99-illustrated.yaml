@@ -1,0 +1,40 @@
+- text: "Allani dokaus. Asunnon ei hienonnus: asua kodin alla."
+  author: Antti Kaihola
+  illustrations:
+    - image: allani_dokaus.jpg
+      author: Markku Mujunen
+      has_text: True
+  translations:
+    - language: en
+      text: "Heavy drinking under me. Not a frill for an apartment: to live under a home."
+      author: Antti Kaihola
+- text: '"Neito!", syyttää pappi, hippa päättyy sotien.'
+  author: Antti Kaiholag
+  illustrations:
+    - image: neito.jpg
+      author: Markku Mujunen
+      has_text: True
+  translations:
+    - language: en
+      text: '"Maiden!", accuses the priest. The tag ends in warfare.'
+      author: Antti Kaihola
+- text: "Inuiittiomaisia moittii uni."
+  author: Antti Kaihola
+  illustrations:
+    - image: inuiitti.jpg
+      author: Markku Mujunen
+      has_text: True
+  translations:
+    - language: en
+      text: "The dream criticizes inuit loved ones."
+      author: Antti Kaihola
+- text: "Asuu demomaassa rassaamomeduusa."
+  author: Antti Kaihola
+  illustrations:
+    - image: rassaamomeduusa.jpg
+      author: Markku Mujunen
+      has_text: True
+  translations:
+    - language: en
+      text: "A tinkering workshop jelly fish lives in the demo land."
+      author: Antti Kaihola
