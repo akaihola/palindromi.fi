@@ -18,7 +18,7 @@ yaml = ruamel.yaml.YAML()
 def read_database(database_directory: Path):
     palindromes = None
     yaml_paths = (database_directory / 'palindromes').glob('*.yaml')
-    for database_file_path in yaml_paths:
+    for database_file_path in sorted(yaml_paths):
         with database_file_path.open() as database_file:
             next_batch = yaml.load(database_file)
         if not palindromes:
