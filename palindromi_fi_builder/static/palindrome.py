@@ -4,7 +4,7 @@ gotonext.focus()
 
 
 def keydown(event):
-    if event.key == 'ArrowRight':
+    if event.key in [' ', 'ArrowRight']:
         gotonext.click()
     elif event.key == 'ArrowLeft':
         gotoprevious.click()
