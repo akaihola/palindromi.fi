@@ -66,12 +66,17 @@ def render_palindrome(palindrome: Dict,
     env = Environment(loader=PackageLoader('palindromi_fi_builder'))
     env.filters['typographic_quotes'] = typographic_quotes
     template = env.get_template('palindrome.html')
-    html = template.render(static_url=static_url,
-                           illustrations=illustrations,
-                           palindrome=palindrome,
-                           PAGE_EXTENSION=PAGE_EXTENSION)
-    with palindrome_path.open('w'):
-        palindrome_path.write_text(html)
+    new_content = template.render(static_url=static_url,
+                                  illustrations=illustrations,
+                                  palindrome=palindrome,
+                                  PAGE_EXTENSION=PAGE_EXTENSION)
+    if palindrome_path.is_file():
+        old_content = palindrome_path.read_text()
+    else:
+        old_content = ''
+    if new_content != old_content:
+        with palindrome_path.open('w'):
+            palindrome_path.write_text(new_content)
 
 
 @cli.command()
