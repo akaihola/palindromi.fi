@@ -11,7 +11,7 @@ build: palindromi_fi_builder/static/__target__/palindrome.js html/index.html
 palindromi_fi_builder/static/__target__/palindrome.js: palindromi_fi_builder/static/palindrome.py
 	transcrypt -b -m -n $(ROOT_DIR)palindromi_fi_builder/static/palindrome.py
 
-html/index.html: palindromi_fi_builder/static/__target__/palindrome.js
+html/index.html: palindromi_fi_builder/static/__target__/palindrome.js palindromi_fi_builder/templates palindromi_fi_builder/*.py
 	python -m palindromi_fi_builder render \
 	  $(ROOT_DIR)database \
 	  -o $(ROOT_DIR)html
