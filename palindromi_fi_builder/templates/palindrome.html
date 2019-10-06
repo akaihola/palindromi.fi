@@ -19,8 +19,8 @@
                 </section>
                 {% endif %}
                 <section id="palindrome">
-                    <blockquote class="{{ 'hidden' if illustrations and palindrome.illustrations[0].has_text else '' }}">{{ palindrome.text | typographic_quotes }}</blockquote>
-                    <blockquote class="translation">{{ palindrome.translations[0].text | typographic_quotes }}</blockquote>
+                    <blockquote class="{{ 'hidden' if illustrations and palindrome.illustrations[0].has_text else '' }}">{{ palindrome.text | add_typography }}</blockquote>
+                    <blockquote class="translation">{{ palindrome.translations[0].text | add_typography }}</blockquote>
                 </section>
             </article>
         </main>

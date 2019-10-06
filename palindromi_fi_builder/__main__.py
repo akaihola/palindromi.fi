@@ -10,7 +10,7 @@ import ruamel.yaml
 from base58 import b58encode
 from jinja2 import PackageLoader, Environment
 
-from palindromi_fi_builder.typography import typographic_quotes
+from palindromi_fi_builder.typography import add_typography
 
 yaml = ruamel.yaml.YAML()
 
@@ -64,7 +64,7 @@ def render_palindrome(palindrome: Dict,
                       illustrations: List[str],
                       static_url: str):
     env = Environment(loader=PackageLoader('palindromi_fi_builder'))
-    env.filters['typographic_quotes'] = typographic_quotes
+    env.filters['add_typography'] = add_typography
     template = env.get_template('palindrome.html')
     new_content = template.render(static_url=static_url,
                                   illustrations=illustrations,

@@ -1,7 +1,11 @@
 import re
 from typing import Match
 
-QUOTED_RE = re.compile('".*?"|\'.*?\'')
+QUOTED_RE = re.compile(r'(?: ^ | (?<=\W) )'
+                       r'( ".*?" | '
+                       r"  '.*?' )"
+                       r'(?: $ | (?=\W) )', re.X)
+INWORD_APOSTROPHE_RE = re.compile(r"(?<=\w)'(?=\w)")
 
 
 def convert_quoted(match: Match) -> str:
@@ -17,3 +21,11 @@ def convert_quoted(match: Match) -> str:
 
 def typographic_quotes(s: str) -> str:
     return QUOTED_RE.sub(convert_quoted, s)
+
+
+def inword_apostrophe(s: str) -> str:
+    return INWORD_APOSTROPHE_RE.sub('&rsquo;', s)
+
+
+def add_typography(s: str) -> str:
+    return typographic_quotes(inword_apostrophe(s))
