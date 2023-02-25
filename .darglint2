@@ -1,0 +1,5 @@
+[darglint2]
+verbosity = 2
+message_template = {path}:{line} {obj}(): {msg}
+docstring_style = sphinx
+strictness = full
