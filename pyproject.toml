@@ -1,0 +1,4 @@
+[tool.darker]
+src = ["setup.py", "palindromi_fi_builder"]
+revision = "origin/main..."
+isort = true
