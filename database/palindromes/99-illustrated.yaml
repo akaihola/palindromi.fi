@@ -38,3 +38,17 @@
     - language: en
       text: "A tinkering workshop jelly fish lives in the demo land."
       author: Antti Kaihola
+- text: |
+    Ojenna Niilo lavitsalle.
+    Kellasti valo liinanne jo.
+  author: Antti Kaihola
+  illustrations:
+    - image: knp-77971.jpg
+  created: 2023-02-24
+  translations:
+    - language: en
+      text: |
+        Stretch Nicholas out on the bed.
+        The light has already
+        yellowed your sheets.
+      author: Antti Kaihola
