@@ -1,4 +1,18 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "palindromi_fi_builder"
+authors = [{name = "Antti Kaihola", email = "13725+akaihola@users.noreply.github.com"}]
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+
+[project.urls]
+Home = "https://github.com/akaihola/palindromi_fi_builder"
+
 [tool.darker]
-src = ["setup.py", "palindromi_fi_builder"]
+src = ["palindromi_fi_builder"]
 revision = "origin/main..."
 isort = true
