@@ -1,0 +1,15 @@
+name: "Palindromi.fi rendered site uploader"
+description: "Upload palindromi.fi rendered static pages to Google Cloud Storage"
+author: "Antti Kaihola"
+
+inputs:
+  secrets:
+    description: "Google Cloud Storage service account credentials"
+    required: true
+
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  icon: arrow-up
+  color: gray-dark
