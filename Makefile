@@ -1,5 +1,6 @@
 ROOT_DIR := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
-REMOTE_REPO ?= $(REMOTE_REPO):origin
+REMOTE_REPO ?= origin
+GITHUB_ACTOR ?= akaihola
 
 all: clean build upload
 
@@ -37,12 +38,13 @@ lint:
 	darker -L "darglint2 -v 2" -L pylint -L flake8 -L mypy
 
 render_to_branch:
+	WORKSPACE=$$(pwd) ;\
 	RENDERED=$$(mktemp -d) ;\
 	git worktree add $$RENDERED rendered ;\
-	WORKSPACE=$$(pwd) ;\
-	git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com" ;\
-	git config --global user.name "${GITHUB_ACTOR}" ;\
-	git config --global --add safe.directory $$WORKSPACE ;\
+	cd $$RENDERED ;\
+	git config user.email "${GITHUB_ACTOR}@users.noreply.github.com" ;\
+	git config user.name "Antti Kaihola" ;\
+	git config --add safe.directory $$WORKSPACE ;\
 	git merge -X theirs --no-commit origin/main ;\
 	make build ;\
 	git add -A ;\
