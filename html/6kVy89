@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.7.2/tufte.min.css">
+        <link rel="stylesheet" href="static/main.css">
+        <script type="module">import * as hello from './static/__target__/palindrome.js'; window.hello = hello;</script>
+    </head>
+    <body>
+        <main>
+            <article>
+                
+                <section id="palindrome">
+                    <blockquote class="">&ldquo;Allasi on ase&rdquo;, sanoi Salla.</blockquote>
+                    <blockquote class="translation">&ldquo;There&rsquo;s a weapon beneath you&rdquo;, said Sally.</blockquote>
+                </section>
+            </article>
+        </main>
+        <nav>
+            <a id="go-to-previous"
+               href="7TZDaR">&nbsp;</a>
+            <a id="go-to-next"
+               href="3uHUAh">&nbsp;</a>
+        </nav>
+    </body>
+</html>

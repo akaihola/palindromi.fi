@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.7.2/tufte.min.css">
+        <link rel="stylesheet" href="static/main.css">
+        <script type="module">import * as hello from './static/__target__/palindrome.js'; window.hello = hello;</script>
+    </head>
+    <body>
+        <main>
+            <article>
+                
+                <section id="palindrome">
+                    <blockquote class="">Teuvo ulisi: &ldquo;Luovu et!&rdquo;</blockquote>
+                    <blockquote class="translation">Theo wailed: &ldquo;You won&rsquo;t give up!&rdquo;</blockquote>
+                </section>
+            </article>
+        </main>
+        <nav>
+            <a id="go-to-previous"
+               href="51a2sW">&nbsp;</a>
+            <a id="go-to-next"
+               href="2U9ndH">&nbsp;</a>
+        </nav>
+    </body>
+</html>

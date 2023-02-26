@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.7.2/tufte.min.css">
+        <link rel="stylesheet" href="static/main.css">
+        <script type="module">import * as hello from './static/__target__/palindrome.js'; window.hello = hello;</script>
+    </head>
+    <body>
+        <main>
+            <article>
+                
+                <section id="palindrome">
+                    <blockquote class="">Ai rakastat Sakaria?</blockquote>
+                    <blockquote class="translation">You mean you love Zack?</blockquote>
+                </section>
+            </article>
+        </main>
+        <nav>
+            <a id="go-to-previous"
+               href="g8G1Z">&nbsp;</a>
+            <a id="go-to-next"
+               href="4E1UPi">&nbsp;</a>
+        </nav>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+body {
+    /* symmetrical on all devices */
+    width: 84%;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+
+html,
+body,
+main,
+nav {
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+article {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    justify-content: center;
+}
+
+@media (max-width: 1030px) and (orientation: landscape) {
+    article {
+        flex-direction: row;
+    }
+}
+
+#illustrations {
+
+}
+
+
+#illustrations img {
+    box-shadow: gray -3px 3px 11px -5px;
+    max-height: 100%;
+}
+
+
+
+#palindrome {
+}
+
+#palindrome blockquote {
+    white-space: pre-wrap;
+}
+
+#palindrome blockquote.hidden {
+    /* the original palindrome is hidden when the text is drawn in the
+       illustration */
+    display: none;
+}
+
+#palindrome blockquote.translation {
+    font-style: italic;
+}
+
+
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav a:link {
+    /* hide underlining from navigation links */
+    background: none;
+}
+
+nav a:active, nav a:focus {
+    /* prevent outline flash when navigating */
+    outline: 0;
+}
+
+nav #go-to-next, nav #go-to-previous {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+
+nav #go-to-previous {
+    left: 0;
+}
+
+nav #go-to-next {
+    right: 0;
+}

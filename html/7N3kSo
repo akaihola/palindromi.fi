@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.7.2/tufte.min.css">
+        <link rel="stylesheet" href="static/main.css">
+        <script type="module">import * as hello from './static/__target__/palindrome.js'; window.hello = hello;</script>
+    </head>
+    <body>
+        <main>
+            <article>
+                
+                <section id="illustrations">
+                    
+                    <img src="static/7N3kSo0.jpg"
+                         title="Inuiittiomaisia moittii uni.">
+                    
+                </section>
+                
+                <section id="palindrome">
+                    <blockquote class="hidden">Inuiittiomaisia moittii uni.</blockquote>
+                    <blockquote class="translation">The dream criticizes inuit loved ones.</blockquote>
+                </section>
+            </article>
+        </main>
+        <nav>
+            <a id="go-to-previous"
+               href="2N1xFx">&nbsp;</a>
+            <a id="go-to-next"
+               href="2GyZHB">&nbsp;</a>
+        </nav>
+    </body>
+</html>
