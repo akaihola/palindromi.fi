@@ -32,3 +32,6 @@ fix-content-types:
 	gsutil setmeta \
 	  -h "Content-Type:text/css" \
 	  gs://www.palindromi.fi/static/*.css
+
+lint:
+	darker -L "darglint2 -v 2" -L pylint -L flake8 -L mypy

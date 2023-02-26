@@ -1,0 +1,10 @@
+[flake8]
+
+# Black compatibility:
+max-line-length = 88
+extend-ignore = E203
+
+# Ignore generated files:
+exclude =
+  ./html/static/,
+  ./palindromi_fi_builder/static/
