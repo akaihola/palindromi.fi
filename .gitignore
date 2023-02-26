@@ -1,5 +1,4 @@
 /.idea
-/html
 __pycache__
 palindromi_fi_builder/static/__target__
 palindromi_fi_builder/*.ipynb
