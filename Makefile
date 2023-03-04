@@ -50,7 +50,7 @@ render_to_branch:
 	make build ;\
 	git add -A ;\
 	git commit -m "Rendered $$(git rev-parse --short origin/main)" ;\
-	git push -v --force-with-lease $(REMOTE_REPO) rendered ;\
+	git push -v --force $(REMOTE_REPO) rendered ;\
 	cd $$WORKSPACE ;\
 	git worktree remove $$RENDERED
 
