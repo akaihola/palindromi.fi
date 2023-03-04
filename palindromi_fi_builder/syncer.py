@@ -43,8 +43,8 @@ def mkdirp(path: Path) -> None:
 class Syncer:
     """Update contents of a target directory with minimal changes"""
 
-    def __init__(self, root: str) -> None:
-        self.root = Path(root).absolute()
+    def __init__(self, root: Path) -> None:
+        self.root = root.absolute()
         self.old_files: Set[Path] = set(self.root.rglob("*"))
         self.new_files: Set[Path] = set()
 

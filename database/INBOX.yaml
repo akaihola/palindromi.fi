@@ -1,0 +1,1453 @@
+- text: Elä, PyRD-rypäle!
+  author: Antti Kaihola
+  created: '2018-10-23'
+  grading: 2
+  translations:
+  - language: en
+    text: Live, you PyRD grape!
+    author: Antti Kaihola
+- text: |-
+    Eläpä ärsytä, DevOp-lekuri. Piru, kelpo vedätys, rääpäle.
+  author: Antti Kaihola
+  created: '2018-10-24'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Don't you harass me, you DevOp doc. Damn, a proper scam, you runt.
+    author: Antti Kaihola
+- text: Etsi paatti, fittaa piste.
+  author: Antti Kaihola
+  created: '2018-10-25'
+  grading: 3
+  translations:
+  - language: en
+    text: Find a boat, fit a point.
+    author: Antti Kaihola
+- text: 'Noh, typykät, täky: Python.'
+  author: Antti Kaihola
+  created: '2018-10-25'
+  grading: 3
+  translations: []
+- text: Sävel, Leksa, Haskell, eväs.
+  author: Antti Kaihola
+  created: '2018-10-25'
+  grading: 2
+  translations:
+  - language: en
+    text: 'Well, chicks, a bait: Python.'
+    author: Antti Kaihola
+  - language: en
+    text: A note, Lenny, Haskell, a bait.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Interestingly, both "täky" (fishing bait) and "eväs" (a lunch box) can be translated as "bait".
+      Brings another interesting angle to this pair of palindromes.
+    author: Antti Kaihola
+- text: |-
+    ...tana, tee malli, Stratos! Isot Artsilla, me etanat.
+  author: Antti Kaihola
+  created: '2018-10-26'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      **ck, create a model, Stratos! Arnie has big ones, we're snails.
+    author: Antti Kaihola
+- text: Irak-Steve, lokit, katu, tak, tik... Ole vetskari!
+  author: Antti Kaihola
+  created: '2018-11-02'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Iraq Steve, seagulls, a street, tock, tick... Be a zipper!
+    author: Antti Kaihola
+  - language: en
+    text: (The Steve'n'Seagulls gig last night was amazing!)
+    author: Antti Kaihola
+- text: |-
+    Isä, älyä visio: Visa! Lauttasaari ivaa, viiraa. Sattua lasi voisi väylääsi.
+  author: Antti Kaihola
+  created: '2018-11-02'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Father, twig the vision: Visa! Lauttasaari mocks, freaks out. A glass into your fairway
+      wander might.
+    author: Antti Kaihola
+- text: |-
+    Sinua katsoi, syyn näki: Salmisaari ivaa, viiraa. SIM-lasi kännyysi osta kaunis.
+  author: Antti Kaihola
+  created: '2018-11-05'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      She looked at you, saw the cause: Salmisaari mocks, freaks out. Buy a beautiful SIM glass for
+      your cell phone.
+    author: Antti Kaihola
+- text: Esaani, hakaa, niemeäni ei näe. Meinaa kahinaa se.
+  author: Antti Kaihola
+  created: '2018-11-06'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      One can't see my Isaiah, a hook, nor my headland. That means rustle!
+    author: Antti Kaihola
+- text: Aimo kuppilamme Femma. Lippu komia.
+  author: Antti Kaihola
+  created: '2018-11-07'
+  grading: 3
+  translations:
+  - language: en
+    text: Our great café Femma. A proper flag.
+    author: Antti Kaihola
+- text: |-
+    Säkä: "people kauhu" -Paula hieno on. Ei halua puhua. Kelpo epäkäs?
+  author: Antti Kaihola
+  created: '2018-11-08'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Luck: Paula the "people horror" is fine and dandy. Doesn't want to speak. A superb
+      trapezium?
+    author: Antti Kaihola
+- text: |-
+    Syy sille: heruu pii, hilaa turbo.
+    Brutaali hiipuu rehellisyys?
+  author: Antti Kaihola
+  created: '2018-11-09'
+  grading: 3
+- text: |-
+    Syy "sille": heruu piihilaa turbo brutaali.
+    Hiipuu rehellisyys?
+  author: Antti Kaihola
+  created: '2018-11-09'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Reason for it: the brutal turbo is trickling silicon lattice.
+      Honesty is fading?
+    author: Antti Kaihola
+- text: |-
+    Ne napakisat...
+    Turtana hanat ruttasi Kapanen.
+  author: Antti Kaihola
+  created: '2018-11-12'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Those polar races...
+      Numb, Kapanen crushed the taps.
+    author: Antti Kaihola
+- text: Tavaa "kilta". Papat likaavat.
+  author: Antti Kaihola
+  created: '2018-11-13'
+  grading: 3
+  translations:
+  - language: en
+    text: Spell "guild". Grandpas are dirtying.
+    author: Antti Kaihola
+- text: Ajaa kiltaa saat, likaaja.
+  author: Antti Kaihola
+  created: '2018-11-13'
+  grading: 3
+  translations:
+  - language: en
+    text: You may ride the guild, you smutcher.
+    author: Antti Kaihola
+- text: |-
+    Nakit – no, säättä joutavi kokki.
+    Mikko kiva tuo jättää sontikan.
+  author: Antti Kaihola
+  created: '2018-11-14'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      The frankfurters – well, without weather, the cook ought to be gone.
+      Mikko the nice guy leaves an umbrella.
+    author: Antti Kaihola
+- text: |-
+    Naavaa kupuun. Aamuteetä puski Femmassamme fiksu. Pätee tumaan, uupukaa vaan.
+  author: Antti Kaihola
+  created: '2018-11-16'
+  grading: 2
+  translations:
+  - language: en
+    text: |-
+      Beard moss into the tummy. In our Femma, a smart one ramrodded morning tea. Applies to a
+      nucleus, go ahead and get exhausted.
+    author: Antti Kaihola
+- text: Tee Nevalla hallaveneet.
+  author: Antti Kaihola
+  created: '2018-11-20'
+  grading: 4
+  series:
+  - Tee ne veneet.
+  translations:
+  - language: en
+    text: Make the frost boats on the Neva.
+    author: Antti Kaihola
+- text: Tee, Neva-kippari, rap-pikaveneet.
+  author: Antti Kaihola
+  created: '2018-11-20'
+  grading: 3
+  series:
+  - Tee ne veneet.
+  translations:
+  - language: en
+    text: Make, you Neva skipper, the rap speedboat.
+    author: Antti Kaihola
+- text: Tee, Neva-kippari, Veho-hevi-rap-pikaveneet.
+  author: Antti Kaihola
+  created: '2018-11-20'
+  grading: 3
+  series:
+  - Tee ne veneet.
+  translations:
+  - language: en
+    text: |-
+      Make, you Neva skipper, the Veho heavy-rap speedboats.
+    author: Antti Kaihola
+- text: |-
+    Tee, Neva-kippari (vehtaat...), hevi-rap-pikaveneet.
+  author: Antti Kaihola
+  created: '2018-11-20'
+  grading: 3
+  series:
+  - Tee ne veneet.
+  translations:
+  - language: en
+    text: |-
+      Make, you Neva skipper (you're fooling around...), the heavy-rap speedboats.
+    author: Antti Kaihola
+- text: |-
+    Tee, Neva-kippari, vehtaa! Saat hevi-rap-pikaveneet.
+  author: Antti Kaihola
+  created: '2018-11-20'
+  grading: 3
+  series:
+  - Tee ne veneet.
+  translations:
+  - language: en
+    text: |-
+      Make, you Neva skipper, fool around! You'll get the heavy rap speedboats.
+    author: Antti Kaihola
+- text: Teen eväveneet.
+  author: Antti Kaihola
+  created: '2018-11-20'
+  grading: 4
+  series:
+  - Tee ne veneet.
+  translations:
+  - language: en
+    text: I'll make the fin boats.
+    author: Antti Kaihola
+- text: Teen evättä veneet.
+  author: Antti Kaihola
+  created: '2018-11-20'
+  grading: 4
+  series:
+  - Tee ne veneet.
+  translations:
+  - language: en
+    text: Without a fin, I'll make the boats.
+    author: Antti Kaihola
+- text: Teen evällä veneet.
+  author: Antti Kaihola
+  created: '2018-11-20'
+  grading: 4
+  series:
+  - Tee ne veneet.
+  translations:
+  - language: en
+    text: With the fin, I'll make the boats.
+    author: Antti Kaihola
+- text: Teen evästä lätsäveneet.
+  author: Antti Kaihola
+  created: '2018-11-20'
+  grading: 3
+  series:
+  - Tee ne veneet.
+  translations:
+  - language: en
+    text: I'll make cap boats out of a fin.
+    author: Antti Kaihola
+- text: Teen evittä rättiveneet.
+  author: Antti Kaihola
+  created: '2018-11-20'
+  grading: 3
+  series:
+  - Tee ne veneet.
+  translations:
+  - language: en
+    text: Without fins, I'll make the wipe boats.
+    author: Antti Kaihola
+- text: Teen evättä, myymättä veneet.
+  author: Antti Kaihola
+  created: '2018-11-20'
+  grading: 3
+  series:
+  - Tee ne veneet.
+  translations:
+  - language: en
+    text: |-
+      Without a fin, and without selling, I'll make the boats.
+    author: Antti Kaihola
+- text: Teen evälliset. Esillä veneet.
+  author: Antti Kaihola
+  created: '2018-11-20'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      I'll make the ones equipped with fins. Boats on display.
+    author: Antti Kaihola
+- text: tip... Markut... etukrampit...
+  author: Antti Kaihola
+  created: '2018-11-20'
+  grading: 3
+- text: |-
+    Seimi? Voyage solution -asenne?
+    Sanoi "tulo" se gay-ovimies.
+  author: Antti Kaihola
+  created: '2018-11-21'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      A manger? A voyage assisté par ordinateur attitude?
+      "Income", said the gay doorman.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      (thanks
+      @Christophe
+      )
+    author: Antti Kaihola
+- text: Tässä A. Kaihola, vakava lohi, a.k.a. Ässä T.
+  author: Jarno Saarimäki
+  created: '2018-11-22'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Here [is] A. Kaihola, no-nonsense salmon, a.k.a. Ace T.
+    author: Antti Kaihola
+- text: |-
+    Iskit! No katsokaa! Jone Makkosen apu:
+    Pane sokkameno Jaakosta kontiksi.
+  author: Antti Kaihola
+  created: '2018-11-22'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      You punched! Well, look! Assistance from Johnny-boy McMachine:
+      Enter the safety pin expense from Mr. Eskola as a container.
+    author: Antti Kaihola
+- text: Sima-maamme! Jensittä rättis ne jemmaa, mamis.
+  author: Antti Kaihola
+  created: '2018-11-22'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Dear mead land of ours! Without Jens, go and hide your rags, you sissy.
+    author: Antti Kaihola
+- text: 'Ajat: tuli tupa, kapu, tiluttaja.'
+  author: Antti Kaihola
+  created: '2018-11-26'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      The times: arrived a cottage, a captain, a guitar shredder.
+    author: Antti Kaihola
+- text: Isiä – työtalo kuumana – muu kola töytäisi.
+  author: Antti Kaihola
+  created: '2018-11-27'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Another snow plow jostled fathers with its working house warm.
+    author: Antti Kaihola
+- text: |-
+    Alli, aja risu! Ja tupa kuumenis, isi – partyt rapisisi.
+    Ne muu kapu tajusi rajailla.
+  author: Antti Kaihola
+  created: '2018-11-28'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Allie, drive a dry twig. And the house would warm up, daddy – the party would rustle.
+      Another captain realized to confine those.
+    author: Antti Kaihola
+- text: |-
+    Iski bailutuparimme.
+    Lemmi, rapu!
+    Tuli abiksi.
+  author: Antti Kaihola
+  created: '2018-11-29'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Our wingding housewarming party struck.
+      Crayfish, make love!
+      It turned into a candidate for the matriculation examination.
+    author: Antti Kaihola
+- text: |-
+    Emmi, hioja!
+    Vauva hautuu, tuohon ei kynnetä.
+    Pyhänä Team Asset imee.
+    Mites sama etänä, hypäten, nykien?
+    Oho: utu, utua, havua vajoihimme.
+  author: Antti Kaihola
+  created: '2018-12-10'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Hesitate, you whetter!
+      A baby is simmering, we won't plow there.
+      On a feast day Team Asset sucks.
+      How about the same remotely, jumping, tugging?
+      Oops: the fog, some fog, sprigs for our huts.
+    author: Antti Kaihola
+- text: |-
+    Sima-Sami K., noin yläkippo-Juho mittasi kylän.
+    "Aipora": Vinoletit? Naiseus?
+    Aarre, tuo Wouter-raasu.
+    Esi-Antit eloni.
+    Varo, pian älykisat, Timo!
+    Hujoppi-kälyni onkima Sami S.
+  author: Antti Kaihola
+  created: '2018-12-11'
+  grading: 2
+  translations:
+  - language: en
+    text: |-
+      Mead-Kauppinen, that's how Upper Scoop Juho measured the village.
+      "Eye-boora": Slanted pigtails? Womanhood?
+      A treasure, that poor Wouter.
+      The Andy forefathers of my life.
+      Watch out Timmy, soon an IQ contest!
+      Salonen, fished by my beanpole sister-in-law.
+    author: Antti Kaihola
+- text: |-
+    Namuasema,
+    haamua sinne!
+    Jenni saumaa hamesauman.
+  author: Antti Kaihola
+  created: '2018-12-12'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      The Candy Station,
+      let's get a ghost there!
+      Jenny will seam the skirt seam.
+    author: Antti Kaihola
+- text: |-
+    Avut: uunissa kuumennut Transas-narttunne, muu kassi nuutuva.
+  author: Antti Kaihola
+  created: '2018-12-13'
+  grading: 2
+  translations:
+  - language: en
+    text: |-
+      Virtues: Your heated-in-the-oven queen Transas, another tired sack.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Helps: the oven-heated Transas bitch, the rest of the bag.
+    author: Google Translate
+- text: Niiskunne joulukaffeleffakulu ojennuksiin!
+  author: Antti Kaihola
+  created: '2018-12-14'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Put your Snork's Christmas coffee
+      movie expense into order!
+    author: Antti Kaihola
+  - language: en
+    text: The Christmas tree for the extravagance!
+    author: Google Translate
+- text: |-
+    Oli seittemänä tähteä.
+    Väyry... öh... nen...
+    Höyryä, väet!
+    Hätänä metties ilo?
+  author: Antti Kaihola
+  created: '2018-12-17'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Star appeared as sevun.
+      Väyry... cough... nen...
+      Steam, folks!
+      Concerned about your timberlands' joy?
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      There were stars behind it.
+      Väyry ... öh ... nen ...
+      Steam, guys!
+      Amazing for the metties delight?
+    author: Google Translate
+- text: |-
+    – Anna keitin!
+    – En! Uneni tie kanna.
+  author: Antti Kaihola
+  created: '2018-12-18'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      – Give us a kettle!
+      – No I won't! Carry the way of my dream.
+    author: Antti Kaihola
+  - language: en
+    text: – Give me the kettle! – No! A dream road cannon.
+    author: Google Translate
+- text: |-
+    Säännöt:
+    - ei hae, pure, tuo WiFi
+    - Wouter upea, hietön, nääs
+  author: Antti Kaihola
+  created: '2018-12-19'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Rules:
+      - doesn't retrieve nor bite, that wireless network
+      - stunning and sweatless Wouter, you see
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Code:
+      - does not look, well, it's WiFi
+      - Wouter's gorgeous, unheard-of.
+    author: Google Translate
+- text: |-
+    Sami osti teevesikoneen – etenee! "Noki se!", Veetit soimas.
+  author: Antti Kaihola
+  created: '2018-12-20'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      @SamiSa
+      bought a tea water appliance – it's progressing! "Peck it", reproached the Fredericks.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Sami bought a sewage machine - proceeds! "Noki it!", Veetit soimas.
+    author: Google Translate
+- text: Niiskunne joulukulu ojennuksiin!
+  author: Antti Kaihola
+  created: '2023-03-04'
+  grading: 4
+  translations:
+  - language: en
+    text: |-
+      Put your Snork's Christmas expense into order!
+    author: Antti Kaihola
+- text: Outona jouluna Anu luo, jano tuo.
+  author: Antti Kaihola
+  created: '2018-12-21'
+  grading: 4
+  translations:
+  - language: en
+    text: On a weird Xmas, Annie creates, and thirst brings.
+    author: Antti Kaihola
+  - language: en
+    text: Outona Christmas Anu creates, thirsty.
+    author: Google Translate
+- text: Anu, luo jano tuo outona jouluna!
+  author: Antti Kaihola
+  created: '2018-12-21'
+  grading: 4
+  translations:
+  - language: en
+    text: Annie, create that thirst on a weird Xmas!
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Anu, create thirst for your extraordinary Christmas!
+    author: Google Translate
+- text: No Speed, deep son.
+  author: Antti Kaihola
+  language: en
+  created: '2018-12-27'
+  grading: 4
+  translations:
+  - language: fi
+    text: Ei nopeutta, syvä poika.
+    author: Google Translate
+- text: Suti-Tomi laulaa. Paalu ali, motitus.
+  author: Antti Kaihola
+  created: '2018-12-27'
+  grading: 3
+  translations:
+  - language: en
+    text: Brush-Tommy sings. A stake under him, a siege.
+    author: Antti Kaihola
+  - language: en
+    text: Suti-Tomi sings. Paalu ali, motives.
+    author: Google Translate
+- text: Televisiostarat soi. Sivelet.
+  author: Antti Kaihola
+  created: '2018-12-28'
+  grading: 3
+  translations:
+  - language: en
+    text: TV stars are ringing. You're stroking.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Television stalls sound. Applying lubricant.
+    author: Google Translate
+- text: 'Tulet, uusi vuosi: souvi, suutelut.'
+  author: Antti Kaihola
+  created: '2018-12-31'
+  grading: 4
+  translations:
+  - language: en
+    text: "You'll arrive, New Year: a show, kisses."
+    author: Antti Kaihola
+  - language: en
+    text: 'You come, new year: souvi, kissing.'
+    author: Google Translate
+- text: |-
+    Ne meinasipa hapet uupua.
+    Huonehapelle pahe: nouhau-puute paha.
+    Pisa Niemen?
+  author: Antti Kaihola
+  created: '2019-01-02'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Almost ran out of them oxygens.
+      A vice for room oxygen: severe lack of know-how.
+      The Pisa of the Niemi moving company?
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      They're a little bit of acid.
+      Room Acid Spoof: Noahau-deficiency evil.
+      Pisa Niemen?
+    author: Google Translate
+- text: |-
+    Eli yläpelle, helotat.
+    Ole helle, pälyile.
+  author: Antti Kaihola
+  created: '2019-01-03'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      So you clown up there, you shine fervently.
+      Be a swelter, glance nervously around.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      So, upside down, you hell.
+      Be gentle, shit.
+    author: Antti Kaihola
+- text: |-
+    Ionia pukkaa pässi.
+    Syy: Lanaa.
+    Ta-daa!
+    Data-analyysissä paakku painoi.
+  author: Antti Kaihola
+  created: '2019-01-04'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      A ram is head-butting an ion.
+      Reason: is leveling a road.
+      Ta-da!
+      A clod weighed in the data analysis.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Ionia put on a ram.
+      Reason: Lana.
+      Ta-daa!
+      In data analysis, the lump weighed.
+    author: Google Translate
+- text: Tammi-Eput, esille Hertat rehelliset, upeimmat!
+  author: Antti Kaihola
+  created: '2019-01-09'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Linuses of January, honest and most gorgeus Earthas to the stage!
+    author: Antti Kaihola
+  - language: en
+    text: Oak-Eput, Bring the Hearts Honest, Most Beautiful!
+    author: Google Translate
+- text: Sakilla malli, kas!
+  author: Antti Kaihola
+  created: '2019-01-10'
+  grading: 3
+  translations:
+  - language: en
+    text: A model by the gang. KAS?
+    author: Antti Kaihola
+  - language: en
+    text: Sakilla model. KAS?
+    author: Google Translate
+- text: |-
+    Uusi osastoni: Marine? EO? KAS? Osakoe Eniramin: otsa. Soi suu.
+  author: Antti Kaihola
+  created: '2019-01-11'
+  grading: 2
+  translations:
+  - language: en
+    text: |-
+      My new department: Marine? EO? KAS? Eniram's partial test: forehead. The mouth makes
+      sounds.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      And look at wisdom from Google Translate:
+      My new compartment: Marine? EO? KAS? Partial end of Eniram: End. Soak your mouth.
+    author: Antti Kaihola
+- text: Floridaa Visa otti ekana. Keittoasi vaadi, Rolf!
+  author: Antti Kaihola
+  created: '2019-01-14'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Visa sipped some Florida first. Demand to have your soup, Rolf!
+    author: Antti Kaihola
+  - language: en
+    text: Florida Visa took the ecu. You cooked, Rolf!
+    author: Google Translate
+- text: |-
+    Noi tautisyyt räällä. Käsipesu, Sepi! Säkällä ärtyy situation.
+  author: Antti Kaihola
+  created: '2019-01-15'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Those reasons for diseases with gob. Wash your hands, Steve! With some luck, the "tilanne"
+      will get irritated.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      That's the sickness in the morning. Hand Wash, Sepi! With the annoyance of
+      the situation.
+    author: Google Translate
+- text: Ajoit? Lumirallifillari, multi-oja...
+  author: Antti Kaihola
+  created: '2019-01-16'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      You were riding? Snow racing bicycle, a multi-ditch...
+    author: Antti Kaihola
+  - language: en
+    text: You drove? Snowball Fleece, Multi-Stage ...
+    author: Google Translate
+- text: |-
+    Sotii katse.
+    Alati katoileva laturi, virut.
+    Ala, veli, ota kitalaesta!
+    Kiitos.
+  author: Antti Kaihola
+  created: '2019-01-17'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      A glance fights a war.
+      You're languishing, you constantly disappearing charger.
+      Begin, brother, grab their palate!
+      Thanks.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Soti test.
+      Always a disappearing charger.
+      Lower, brother, take the palate!
+      Thank you.
+    author: Google Translate
+- text: |-
+    Itua: Tee, Tytti, krematoriaalipila.
+    Airota merkitty teetauti.
+  author: Antti Kaihola
+  created: '2019-01-18'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Makes sense: Tytti, do a crematorial practical joke.
+      Put oars in place to the tagged tea disease.
+    author: Antti Kaihola
+- text: |-
+    "Näätävene" nimi ois.
+    Asioiminen evätään.
+  author: Antti Kaihola
+  created: '2019-01-21'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      "Marten boat" would be the name.
+      Doing business is being denied.
+    author: Antti Kaihola
+  - language: en
+    text: '"Wandering" name ois, doing business is denied.'
+    author: Google Translate
+- text: |-
+    Nähä taattua Juhania (Risitas):
+    osat, isi, raina hujauttaa tähän.
+  author: Antti Kaihola
+  created: '2019-01-23'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      To see tried and true Juan El Risitas stuff:
+      daddy, the filmstrip smacks the parts in here.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      See guaranteed Juhania (Risitas):
+      parts, daddy, stripe here.
+    author: Google Translate
+- text: |-
+    Ai tuurilla saatu osakenousu on?
+    Eka soutaa salli ruutia.
+  author: Antti Kaihola
+  created: '2019-01-28'
+  grading: 4
+  translations:
+  - language: en
+    text: |-
+      Oh, the shares rose by sheer luck?
+      Allow me to row some gunpowder first.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Is the share price increase?
+      Do not rush to allow the square.
+    author: Google Translate
+- text: |-
+    Emme tuu.
+    Kaarrekoon snooker,
+    raakuutemme.
+  author: Antti Kaihola
+  created: '2019-01-29'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      We're not comin'.
+      A curve sized snooker,
+      our ferocity.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      We don't.
+      Kaarrekoon snooker,
+      our brutality.
+    author: Google Translate
+- text: 'Ässää: ja maan naama jäässä.'
+  author: Antti Kaihola
+  created: '2019-01-29'
+  grading: 3
+  translations:
+  - language: en
+    text: 'Ace: and the face of the ground frozen.'
+    author: Antti Kaihola
+  - language: en
+    text: "Ace: and the earth's face frozen."
+    author: Google Translate
+- text: |-
+    Neniä,
+    kyökin uusi keitin,
+    YyTee,
+    tyyni tie,
+    kisu,
+    uni köykäinen.
+  author: Antti Kaihola
+  created: '2019-01-30'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Noses,
+      the new water kettle in the kitchen,
+      employee co-operation negotiations,
+      a calm road,
+      a pussy-cat,
+      lightweight sleep.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Nose,
+      new cucumber soup,
+      YyTee,
+      calm road,
+      kitty,
+      sleep crazy.
+    author: Google Translate
+- text: |-
+    Iski ruumis.
+    Kelpo juristivitsi: "Rujo pleksi muuriksi".
+  author: Antti Kaihola
+  created: '2019-01-31'
+  grading: 4
+  translations:
+  - language: en
+    text: |-
+      A body hit.
+      A decent lawyer joke: "Rough acrylic plastic for a wall".
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Get in the room.
+      Kelpo Law Firm: "Rude to the Plex Wall".
+    author: Google Translate
+- text: |-
+    Haiku asiatta: "Vedelle keitin!"
+    Uni: "Tie kelle devattais auki, ah?"
+  author: Antti Kaihola
+  created: '2019-02-01'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      A haiku without a message: "A kettle for the water!"
+      A dream: "For whom would we open the road by developing, ah?"
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Haiku doesn't say, "I brewed the water!"
+      Uni: "Those whose devata open, huh?"
+    author: Google Translate
+- text: No hei, hyvästi, Satu! Hutasit sävyhiehon.
+  author: Antti Kaihola
+  created: '2019-02-01'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Well bye, farewell, @Satu! You knocked out a hue heifer.
+    author: Antti Kaihola
+  - language: en
+    text: Well hey, goodbye, Satu! You hit the horn.
+    author: Google Translate
+- text: |-
+    Elli, kolaa loka.
+    Pelais edes Tiima...
+    Amis-imaami itse,
+    desi Alepa-kolaa lokille.
+  author: Antti Kaihola
+  created: '2019-02-04'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Ellie, plow the mud.
+      If only Tiima would work...
+      The vocational school imam himself,
+      a decilitre of Tesco Cola for the seagull.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Elli, shit.
+      Pelais even Tiima ...
+      Amis-imam,
+      desi Alepa-kolaa log.
+    author: Google Translate
+- text: 'Naava-Jone Makkosen apu: pane sokkameno Javaan.'
+  author: Antti Kaihola
+  created: '2019-02-06'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Help from Jonas "Beard Moss" MacAune: enter the linchpin expense in Java.
+    author: Antti Kaihola
+  - language: en
+    text: 'Help by Naava-Jone Makkonen: Put a shock in Java.'
+    author: Google Translate
+- text: |-
+    Oioit takut Transakselles.
+    Kas, narttukatti!
+    Oio!
+  author: Antti Kaihola
+  created: '2019-02-07'
+  grading: 2
+  translations:
+  - language: en
+    text: |-
+      You straightened the frizzes for your Transas.
+      Oh look, a female cat!
+      Straighten!
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      You were wearing Transakselles.
+      Kas, bitch!
+      Smooth out!
+    author: Google Translate
+- text: |-
+    Allu upee, kutukooditehtaat heti Dooku tukee puulla.
+  author: Antti Kaihola
+  created: '2019-02-11'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Hey gorgeous Alex, Dooku supports spawn code factories immediately using wood.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Allu flips, spawning code factories right away Dooku supports wood.
+    author: Google Translate
+- text: "Ennätän: i'istä lyö höylät siinä tänne."
+  author: Antti Kaihola
+  created: '2019-02-12'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      I'll find time: Hit the planers there this way from ages.
+    author: Antti Kaihola
+  - language: en
+    text: "I foretell: I'll hit the planes here."
+    author: Google Translate
+- text: Ota kili. Emittoi. Liotti meilikato.
+  author: Antti Kaihola
+  created: '2019-02-13'
+  grading: 3
+  translations:
+  - language: en
+    text: Take a kid. Emit. E-mail loss soaked.
+    author: Antti Kaihola
+  - language: en
+    text: Take the kid. Emits. Soaked the email cover.
+    author: Google Translate
+- text: 'Iso tunne: Valo, lavennu! Tosi.'
+  author: Antti Kaihola
+  created: '2019-02-14'
+  grading: 3
+  translations:
+  - language: en
+    text: 'A big feeling: Light, be expanded! True.'
+    author: Antti Kaihola
+  - language: en
+    text: 'Big feeling: Light, Lavender! True.'
+    author: Google Translate
+- text: Tuskana soit, sävel, eikä kielevästi osanaksut.
+  author: Antti Kaihola
+  created: '2019-02-15'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Tune, you sound as pain. The partial clicks don't, glibly.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      The pain you play, the tone, and the linguistic sublease.
+    author: Google Translate
+- text: |-
+    Ikkunaviemäriremontit? No... meri, räme, Ivan-ukki.
+  author: Antti Kaihola
+  created: '2019-02-20'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Window pipe renovations? Well... ocean, slough, grandpa Ivan.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      The window Sewer Renovations? Well ... sea, weed, Ivan Grandpa.
+    author: Google Translate
+- text: |-
+    Sotii kuka?
+    Pese Pösö,
+    pese paku,
+    kiitos.
+  author: Antti Kaihola
+  created: '2019-02-22'
+  grading: 4
+  translations:
+  - language: en
+    text: |-
+      Who's at war?
+      Wash the Peugeot,
+      wash the van,
+      please.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Sotii who?
+      Wash Pösö,
+      wash it,
+      thank you.
+    author: Google Translate
+- text: |-
+    Etualapellesi otan, nauru.
+    Anna toiselle palaute.
+  author: Antti Kaihola
+  created: '2019-03-01'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      I'm taking your foreground clown, you laughter.
+      Give feedback to the other one.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      I'll take your laughter, laugh.
+      Give others feedback.
+    author: Google Translate
+- text: |-
+    Sakaraviekoittelu:
+    - Team of Teams Irakissa
+    - passi
+    - karisma
+    - ETF
+    – oma etu
+    - letti okei
+    - varakas
+  author: Antti Kaihola
+  created: '2019-03-04'
+  grading: 4
+  translations:
+  - language: en
+    text: |-
+      Enticement with a point of a star:
+      - Team of Teams in Iraq
+      - a passport
+      - charisma
+      - an ETF
+      – own interest
+      - hair OK
+      - wealthy
+    author: Antti Kaihola
+- text: Spartalais-äksy, tänne ennätyskäsiala! Traps.
+  author: Antti Kaihola
+  created: '2019-03-06'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Spartan crotchety guy, bring the all-time record handwriting here! A Mac malware
+      protector.
+    author: Antti Kaihola
+  - language: en
+    text: The Spartans, the record handwriting here! Traps.
+    author: Google Translate
+- text: 'Scam: Emacs.'
+  author: Antti Kaihola
+  created: '2019-03-07'
+  language: en
+  grading: 4
+- text: |-
+    No, Nanoksi Vimit.
+    Imi, viskon, anon.
+  author: Antti Kaihola
+  created: '2019-03-07'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Well, turn the Vims into Nano!
+      It sucked, I throw and beg.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Well, Nanoxy Vimit.
+      Imi, Whiskey, anon.
+    author: Google Translate
+- text: |-
+    "Niken nait" -sävy:
+    Hyvästi, Annekin!
+  author: Antti Kaihola
+  created: '2019-03-08'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      "You married Nikke" tenor:
+      Farewell to you too, Anne!
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      "Nike Nait" tone:
+      Goodbye, Annekin!
+    author: Google Translate
+- text: Et, Sipilä! Välipiste.
+  author: Antti Kaihola
+  created: '2019-03-08'
+  grading: 4
+- text: Suomu, keto, SOTE-kumous!
+  author: Antti Kaihola
+  created: '2019-03-08'
+  grading: 3
+- text: |-
+    Anne-karibu, utelu:
+    Tule, tuubi rakenna!
+  author: Antti Kaihola
+  created: '2019-03-08'
+  grading: 3
+- text: Suap puutarhatontut... No, tahratuuppaus...
+  author: Antti Kaihola
+  created: '2019-03-12'
+  grading: 2
+  translations:
+  - language: en
+    text: Suap gardening ... Well, smacking the store ...
+    author: Google Translate
+- text: |-
+    Anutta vaivaa hautaa, liotu!
+    Kallis Akava Java kasilla
+    kutoi laatua haavi avattuna.
+  author: Antti Kaihola
+  created: '2019-03-13'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Trouble the grave without Ann, get soaked!
+      The precious Confederation of Unions for
+      Professional and Managerial Staff in Finland
+      weaved quality stuff using Java 8, flabbergasted.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Wait for the tomb, soot!
+      Dear Akava Java on the pile,
+      the quality wound open.
+    author: Google Translate
+- text: Takun nai asukit, Tiku sai Annukat...
+  author: Antti Kaihola
+  created: '2019-03-14'
+  grading: 4
+  series:
+  - Takun nai asukit
+  translations:
+  - language: en
+    text: |-
+      The inhabitants married Dale, Chip was left with Annabeths...
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Taku's wives, Tiku got Annuka ...
+    author: Google Translate
+- text: '...Ninni Mikin, Niki Minnin.'
+  author: Antti Kaihola
+  created: '2019-03-14'
+  grading: 4
+  series:
+  - Takun nai asukit
+  translations:
+  - language: en
+    text: |-
+      ...Nina with Mickey, Nick with Minnie.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      ... Ninni Mikin, Niki Minn.
+    author: Google Translate
+- text: |-
+    Elli oma,
+    anna pahaa dataa,
+    dadaa (ta-daa!)
+    hapannaamoille.
+  author: Antti Kaihola
+  created: '2019-03-15'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      My own Ellie,
+      give some bad data,
+      dada, (ta-da!)
+      to the sourpusses.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Elli's own,
+      give bad data
+      to the dadaa (ta-daa!)
+      Deaf plants.
+    author: Google Translate
+- text: |-
+    Avot!
+    Ei sällit livo huulia.
+    Jonnen nojailu-uho viltilläsi – etova!
+  author: Antti Kaihola
+  created: '2019-03-19'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Voilà!
+      Dudes aren't supposed to lick their lips.
+      Jonne's leaning emanation on your blanket – disgusting!
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Avot!
+      No crap livo lips.
+      Yeah leaning on a blanket with your blanket - etova!
+    author: Google Translate
+- text: |-
+    Naamat, Haapalainen!
+    No, Jonneni,
+    ala paahtamaan!
+  author: Antti Kaihola
+  created: '2019-03-20'
+  grading: 4
+  translations:
+  - language: en
+    text: |-
+      Get drunk, Haapalainen!
+      Well, good old Johnny,
+      start to beaver away!
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Naamat, Haapan.
+      Well, Jonnen,
+      start roasting!
+    author: Google Translate
+- text: Sulla mikä "Teal"? Ala etäkimallus.
+  author: Antti Kaihola
+  created: '2019-03-20'
+  grading: 2
+  translations:
+  - language: en
+    text: You have what "Teal"? Initiate remote glitter.
+    author: Antti Kaihola
+- text: |-
+    YT.
+    Heti ovat: "Ei oo pomoja!"
+    Jo mopo oieta voi.
+    Tehty!
+  author: Antti Kaihola
+  created: '2019-03-21'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Employee co-operation.
+      Immediately they're like: "There ain't no bosses!"
+      Now the moped can straighten.
+      Done!
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      YT.
+      Immediately: "No bosses!"
+      Already a moped wand can.
+      Made!
+    author: Google Translate
+- text: Suutu Ahola et. Teal, oh autuus!
+  author: Antti Kaihola
+  created: '2019-03-22'
+  grading: 2
+  translations:
+  - language: en
+    text: Ahola, you don't get angry. Teal, oh bliss!
+    author: Antti Kaihola
+  - language: en
+    text: Kiss, Ahola et. Teal, oh bliss!
+    author: Google Translate
+- text: 'Taival: Neva, Venla, viat.'
+  author: Antti Kaihola
+  created: '2019-03-25'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      A long journey: The river Neva, Venla, malfunctions.
+    author: Antti Kaihola
+  - language: en
+    text: 'Taiva: Neva, Venla, bugs.'
+    author: Google Translate
+- text: 'Iso trial Nevalla: Venla irtosi!'
+  author: Antti Kaihola
+  created: '2019-03-26'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      A big trial on the river Neva: Venla fell off!
+    author: Antti Kaihola
+  - language: en
+    text: 'Big trial with Nevalla: Venla is out!'
+    author: Google Translate
+- text: |-
+    Sulle avaa Venla,
+    MM-astuja.
+    Pajut,
+    sammalnevaa,
+    vaellus.
+  author: Antti Kaihola
+  created: '2019-03-27'
+  grading: 3
+  translations:
+  - language: en
+    text: |-
+      Venla,
+      the world champion racewalker,
+      will open for you.
+      Willows,
+      some moss bog,
+      a hike.
+    author: Antti Kaihola
+  - language: en
+    text: |-
+      Venla,
+      World Championships,
+      will open for you.
+      Swans,
+      moss,
+      hiking.
+    author: Google Translate
+- text: 'Flowdock: cod wolf.'
+  author: Antti Kaihola
+  created: '2019-03-28'
+  language: en
+  grading: 0
+  translations:
+  - language: fi
+    text: 'Vuoksitelakka: turskasusi.'
+    author: Antti Kaihola
+  - language: fi
+    text: 'Vuokaavio: turskan susi.'
+    author: Google Translate
