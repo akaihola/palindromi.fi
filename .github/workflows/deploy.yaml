@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   deploy:
@@ -23,7 +26,8 @@ jobs:
         run: |
           export REMOTE_REPO="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
           make render_to_branch
-      - name: Upload the rendered site to Google Cloud Storage
+      - name: Upload the rendered site to Google Cloud Storage when merging to main
         uses: ./.github/actions/upload-rendered
         with:
           secrets: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS }}
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
