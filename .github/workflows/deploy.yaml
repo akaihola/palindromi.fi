@@ -30,6 +30,7 @@ jobs:
         uses: ScribeMD/docker-cache@0.2.9
         with:
           key: docker-${{ runner.os }}-${{ hashFiles('.github/actions/upload-rendered/*') }}
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
       - name: Upload the rendered site to Google Cloud Storage when merging to main
         uses: ./.github/actions/upload-rendered
         with:
