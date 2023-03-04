@@ -140,3 +140,196 @@
     - language: en
       text: You mean you love Zack?
       author: Antti Kaihola
+- text: Tee ne veneet.
+  author: Antti Kaihola
+  created: '2018-11-19'
+  grading: 5
+  series:
+  - Tee ne veneet.
+  translations:
+  - language: en
+    text: Make those boats.
+    author: Antti Kaihola
+- text: Tee Neva-veneet.
+  author: Antti Kaihola
+  created: '2018-11-20'
+  grading: 5
+  series:
+  - Tee ne veneet.
+  translations:
+  - language: en
+    text: Make the Neva boats.
+    author: Antti Kaihola
+- text: Tee Nevalla veneet.
+  author: Antti Kaihola
+  created: '2018-11-20'
+  grading: 5
+  series:
+  - Tee ne veneet.
+  translations:
+  - language: en
+    text: Make the boats on the Neva.
+    author: Antti Kaihola
+- text: En nojaa, Jonne.
+  author: Antti Kaihola
+  created: '2019-03-19'
+  grading: 5
+  translations:
+  - language: en
+    text: I'm not leaning, Johnny.
+    author: Antti Kaihola
+- text: Aimo, saispa lapsia somia!
+  author: Antti Kaihola
+  created: '2018-11-23'
+  grading: 5
+  translations:
+  - language: en
+    text: Amos, oh how I wish to have cute kids!
+    author: Antti Kaihola
+- text: On rajalla Jarno.
+  author: Antti Kaihola
+  created: '2018-11-22'
+  grading: 5
+  translations:
+  - language: en
+    text: Jarno is on the borderline.
+    author: Antti Kaihola
+- text: 'Nootti: hassu ruuhi seilaa liesi huurussa hittoon.'
+  author: Antti Kaihola
+  created: '2019-01-08'
+  grading: 4
+  translations:
+  - language: en
+    text: |-
+      A note: a funny punt sails to hell with a foggy cooking stove.
+    author: Antti Kaihola
+- text: Tämä radiohiiri kirii. Hoida rämät.
+  author: Antti Kaihola
+  created: '2019-01-18'
+  grading: 4
+  translations:
+  - language: en
+    text: This radio mouse spurts. Take care of the junk.
+    author: Antti Kaihola
+- text: Siististi vilu tuli, vitsit siis!
+  author: Antti Kaihola
+  created: '2019-01-22'
+  grading: 4
+  translations:
+  - language: en
+    text: One started to feel chilly in a cool way, oh man!
+    author: Antti Kaihola
+- text: |-
+    Sotii, kas sisko, Putin.
+    Nuhaa.
+    Trump murtaa hunnit upoksissa.
+    Kiitos!
+  author: Antti Kaihola
+  created: '2019-02-25'
+  grading: 4
+  translations:
+  - language: en
+    text: |-
+      Look, sister, Putin is fighting a war.
+      Flu.
+      Trump breaks the Huns submerged.
+      Thank you!
+    author: Antti Kaihola
+- text: |-
+    Täällä millä sä Hyökki, *hik*, köyhä sälli, mälläät?
+  author: Antti Kaihola
+  created: '2018-11-15'
+  grading: 4
+  translations:
+  - language: en
+    text: |-
+      What do you, Hyökki, *hic*, you poor bloke, squander with here?
+    author: Antti Kaihola
+- text: Anne, joulu ojenna!
+  author: Antti Kaihola
+  created: '2018-11-30'
+  grading: 4
+  translations:
+  - language: en
+    text: Anne, please hand over Christmas!
+    author: Antti Kaihola
+- text: |-
+    Ei vessoja, aha.
+    Raakkaa, rahaa jos se vie.
+  author: Antti Kaihola
+  created: '2018-12-12'
+  grading: 4
+  translations:
+  - language: en
+    text: |-
+      O-kayy... no toilets.
+      Prune'em, if it requires money.
+    author: Antti Kaihola
+- text: Leseiden oktaania lainaat, konediesel.
+  author: Antti Kaihola
+  created: '2019-01-07'
+  grading: 4
+  translations:
+  - language: en
+    text: |-
+      Engine diesel fuel, you're borrowing the octane of brans.
+    author: Antti Kaihola
+- text: |-
+    Nousi savu tuo hutera tuotannosta.
+    Katson: NATO-utare tuhoutuva sisu on.
+  author: Antti Kaihola
+  created: '2019-01-24'
+  grading: 4
+  translations:
+  - language: en
+    text: |-
+      That groggy smoke rose from production.
+      I'm watching: The NATO udder is a disintegrating grit.
+    author: Antti Kaihola
+- text: Aina kuka sallivi uhata datahuivilla Saku-kania?
+  author: Antti Kaihola
+  created: '2019-01-25'
+  grading: 4
+  translations:
+  - language: en
+    text: |-
+      Who always alloweth to threaten Zack the Rabbit with a data scarf?
+    author: Antti Kaihola
+- text: Emma, alakautta saa sattua kalaamme.
+  author: Antti Kaihola
+  created: '2019-02-05'
+  grading: 4
+  translations:
+  - language: en
+    text: Emma, our fish is allowed to be hurt from below.
+    author: Antti Kaihola
+- text: Tule, Linux! Unilelut!
+  author: Antti Kaihola
+  created: '2019-02-08'
+  grading: 4
+  translations:
+  - language: en
+    text: Come on, Linux! Bedtime toys!
+    author: Antti Kaihola
+- text: |-
+    Iski ruumis.
+    Kas, kehtaisi kryptata datat.
+    Pyrki siat heksaksi, muuriksi.
+  author: Antti Kaihola
+  created: '2019-02-26'
+  grading: 4
+  translations:
+  - language: en
+    text: |-
+      A body hit.
+      Look, would dare to encrypt the data.
+      Pigs were running for hexadecimal, for the wall.
+    author: Antti Kaihola
+- text: En nojaisi. Anele naisia, Jonne.
+  author: Antti Kaihola
+  created: '2019-03-19'
+  grading: 4
+  translations:
+  - language: en
+    text: I wouldn't lean. Beg the ladies, Johnny.
+    author: Antti Kaihola
