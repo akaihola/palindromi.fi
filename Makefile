@@ -22,7 +22,7 @@ upload: upload-files fix-content-types
 upload-files:
 	gsutil -m rsync \
 	  -R \
-	  -d $(ROOT_DIR)html \
+	  -d ./html \
 	  gs://www.palindromi.fi
 
 fix-content-types:
@@ -56,6 +56,7 @@ upload_rendered_branch:
 	RENDERED=$$(mktemp -d) ;\
 	git worktree add $$RENDERED rendered ;\
 	WORKSPACE=$$(pwd) ;\
+	cd $$RENDERED ;\
 	make upload ;\
 	cd $$WORKSPACE ;\
 	git worktree remove $$RENDERED
