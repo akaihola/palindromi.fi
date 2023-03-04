@@ -26,6 +26,10 @@ jobs:
         run: |
           export REMOTE_REPO="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
           make render_to_branch
+      - name: Cache Docker images.
+        uses: ScribeMD/docker-cache@0.2.9
+        with:
+          key: docker-${{ runner.os }}-${{ hashFiles('.github/actions/upload-rendered/*') }}
       - name: Upload the rendered site to Google Cloud Storage when merging to main
         uses: ./.github/actions/upload-rendered
         with:
