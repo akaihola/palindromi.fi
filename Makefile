@@ -45,6 +45,7 @@ render_to_branch:
 	git config user.email "${GITHUB_ACTOR}@users.noreply.github.com" ;\
 	git config user.name "Antti Kaihola" ;\
 	git config --add safe.directory $$WORKSPACE ;\
+	git fetch origin rendered ;\
 	git merge -X theirs --no-commit origin/main ;\
 	make build ;\
 	git add -A ;\
