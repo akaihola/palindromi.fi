@@ -11,24 +11,19 @@
         <main>
             <article>
                 
-                <section id="illustrations">
-                    
-                    <img src="static/g8G1Z0.jpg"
-                         title="Allani dokaus. Asunnon ei hienonnus: asua kodin alla.">
-                    
-                </section>
-                
                 <section id="palindrome">
-                    <blockquote class="hidden">Allani dokaus. Asunnon ei hienonnus: asua kodin alla.</blockquote>
-                    <blockquote class="translation">Heavy drinking under me. Not a frill for an apartment: to live under a home.</blockquote>
+                    <blockquote class="">Nousi savu tuo hutera tuotannosta.
+Katson: NATO-utare tuhoutuva sisu on.</blockquote>
+                    <blockquote class="translation">That groggy smoke rose from production.
+I&rsquo;m watching: The NATO udder is a disintegrating grit.</blockquote>
                 </section>
             </article>
         </main>
         <nav>
             <a id="go-to-previous"
-               href="2GyZHB">&nbsp;</a>
+               href="c9G4W">&nbsp;</a>
             <a id="go-to-next"
-               href="68LNwj">&nbsp;</a>
+               href="5zbU2w">&nbsp;</a>
         </nav>
     </body>
 </html>

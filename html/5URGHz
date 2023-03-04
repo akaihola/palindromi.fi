@@ -11,24 +11,23 @@
         <main>
             <article>
                 
-                <section id="illustrations">
-                    
-                    <img src="static/g8G1Z0.jpg"
-                         title="Allani dokaus. Asunnon ei hienonnus: asua kodin alla.">
-                    
-                </section>
-                
                 <section id="palindrome">
-                    <blockquote class="hidden">Allani dokaus. Asunnon ei hienonnus: asua kodin alla.</blockquote>
-                    <blockquote class="translation">Heavy drinking under me. Not a frill for an apartment: to live under a home.</blockquote>
+                    <blockquote class="">Sotii, kas sisko, Putin.
+Nuhaa.
+Trump murtaa hunnit upoksissa.
+Kiitos!</blockquote>
+                    <blockquote class="translation">Look, sister, Putin is fighting a war.
+Flu.
+Trump breaks the Huns submerged.
+Thank you!</blockquote>
                 </section>
             </article>
         </main>
         <nav>
             <a id="go-to-previous"
-               href="2GyZHB">&nbsp;</a>
+               href="s7Ucf">&nbsp;</a>
             <a id="go-to-next"
-               href="68LNwj">&nbsp;</a>
+               href="4kJVcw">&nbsp;</a>
         </nav>
     </body>
 </html>
