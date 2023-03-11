@@ -4,7 +4,6 @@ from pathlib import Path
 from typing import Dict, Generic, List, Optional, Set, Tuple, TypeVar, Union
 
 import pytest
-from _pytest._py.path import LocalPath
 
 from palindromi_fi_builder.syncer import Syncer
 
@@ -179,7 +178,7 @@ def test_syncer(
     dest: Dict[str, str],
     src: List[Tuple[str, SyncerAction[str]]],
     expect: Dict[str, FileVerifier],
-    tmpdir: LocalPath,
+    tmp_path: Path,
 ) -> None:
     """Test the `Syncer` class
 
@@ -188,12 +187,12 @@ def test_syncer(
                 perform on them
     :param expect: Dictionary of files to verify in the destination directory and the
                    verifier to use
-    :param tmpdir: Temporary directory to use for the test
+    :param tmp_path: Temporary directory to use for the test
 
     """
-    src_root = Path(tmpdir / "src")
+    src_root = tmp_path / "src"
     src_root.mkdir()
-    dest_root = Path(tmpdir / "dest")
+    dest_root = tmp_path / "dest"
     dest_root.mkdir()
 
     # Write existing content into the destination directory
