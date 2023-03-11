@@ -33,7 +33,7 @@ class DbPalindrome(TypedDict):
     author: str
     illustrations: NotRequired[List[Illustration]]
     translations: List[Translation]
-    date: NotRequired[str]
+    created: NotRequired[str]
 
 
 class Links(TypedDict):
@@ -66,8 +66,8 @@ def db_to_site_palindrome(db_palindrome: DbPalindrome) -> SitePalindrome:
     )
     if "illustrations" in db_palindrome:
         site_palindrome["illustrations"] = db_palindrome["illustrations"]
-    if "date" in db_palindrome:
-        site_palindrome["date"] = db_palindrome["date"]
+    if "created" in db_palindrome:
+        site_palindrome["created"] = db_palindrome["created"]
     return site_palindrome
 
 
