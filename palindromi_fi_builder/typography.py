@@ -8,7 +8,16 @@ QUOTED_RE = re.compile(r'(?: ^ | (?<=\W) )'
 INWORD_APOSTROPHE_RE = re.compile(r"(?<=\w)'(?=\w)")
 
 
-def convert_quoted(match: Match) -> str:
+def convert_quoted(match: Match[str]) -> str:
+    """Convert a quoted string to typographic quotes
+
+    This function is intended to be used with `QUOTED_RE.sub`.
+
+    :param match: A match object from `QUOTED_RE`
+    :return: The string with typographic quotes
+    :raises ValueError: If the quotes are not recognized
+
+    """
     opening_quote = match[0][0]
     quoted_text = match[0][1:-1]
     if opening_quote == '"':
