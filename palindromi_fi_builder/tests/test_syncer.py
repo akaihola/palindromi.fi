@@ -118,6 +118,7 @@ class Updated(FileVerifier):
 
         """
         super().verify(path)
+        assert original_mtime is not None
         assert path.stat().st_mtime > original_mtime
 
 
