@@ -65,7 +65,7 @@ class Verifier(str):
 class Directory(Verifier):
     """Verify that the destination directory exists"""
 
-    def verify(self, path, original_mtime: Optional[float] = None) -> None:
+    def verify(self, path: Path, original_mtime: Optional[float] = None) -> None:
         """Verify that the destination directory exists
 
         :param path: Path to the directory to verify
@@ -79,14 +79,21 @@ class Directory(Verifier):
 class FileVerifier(Verifier):
     """Verify that the destination file has correct contect"""
 
-    def verify(self, path, original_mtime: Optional[float] = None):
+    def verify(self, path: Path, original_mtime: Optional[float] = None) -> None:
+        """Verify correct content
+
+        :param path: Path to the file to verify
+        :param original_mtime: Original modification time of the file
+        :raises AssertionError: If the contents are not correct
+
+        """
         assert path.read_text("utf-8") == self
 
 
 class New(FileVerifier):
     """Verify correct content and no previous file for newly written files"""
 
-    def verify(self, path, original_mtime: Optional[float] = None):
+    def verify(self, path: Path, original_mtime: Optional[float] = None) -> None:
         """Verify correct content and no previous file for newly written files
 
         :param path: Path to the file to verify
@@ -170,7 +177,7 @@ class Kept(FileVerifier):
 )
 def test_syncer(
     dest: Dict[str, str],
-    src: List[Tuple[str, SyncerAction]],
+    src: List[Tuple[str, SyncerAction[str]]],
     expect: Dict[str, FileVerifier],
     tmpdir: LocalPath,
 ) -> None:
