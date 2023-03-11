@@ -10,6 +10,7 @@ classifiers = ["License :: OSI Approved :: MIT License"]
 dynamic = ["version", "description"]
 dependencies = [
     "base58",
+    "beautifulsoup4",
     "click",
     "jinja2",
     "ruamel.yaml",
