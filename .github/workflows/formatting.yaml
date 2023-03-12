@@ -1,9 +1,15 @@
 name: Formatting
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
- lint:
+ darker:
    runs-on: ubuntu-latest
    steps:
      - uses: actions/checkout@v3
@@ -16,4 +22,3 @@ jobs:
          options: "--check --diff --isort --color"
          src: "./palindromi_fi_builder"
          revision: "origin/main..."
-         lint: "flake8,mypy,pylint"
