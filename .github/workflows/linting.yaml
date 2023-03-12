@@ -1,0 +1,26 @@
+name: Linting
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  graylint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v4
+      - uses: akaihola/graylint@action-extra-packages
+        with:
+          version: "@action-extra-packages"
+          options: "--color"
+          src: "./palindromi_fi_builder"
+          revision: "origin/main..."
+          lint: "flake8,mypy,pylint"
+          extra_packages: "-e .[test]"

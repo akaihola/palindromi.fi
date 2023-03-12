@@ -21,7 +21,7 @@ jobs:
           cache: 'pip'
           cache-dependency-path: 'pyproject.toml'
       - name: Install dependencies
-        run: pip install base58 click jinja2 ruamel.yaml transcrypt
+        run: pip install -e '.[test]'
       - name: Render the site into the "rendered" branch
         run: |
           export REMOTE_REPO="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
