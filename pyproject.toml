@@ -13,6 +13,7 @@ dependencies = [
     "beautifulsoup4",
     "click",
     "jinja2",
+    "requests",
     "ruamel.yaml",
     "setuptools",
     "transcrypt",
