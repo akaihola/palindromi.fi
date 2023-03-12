@@ -20,6 +20,9 @@ dependencies = [
 
 [project.optional-dependencies]
 test = [
+    "flake8",
+    "mypy",
+    "pylint",
     "pytest",
     "types-beautifulsoup4",
     "types-requests",
