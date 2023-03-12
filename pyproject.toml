@@ -8,6 +8,19 @@ authors = [{name = "Antti Kaihola", email = "13725+akaihola@users.noreply.github
 license = {file = "LICENSE"}
 classifiers = ["License :: OSI Approved :: MIT License"]
 dynamic = ["version", "description"]
+dependencies = [
+    "base58",
+    "click",
+    "jinja2",
+    "ruamel.yaml",
+    "setuptools",
+    "transcrypt",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
 
 [project.urls]
 Home = "https://github.com/akaihola/palindromi_fi_builder"
