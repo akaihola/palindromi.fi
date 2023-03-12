@@ -16,10 +16,11 @@ jobs:
         with:
           fetch-depth: 0
       - uses: actions/setup-python@v4
-      - uses: akaihola/graylint@action
+      - uses: akaihola/graylint@action-extra-packages
         with:
-          version: "@baseline-clone-fix"
+          version: "@action-extra-packages"
           options: "--color"
           src: "./palindromi_fi_builder"
           revision: "origin/main..."
           lint: "flake8,mypy,pylint"
+          extra_packages: "-e .[test]"
