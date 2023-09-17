@@ -95,6 +95,10 @@ def split_by_empty_lines(content_stream: Iterable[str]) -> Iterable[list[str]]:
             current_block = []
 
 
+class NoPalindromeFound(Exception):
+    """Raised when a block of text does not contain a palindrome"""
+
+
 def parse_block(lines: list[str]) -> tuple[str, str]:
     """Parse a block of text into a palindrome and its translation
 
@@ -108,7 +112,7 @@ def parse_block(lines: list[str]) -> tuple[str, str]:
         if is_palindrome(palindrome):
             translation = "\n".join(lines[num_palindrome_lines:])
             return palindrome, translation
-    raise ValueError(f"Could not find palindrome in block: {lines}")
+    raise NoPalindromeFound(f"Could not find palindrome in block: {lines}")
 
 
 def main() -> None:
