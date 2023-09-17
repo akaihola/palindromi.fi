@@ -52,7 +52,11 @@ def load_zoho_notebook_palindromes() -> Iterable[DbPalindrome]:
     palindrome: str
     translation: str
     for block in split_by_empty_lines(notebook_doc.itertext()):
-        palindrome, translation = parse_block(block)
+        try:
+            palindrome, translation = parse_block(block)
+        except NoPalindromeFound as exc_info:
+            logger.warning("Not a palindrome: %s", exc_info)
+            continue
         yield DbPalindrome(
             text=palindrome,
             translations=[
