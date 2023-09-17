@@ -108,7 +108,7 @@ def parse_block(lines: list[str]) -> tuple[str, str]:
 
     """
     for num_palindrome_lines in range(1, len(lines) + 1):
-        palindrome = "\n".join(lines[:num_palindrome_lines])
+        palindrome = "\n".join(line.rstrip() for line in lines[:num_palindrome_lines])
         if is_palindrome(palindrome):
             translation = "\n".join(lines[num_palindrome_lines:])
             return palindrome, translation
