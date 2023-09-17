@@ -52,7 +52,11 @@ def load_zoho_notebook_palindromes() -> Iterable[DbPalindrome]:
     palindrome: str
     translation: str
     for block in split_by_empty_lines(notebook_doc.itertext()):
-        palindrome, translation = parse_block(block)
+        try:
+            palindrome, translation = parse_block(block)
+        except NoPalindromeFound as exc_info:
+            logger.warning("Not a palindrome: %s", exc_info)
+            continue
         yield DbPalindrome(
             text=palindrome,
             translations=[
@@ -95,6 +99,10 @@ def split_by_empty_lines(content_stream: Iterable[str]) -> Iterable[list[str]]:
             current_block = []
 
 
+class NoPalindromeFound(Exception):
+    """Raised when a block of text does not contain a palindrome"""
+
+
 def parse_block(lines: list[str]) -> tuple[str, str]:
     """Parse a block of text into a palindrome and its translation
 
@@ -104,11 +112,11 @@ def parse_block(lines: list[str]) -> tuple[str, str]:
 
     """
     for num_palindrome_lines in range(1, len(lines) + 1):
-        palindrome = "\n".join(lines[:num_palindrome_lines])
+        palindrome = "\n".join(line.rstrip() for line in lines[:num_palindrome_lines])
         if is_palindrome(palindrome):
             translation = "\n".join(lines[num_palindrome_lines:])
             return palindrome, translation
-    raise ValueError(f"Could not find palindrome in block: {lines}")
+    raise NoPalindromeFound(f"Could not find palindrome in block: {lines}")
 
 
 def main() -> None:
