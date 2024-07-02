@@ -11,7 +11,7 @@ dynamic = ["version", "description"]
 dependencies = [
     "base58",
     "beautifulsoup4",
-    "click",
+    "click @ git+https://github.com/pallets/click.git@main",
     "jinja2",
     "requests",
     "ruamel.yaml",
