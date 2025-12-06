@@ -2,6 +2,7 @@
 
 import click
 
+from palindromi_fi_builder.format import format
 from palindromi_fi_builder.load import load
 from palindromi_fi_builder.render import render
 
@@ -14,6 +15,7 @@ def cli():
 def main():
     cli.add_command(render)
     cli.add_command(load)
+    cli.add_command(format)
     cli()
 
 
