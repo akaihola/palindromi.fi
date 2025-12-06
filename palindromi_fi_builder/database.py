@@ -4,10 +4,11 @@ from hashlib import sha256
 from pathlib import Path
 from typing import List, NotRequired, TypedDict, cast
 
-import ruamel.yaml
 from base58 import b58encode
 
-yaml = ruamel.yaml.YAML()
+from palindromi_fi_builder.yaml_utils import create_yaml_dumper
+
+yaml = create_yaml_dumper()
 
 
 class Illustration(TypedDict):

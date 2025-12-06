@@ -4,42 +4,14 @@ import argparse
 import re
 import sys
 from datetime import datetime
-from io import StringIO
 from pathlib import Path
-from typing import Any, Optional, Sequence, Union, cast
+from typing import Optional, Sequence, cast
 
 from bs4 import BeautifulSoup, ResultSet, Tag
-from ruamel.yaml import YAML
-from ruamel.yaml.scalarstring import LiteralScalarString, preserve_literal
 
 from palindromi_fi_builder.database import DbPalindrome, Translation
 from palindromi_fi_builder.palindrome import is_palindrome
-
-
-def maybe_preserve_literal(text: str) -> Union[str, LiteralScalarString]:
-    """Use a multi-line YAML literal if the text contains a newline or is too long
-
-    :param text: The text to check
-    :return: The text, possibly wrapped in a YAML literal
-
-    """
-    if "\n" in text or len(text) > 50:
-        return preserve_literal(text)
-    return text
-
-
-def yaml_dump(data: Any) -> str:  # type: ignore[misc]
-    """Dump data as YAML with a line width of 88 and return the result as a string
-
-    :param data: The data to dump
-    :return: The YAML string
-
-    """
-    yaml = YAML()
-    yaml.width = 88  # type: ignore[assignment]
-    buffer = StringIO()
-    yaml.dump(data, buffer)  # type: ignore[misc]
-    return buffer.getvalue()
+from palindromi_fi_builder.yaml_utils import create_yaml_dumper, maybe_preserve_literal, yaml_dump
 
 
 def main() -> None:
@@ -177,8 +149,7 @@ def print_db_as_yaml(entries: list[DbPalindrome]) -> None:
     :param entries: The palindrome database entries
 
     """
-    yaml = YAML()
-    yaml.width = 88  # type: ignore[assignment]
+    yaml = create_yaml_dumper()
     yaml.dump(entries, sys.stdout)
 
 

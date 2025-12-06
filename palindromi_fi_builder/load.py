@@ -5,7 +5,8 @@ from pathlib import Path
 
 import click
 
-from palindromi_fi_builder.database import read_database, yaml
+from palindromi_fi_builder.database import read_database
+from palindromi_fi_builder.yaml_utils import create_yaml_dumper
 
 
 @click.command()
@@ -18,4 +19,5 @@ def load(database_directory: str) -> None:
 
     """
     palindromes = read_database(Path(database_directory))
+    yaml = create_yaml_dumper()
     yaml.dump(palindromes, sys.stdout)
