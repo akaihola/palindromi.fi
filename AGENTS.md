@@ -8,10 +8,10 @@ This is a static site generator for palindromi.fi, a Finnish palindrome collecti
 
 ## Commands
 
-### Development Environment (Nix)
+### Setup
 ```bash
-nix develop              # Enter development shell
-nix run '.#default.lock' # Initialize project after cloning
+pip install -e .                    # Install in development mode
+pip install -e ".[test]"            # Install with test dependencies
 ```
 
 ### CLI Commands
