@@ -16,17 +16,17 @@ uv sync --no-dev                    # Install only production dependencies
 
 ### CLI Commands
 ```bash
-python -m palindromi_fi_builder render ./database -o ./html  # Render site to HTML
-python -m palindromi_fi_builder load ./database              # Dump database as YAML to stdout
-python -m palindromi_fi_builder.server -d ./html             # Serve rendered site (port 8000)
+uv run python -m palindromi_fi_builder render ./database -o ./html  # Render site to HTML
+uv run python -m palindromi_fi_builder load ./database              # Dump database as YAML to stdout
+uv run python -m palindromi_fi_builder.server -d ./html             # Serve rendered site (port 8000)
 ```
 
 ### Testing and Linting
 ```bash
-pytest                                    # Run all tests
-pytest palindromi_fi_builder/tests/test_syncer.py  # Run single test file
-flake8                                    # Lint
-mypy                                      # Type check
+uv run pytest                                    # Run all tests
+uv run pytest palindromi_fi_builder/tests/test_syncer.py  # Run single test file
+uv run flake8                                    # Lint
+uv run mypy .                                    # Type check
 ```
 
 Dev dependencies (pytest, flake8, mypy, pylint, type stubs) are installed by default with `uv sync`.
