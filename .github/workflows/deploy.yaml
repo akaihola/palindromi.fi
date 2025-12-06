@@ -4,35 +4,42 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
           cache-dependency-path: 'pyproject.toml'
       - name: Install dependencies
-        run: pip install -e '.[test]'
-      - name: Render the site into the "rendered" branch
-        run: |
-          export REMOTE_REPO="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
-          make render_to_branch
-      - name: Cache Docker images.
-        uses: ScribeMD/docker-cache@0.2.9
+        run: pip install -e .
+      - name: Build site
+        run: make build
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          key: docker-${{ runner.os }}-${{ hashFiles('.github/actions/upload-rendered/*') }}
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-      - name: Upload the rendered site to Google Cloud Storage when merging to main
-        uses: ./.github/actions/upload-rendered
-        with:
-          secrets: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS }}
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+          path: html/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
