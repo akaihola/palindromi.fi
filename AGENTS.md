@@ -10,8 +10,8 @@ This is a static site generator for palindromi.fi, a Finnish palindrome collecti
 
 ### Setup
 ```bash
-pip install -e .                    # Install in development mode
-pip install -e ".[test]"            # Install with test dependencies
+uv sync                             # Install in development mode
+uv sync --extra test                # Install with test dependencies
 ```
 
 ### CLI Commands
