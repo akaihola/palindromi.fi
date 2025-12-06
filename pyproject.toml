@@ -19,8 +19,8 @@ dependencies = [
     "transcrypt",
 ]
 
-[project.optional-dependencies]
-test = [
+[dependency-groups]
+dev = [
     "flake8",
     "mypy",
     "pylint",

@@ -10,8 +10,8 @@ This is a static site generator for palindromi.fi, a Finnish palindrome collecti
 
 ### Setup
 ```bash
-uv sync                             # Install in development mode
-uv sync --extra test                # Install with test dependencies
+uv sync                             # Install all dependencies (includes dev by default)
+uv sync --no-dev                    # Install only production dependencies
 ```
 
 ### CLI Commands
@@ -29,7 +29,7 @@ flake8                                    # Lint
 mypy                                      # Type check
 ```
 
-Install test dependencies: `pip install -e ".[test]"`
+Dev dependencies (pytest, flake8, mypy, pylint, type stubs) are installed by default with `uv sync`.
 
 ## Architecture
 
