@@ -96,7 +96,7 @@ def extract_from_main_html(html_path: Path) -> str:
 
 
 def main():
-    """Process all YYYY-MM-DD.html files in zoho-history/"""
+    """Process all YYYY-MM-DD.html files in zoho-history/, outputting only new palindromes"""
     zoho_dir = Path(__file__).parent.parent.parent / "zoho-history"
 
     # Find all main HTML files
@@ -108,20 +108,35 @@ def main():
 
     print(f"Found {len(html_files)} HTML files\n")
 
+    seen_palindromes = set()
+
     for html_file in html_files:
         date_str = html_file.stem
         print(f"Processing {date_str}...")
         try:
             text = extract_from_main_html(html_file)
 
-            # Create output file
-            output_path = zoho_dir / f"{date_str}.txt"
-            with open(output_path, "w", encoding="utf-8") as f:
-                f.write(text)
+            # Parse palindromes (separated by blank lines)
+            all_palindromes = [line for line in text.split("\n") if line.strip()]
 
-            lines = text.split("\n")
-            print(f"  Extracted {len(lines)} lines → {output_path.name}")
-            print(f"  First line: {lines[0][:60]}...")
+            # Filter to only new palindromes
+            new_palindromes = [p for p in all_palindromes if p not in seen_palindromes]
+
+            # Add new ones to seen set
+            seen_palindromes.update(new_palindromes)
+
+            # Create or delete output file based on whether there are new palindromes
+            output_path = zoho_dir / f"{date_str}.txt"
+            if new_palindromes:
+                output_text = "\n\n".join(new_palindromes) + "\n"
+                with open(output_path, "w", encoding="utf-8") as f:
+                    f.write(output_text)
+                print(f"  Extracted {len(all_palindromes)} total, {len(new_palindromes)} new → {output_path.name}")
+                print(f"  First new: {new_palindromes[0][:60]}...")
+            else:
+                if output_path.exists():
+                    output_path.unlink()
+                print(f"  Extracted {len(all_palindromes)} total, 0 new (file deleted)")
 
         except Exception as e:
             print(f"  Error processing {date_str}: {e}")
