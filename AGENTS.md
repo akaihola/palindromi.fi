@@ -49,7 +49,20 @@ Dev dependencies (pytest, flake8, mypy, pylint, type stubs) are installed by def
 - `static/main.css`: Custom styles
 
 ### Ad-hoc Import Scripts
-`adhoc/` contains one-time importers for Flowdock and Zoho Notebook exports.
+`adhoc/` contains one-time importers for data sources.
+
+#### Zoho Notebook Converter (`adhoc/convert_zoho_html.py`)
+Extracts palindrome content from Zoho Notebook HTML exports. Each export contains a `parsed-html` attribute with entity-encoded HTML content. The script decodes and converts this to plaintext, preserving blank lines between palindromes while collapsing consecutive empty lines from nested HTML tags.
+
+Usage:
+```bash
+uv run python -m palindromi_fi_builder.adhoc.convert_zoho_html
+```
+
+Processes all `YYYY-MM-DD.html` files in the `zoho-history/` directory and outputs `YYYY-MM-DD.txt` files with extracted content.
+
+#### Flowdock Importer (`adhoc/zoho_notebook.py`)
+(Historical importer for Flowdock data - see inline documentation)
 
 ## Code Style
 
