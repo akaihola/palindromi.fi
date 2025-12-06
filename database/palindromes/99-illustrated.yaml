@@ -1,54 +1,54 @@
-- text: "Allani dokaus. Asunnon ei hienonnus: asua kodin alla."
+- text: 'Allani dokaus. Asunnon ei hienonnus: asua kodin alla.'
   author: Antti Kaihola
   illustrations:
-    - image: allani_dokaus.jpg
-      author: Markku Mujunen
-      has_text: True
+  - image: allani_dokaus.jpg
+    author: Markku Mujunen
+    has_text: true
   translations:
-    - language: en
-      text: "Heavy drinking under me. Not a frill for an apartment: to live under a home."
-      author: Antti Kaihola
+  - language: en
+    text: 'Heavy drinking under me. Not a frill for an apartment: to live under a home.'
+    author: Antti Kaihola
 - text: '"Neito!", syyttää pappi, hippa päättyy sotien.'
   author: Antti Kaihola
   illustrations:
-    - image: neito.jpg
-      author: Markku Mujunen
-      has_text: True
+  - image: neito.jpg
+    author: Markku Mujunen
+    has_text: true
   translations:
-    - language: en
-      text: '"Maiden!", accuses the priest. The tag ends in warfare.'
-      author: Antti Kaihola
-- text: "Inuiittiomaisia moittii uni."
+  - language: en
+    text: '"Maiden!", accuses the priest. The tag ends in warfare.'
+    author: Antti Kaihola
+- text: Inuiittiomaisia moittii uni.
   author: Antti Kaihola
   illustrations:
-    - image: inuiitti.jpg
-      author: Markku Mujunen
-      has_text: True
+  - image: inuiitti.jpg
+    author: Markku Mujunen
+    has_text: true
   translations:
-    - language: en
-      text: "The dream criticizes inuit loved ones."
-      author: Antti Kaihola
-- text: "Asuu demomaassa rassaamomeduusa."
+  - language: en
+    text: The dream criticizes inuit loved ones.
+    author: Antti Kaihola
+- text: Asuu demomaassa rassaamomeduusa.
   author: Antti Kaihola
   illustrations:
-    - image: rassaamomeduusa.jpg
-      author: Markku Mujunen
-      has_text: True
+  - image: rassaamomeduusa.jpg
+    author: Markku Mujunen
+    has_text: true
   translations:
-    - language: en
-      text: "A tinkering workshop jelly fish lives in the demo land."
-      author: Antti Kaihola
+  - language: en
+    text: A tinkering workshop jelly fish lives in the demo land.
+    author: Antti Kaihola
 - text: |
     Ojenna Niilo lavitsalle.
     Kellasti valo liinanne jo.
   author: Antti Kaihola
   illustrations:
-    - image: knp-77971.jpg
+  - image: knp-77971.jpg
   created: 2023-02-24
   translations:
-    - language: en
-      text: |
-        Stretch Nicholas out on the bed.
-        The light has already
-        yellowed your sheets.
-      author: Antti Kaihola
+  - language: en
+    text: |
+      Stretch Nicholas out on the bed.
+      The light has already
+      yellowed your sheets.
+    author: Antti Kaihola
