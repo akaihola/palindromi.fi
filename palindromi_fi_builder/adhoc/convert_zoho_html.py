@@ -23,7 +23,15 @@ from html.parser import HTMLParser
 
 
 class ContentExtractor(HTMLParser):
-    """Extract text from HTML with proper handling of <br/> and <div> tags"""
+    """Extract text from HTML with proper handling of <br/> and <div> tags.
+
+    Handles two HTML variants:
+    - text</div><div>text (no <br> between lines)
+    - text<br></div><div>text<br> (with <br> between lines)
+
+    Both <br> and <div> can mark line boundaries, but we only flush when
+    there's content to avoid duplicate blank lines.
+    """
 
     def __init__(self):
         super().__init__()
@@ -32,10 +40,14 @@ class ContentExtractor(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         if tag in ("br", "div"):
-            # Handle <br/> and <div> tags as line breaks
-            line_text = "".join(self.current_line).strip()
-            self.lines.append(line_text)
-            self.current_line = []
+            if self.current_line:
+                # Flush accumulated content as a line
+                line_text = "".join(self.current_line).strip()
+                self.lines.append(line_text)
+                self.current_line = []
+            elif tag == "br":
+                # Empty <br> creates a blank line (separator between palindromes)
+                self.lines.append("")
 
     def handle_endtag(self, tag):
         pass
@@ -117,7 +129,18 @@ def main():
             text = extract_from_main_html(html_file)
 
             # Parse palindromes (separated by blank lines)
-            all_palindromes = [line for line in text.split("\n") if line.strip()]
+            # Group consecutive non-empty lines as a single palindrome
+            all_palindromes = []
+            current_lines = []
+            for line in text.split("\n"):
+                if line.strip():
+                    current_lines.append(line)
+                else:
+                    if current_lines:
+                        all_palindromes.append("\n".join(current_lines))
+                        current_lines = []
+            if current_lines:
+                all_palindromes.append("\n".join(current_lines))
 
             # Filter to only new palindromes
             new_palindromes = [p for p in all_palindromes if p not in seen_palindromes]
