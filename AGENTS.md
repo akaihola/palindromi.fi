@@ -59,10 +59,12 @@ Usage:
 uv run python -m palindromi_fi_builder.adhoc.convert_zoho_html
 ```
 
-Processes all `YYYY-MM-DD.html` files in the `zoho-history/` directory and outputs `YYYY-MM-DD.txt` files with extracted content.
+Processes all `YYYY-MM-DD.html` files in the local, git-ignored `zoho-history/` directory and writes a `YYYY-MM-DD.txt` per export containing only entries not seen in earlier files.
 
-#### Flowdock Importer (`adhoc/zoho_notebook.py`)
-(Historical importer for Flowdock data - see inline documentation)
+Known broken: it orders exports by filename (several filenames are wrong) and reads exports saved from the phone app as a single entry. Don't trust its output. See `docs/zoho-import.md` for the export format, the findings and the import plan.
+
+#### Zoho Notebook API downloader (`adhoc/zoho_notebook.py`)
+2023 script that fetches a publicly shared Zoho note through the notecard API and converts its blocks to `DbPalindrome` dicts.
 
 ## Code Style
 
