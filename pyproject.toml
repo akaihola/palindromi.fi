@@ -8,6 +8,7 @@ authors = [{name = "Antti Kaihola", email = "13725+akaihola@users.noreply.github
 license = {file = "LICENSE"}
 classifiers = ["License :: OSI Approved :: MIT License"]
 dynamic = ["version", "description"]
+requires-python = ">=3.11"
 dependencies = [
     "base58",
     "beautifulsoup4",
