@@ -3,3 +3,7 @@
 __pycache__
 palindromi_fi_builder/static/__target__
 palindromi_fi_builder/*.ipynb
+# local Zoho Notebook exports (~870 MB, contain personal data)
+/zoho-history
+/.env
+/.claude/settings.local.json
