@@ -35,10 +35,6 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## In Progress
 
-- [~] [*] Delete `lock.json` and `flake.lock`, left over from the Nix setup removed in
-  `eaa78ee`.
-  <!-- hai:{"id":"simple-cedf4f66511832e1","updatedAt":"2026-10-06T19:59:49.034Z"} -->
-
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
 - [~] [4] Decide the rules for importing Zoho palindromes.
@@ -47,6 +43,10 @@ Rules for TASKS.md usage are at the bottom of the file.
   from the repo root.
 
 ## Completed / Accepted
+
+- [ ] [*] Delete `lock.json` and `flake.lock`, left over from the Nix setup removed in
+  `eaa78ee`.
+  <!-- hai:{"id":"simple-cedf4f66511832e1","updatedAt":"2026-10-06T20:00:01.254Z"} -->
 
 - [ ] [6] Fix dependency installs in CI.
   <!-- hai:{"updatedAt":"2026-10-06T19:58:54.924Z"} -->
