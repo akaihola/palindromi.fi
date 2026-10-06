@@ -32,10 +32,6 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## In Progress
 
-- [~] [*] Replace `pkg_resources.resource_filename` in `render.py` with
-  `importlib.resources`. Recent setuptools no longer ships `pkg_resources`.
-  <!-- hai:{"id":"simple-68788e48c58089d7","updatedAt":"2026-10-06T19:56:23.795Z"} -->
-
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
 - [~] [4] Decide the rules for importing Zoho palindromes.
@@ -44,6 +40,10 @@ Rules for TASKS.md usage are at the bottom of the file.
   from the repo root.
 
 ## Completed / Accepted
+
+- [ ] [*] Replace `pkg_resources.resource_filename` in `render.py` with
+  `importlib.resources`. Recent setuptools no longer ships `pkg_resources`.
+  <!-- hai:{"id":"simple-68788e48c58089d7","updatedAt":"2026-10-06T19:56:23.795Z"} -->
 
 - [ ] [*] Delete `lock.json` and `flake.lock`, left over from the Nix setup removed in
   `eaa78ee`.
