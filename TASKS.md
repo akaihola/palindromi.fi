@@ -30,11 +30,11 @@ Rules for TASKS.md usage are at the bottom of the file.
     - Depends on: [6]
   <!-- hai:{"updatedAt":"2026-10-06T20:00:27.003Z"} -->
 
-- [*] Replace `pkg_resources.resource_filename` in `render.py` with
+## In Progress
+
+- [~] [*] Replace `pkg_resources.resource_filename` in `render.py` with
   `importlib.resources`. Recent setuptools no longer ships `pkg_resources`.
   <!-- hai:{"id":"simple-68788e48c58089d7","updatedAt":"2026-10-06T19:56:23.795Z"} -->
-
-## In Progress
 
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
