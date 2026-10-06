@@ -29,15 +29,15 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## Scheduled
 
-- [*] Delete `lock.json` and `flake.lock`, left over from the Nix setup removed in
-  `eaa78ee`.
-  <!-- hai:{"id":"simple-cedf4f66511832e1","updatedAt":"2026-10-06T19:59:26.159Z"} -->
-
 - [*] Replace `pkg_resources.resource_filename` in `render.py` with
   `importlib.resources`. Recent setuptools no longer ships `pkg_resources`.
   <!-- hai:{"id":"simple-68788e48c58089d7","updatedAt":"2026-10-06T19:56:23.795Z"} -->
 
 ## In Progress
+
+- [~] [*] Delete `lock.json` and `flake.lock`, left over from the Nix setup removed in
+  `eaa78ee`.
+  <!-- hai:{"id":"simple-cedf4f66511832e1","updatedAt":"2026-10-06T19:59:49.034Z"} -->
 
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
