@@ -1,3 +1,7 @@
+---
+depends-on: [1]
+---
+
 # Rewrite the Zoho converter to order exports by version
 
 `adhoc/convert_zoho_html.py` extracts text correctly from most exports, but its

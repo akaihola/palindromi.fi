@@ -11,8 +11,8 @@ find them. Expect 37 groups with 38 surplus entries, one group having three
 members. Keep the original graded entry of each group unless the reflowed text is
 better, and review the 5 other entries that `3daa724` added.
 
-`3daa724` is not pushed yet. Fix it before pushing `main`, with a fixup commit or by
-rewriting the unpushed history.
+`3daa724` is not pushed yet. Fix it with a new commit before pushing `main`. Don't
+rewrite history: `main` also lives in `agent@gogo:~/prg/palindromi.fi`.
 
 While at it, check the 5 INBOX entries whose letters match published palindromes:
 "Aimo, saispa lapsia somia!", "Ei vessoja, aha. …", "Nousi savu tuo hutera

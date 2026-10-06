@@ -9,14 +9,11 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## Ordered backlog
 
-- [1] Refresh the Zoho exports before editing the note again.
-
 - [2] Rewrite the Zoho converter to order exports by their embedded version.
+    - Depends on: [1]
 
 - [3] Remove the reflowed duplicates that `3daa724` added to `INBOX.yaml`, before
   pushing `main`.
-
-- [4] Decide the rules for importing Zoho palindromes.
 
 - [5] Import the Zoho palindromes into the database.
     - Depends on: [1], [2], [3], [4]
@@ -26,15 +23,19 @@ Rules for TASKS.md usage are at the bottom of the file.
 - [*] Replace `pkg_resources.resource_filename` in `render.py` with
   `importlib.resources`. Recent setuptools no longer ships `pkg_resources`.
 
-- [*] Delete the untracked `analyze_zoho_html.py` and `extract_zoho_revisions.py`
-  from the repo root.
-
 - [*] Delete `lock.json` and `flake.lock`, left over from the Nix setup removed in
   `eaa78ee`.
 
 ## Scheduled
 
 ## In Progress
+
+- [~] [1] Refresh the Zoho exports before editing the note again.
+
+- [~] [4] Decide the rules for importing Zoho palindromes.
+
+- [~] [*] Delete the untracked `analyze_zoho_html.py` and `extract_zoho_revisions.py`
+  from the repo root.
 
 ## Completed / Accepted
 
