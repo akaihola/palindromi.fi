@@ -21,3 +21,21 @@ tuotannosta. …", "Sotii, kas sisko, Putin nuhaa. …" and "Iski ruumis. …".
 `format` round-trips `INBOX.yaml` unchanged, so it is safe to run on that file.
 Don't run it on `database/palindromes/` in the same commit: it would reformat 5
 unrelated strings there.
+
+## Outcome (2026-10-06)
+
+Fixed in commit `bcc051c`. All 42 entries that `3daa724` appended were removed:
+
+- The 37 reflowed twins were identical to their graded originals apart from
+  whitespace, with three punctuation variants ("Sakilla malli. KAS?", "sotekumous",
+  "Haapalainen.") and Flowdock chatter copied into some translations. None was a
+  better reading, so the originals were kept.
+- The 5 remaining entries were the ones whose letters match published palindromes.
+  Each is already in `02-additional.yaml` with a grading and the author's
+  translation; the INBOX copies only added Google Translate output and chat remarks.
+- The triple group was "Syy sille: heruu pii, hilaa turbo." Its two pre-existing
+  members are distinct graded readings, so both stay; only the reflowed one went.
+
+Validation: `format database/INBOX.yaml` reports it unchanged, `load ./database`
+succeeds, all 109 INBOX entries carry a grading, and pytest passes (37 tests). No
+Python changed; flake8 and mypy report the same pre-existing findings as on `main`.
