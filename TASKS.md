@@ -26,11 +26,11 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## Scheduled
 
-- [7] Fix the failing Linting workflow.
-    - Depends on: [6]
-  <!-- hai:{"updatedAt":"2026-10-06T20:00:27.003Z"} -->
-
 ## In Progress
+
+- [~] [7] Fix the failing Linting workflow.
+    - Depends on: [6]
+  <!-- hai:{"updatedAt":"2026-10-06T20:02:54.610Z"} -->
 
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
