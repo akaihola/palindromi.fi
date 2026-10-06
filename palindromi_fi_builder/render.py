@@ -1,10 +1,10 @@
 """Subcommand for rendering the palindrome database to HTML pages"""
 
+from importlib.resources import as_file, files
 from pathlib import Path
 from typing import List
 
 import click
-import pkg_resources
 from jinja2 import Environment, PackageLoader
 
 from palindromi_fi_builder.database import SitePalindrome, read_database
@@ -60,8 +60,8 @@ def render(database_directory: str, output_directory: str) -> None:
 
     static_url = "static"
     static_destination = html_root / static_url
-    static_source = pkg_resources.resource_filename("palindromi_fi_builder", "static")
-    syncer.copytree(Path(static_source), static_destination)
+    with as_file(files("palindromi_fi_builder") / "static") as static_source:
+        syncer.copytree(static_source, static_destination)
 
     for palindrome in palindromes:
         palindrome_path = render_palindrome_and_illustrations(
