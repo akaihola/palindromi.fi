@@ -23,11 +23,11 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## Scheduled
 
-- [8] Fix the failing Formatting workflow.
+## In Progress
+
+- [~] [8] Fix the failing Formatting workflow.
     - Depends on: [6]
   <!-- hai:{"updatedAt":"2026-10-06T20:03:28.971Z"} -->
-
-## In Progress
 
 - [~] [7] Fix the failing Linting workflow.
     - Depends on: [6]
