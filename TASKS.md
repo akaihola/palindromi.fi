@@ -15,9 +15,6 @@ Rules for TASKS.md usage are at the bottom of the file.
 - [5] Import the Zoho palindromes into the database.
     - Depends on: [1], [2], [3], [4]
 
-- [8] Fix the failing Formatting workflow.
-    - Depends on: [6]
-
 - [9] Move the workflows to action versions that run on Node.js 24.
     - Depends on: [6], [7], [8]
 
@@ -25,6 +22,10 @@ Rules for TASKS.md usage are at the bottom of the file.
     - Depends on: [9]
 
 ## Scheduled
+
+- [8] Fix the failing Formatting workflow.
+    - Depends on: [6]
+  <!-- hai:{"updatedAt":"2026-10-06T20:03:28.971Z"} -->
 
 ## In Progress
 
