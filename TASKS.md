@@ -21,6 +21,18 @@ Rules for TASKS.md usage are at the bottom of the file.
 - [*] Delete `lock.json` and `flake.lock`, left over from the Nix setup removed in
   `eaa78ee`.
 
+- [7] Fix the failing Linting workflow.
+    - Depends on: [6]
+
+- [8] Fix the failing Formatting workflow.
+    - Depends on: [6]
+
+- [9] Move the workflows to action versions that run on Node.js 24.
+    - Depends on: [6], [7], [8]
+
+- [10] Get CI passing on Ubuntu 26 before `ubuntu-latest` switches on 2026-10-19.
+    - Depends on: [9]
+
 ## Scheduled
 
 - [6] Fix dependency installs in CI.
@@ -53,9 +65,13 @@ Rules for TASKS.md usage are at the bottom of the file.
 [4]: docs/tasks/4-zoho-import-rules.md
 [5]: docs/tasks/5-import-zoho-palindromes.md
 [6]: docs/tasks/6-ci-dependency-installs.md
+[7]: docs/tasks/7-fix-linting-workflow.md
+[8]: docs/tasks/8-fix-formatting-workflow.md
+[9]: docs/tasks/9-node24-actions.md
+[10]: docs/tasks/10-ubuntu-26-runner.md
 [*]: TASKS.md
 
-<!-- hai:reserved-numbers:1,2,3,4,5,6 -->
+<!-- hai:reserved-numbers:1,2,3,4,5,6,7,8,9,10 -->
 
 ## Rules
 
