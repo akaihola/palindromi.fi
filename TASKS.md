@@ -15,8 +15,6 @@ Rules for TASKS.md usage are at the bottom of the file.
 - [5] Import the Zoho palindromes into the database.
     - Depends on: [1], [2], [3], [4]
 
-- [6] Fix dependency installs in CI.
-
 - [*] Replace `pkg_resources.resource_filename` in `render.py` with
   `importlib.resources`. Recent setuptools no longer ships `pkg_resources`.
 
@@ -24,6 +22,9 @@ Rules for TASKS.md usage are at the bottom of the file.
   `eaa78ee`.
 
 ## Scheduled
+
+- [6] Fix dependency installs in CI.
+  <!-- hai:{"updatedAt":"2026-10-06T16:10:19.339Z"} -->
 
 - [3] Remove the reflowed duplicates that `3daa724` added to `INBOX.yaml`, before
   pushing `main`.
