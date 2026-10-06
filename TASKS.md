@@ -28,10 +28,6 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## In Progress
 
-- [~] [3] Remove the reflowed duplicates that `3daa724` added to `INBOX.yaml`, before
-  pushing `main`.
-  <!-- hai:{"updatedAt":"2026-10-06T16:06:17.092Z"} -->
-
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
 - [~] [4] Decide the rules for importing Zoho palindromes.
@@ -40,6 +36,10 @@ Rules for TASKS.md usage are at the bottom of the file.
   from the repo root.
 
 ## Completed / Accepted
+
+- [ ] [3] Remove the reflowed duplicates that `3daa724` added to `INBOX.yaml`, before
+  pushing `main`.
+  <!-- hai:{"updatedAt":"2026-10-06T16:06:17.092Z"} -->
 
 - [ ] [*] Investigate the unfinished Zoho import work and record the findings in
   `docs/zoho-import.md`.
