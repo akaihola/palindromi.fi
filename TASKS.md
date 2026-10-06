@@ -26,11 +26,11 @@ Rules for TASKS.md usage are at the bottom of the file.
 - [6] Fix dependency installs in CI.
   <!-- hai:{"updatedAt":"2026-10-06T16:10:19.339Z"} -->
 
-- [3] Remove the reflowed duplicates that `3daa724` added to `INBOX.yaml`, before
+## In Progress
+
+- [~] [3] Remove the reflowed duplicates that `3daa724` added to `INBOX.yaml`, before
   pushing `main`.
   <!-- hai:{"updatedAt":"2026-10-06T16:06:17.092Z"} -->
-
-## In Progress
 
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
