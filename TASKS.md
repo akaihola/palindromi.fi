@@ -36,10 +36,10 @@ Rules for TASKS.md usage are at the bottom of the file.
   `importlib.resources`. Recent setuptools no longer ships `pkg_resources`.
   <!-- hai:{"id":"simple-68788e48c58089d7","updatedAt":"2026-10-06T19:56:23.795Z"} -->
 
-- [6] Fix dependency installs in CI.
-  <!-- hai:{"updatedAt":"2026-10-06T16:10:19.339Z"} -->
-
 ## In Progress
+
+- [~] [6] Fix dependency installs in CI.
+  <!-- hai:{"updatedAt":"2026-10-06T19:58:46.393Z"} -->
 
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
