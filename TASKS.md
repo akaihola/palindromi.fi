@@ -38,9 +38,6 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## In Progress
 
-- [~] [6] Fix dependency installs in CI.
-  <!-- hai:{"updatedAt":"2026-10-06T19:58:46.393Z"} -->
-
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
 - [~] [4] Decide the rules for importing Zoho palindromes.
@@ -49,6 +46,9 @@ Rules for TASKS.md usage are at the bottom of the file.
   from the repo root.
 
 ## Completed / Accepted
+
+- [ ] [6] Fix dependency installs in CI.
+  <!-- hai:{"updatedAt":"2026-10-06T19:58:54.924Z"} -->
 
 - [ ] [3] Remove the reflowed duplicates that `3daa724` added to `INBOX.yaml`, before
   pushing `main`.

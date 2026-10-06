@@ -48,3 +48,8 @@ pushes to main.
 
 No `docs/deployment.md` exists. Deployment uses the existing GitHub Pages
 workflow triggered by a push to main.
+
+Merged into local main on 2026-10-06. A concurrent scheduling change in
+TASKS.md was preserved during rebase. Remote CI and deployment were not run:
+main already contained 20 unpublished commits before this task, so pushing
+would publish unrelated work as well. Completion is pending user acceptance.
