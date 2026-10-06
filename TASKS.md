@@ -15,9 +15,6 @@ Rules for TASKS.md usage are at the bottom of the file.
 - [5] Import the Zoho palindromes into the database.
     - Depends on: [1], [2], [3], [4]
 
-- [7] Fix the failing Linting workflow.
-    - Depends on: [6]
-
 - [8] Fix the failing Formatting workflow.
     - Depends on: [6]
 
@@ -28,6 +25,10 @@ Rules for TASKS.md usage are at the bottom of the file.
     - Depends on: [9]
 
 ## Scheduled
+
+- [7] Fix the failing Linting workflow.
+    - Depends on: [6]
+  <!-- hai:{"updatedAt":"2026-10-06T20:00:27.003Z"} -->
 
 - [*] Replace `pkg_resources.resource_filename` in `render.py` with
   `importlib.resources`. Recent setuptools no longer ships `pkg_resources`.
