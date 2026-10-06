@@ -12,9 +12,6 @@ Rules for TASKS.md usage are at the bottom of the file.
 - [2] Rewrite the Zoho converter to order exports by their embedded version.
     - Depends on: [1]
 
-- [3] Remove the reflowed duplicates that `3daa724` added to `INBOX.yaml`, before
-  pushing `main`.
-
 - [5] Import the Zoho palindromes into the database.
     - Depends on: [1], [2], [3], [4]
 
@@ -27,6 +24,10 @@ Rules for TASKS.md usage are at the bottom of the file.
   `eaa78ee`.
 
 ## Scheduled
+
+- [3] Remove the reflowed duplicates that `3daa724` added to `INBOX.yaml`, before
+  pushing `main`.
+  <!-- hai:{"updatedAt":"2026-10-06T16:06:17.092Z"} -->
 
 ## In Progress
 
