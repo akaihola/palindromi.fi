@@ -120,52 +120,10 @@ Things the import has to handle:
 
 ## Plan
 
-1. **Refresh the exports.** You do this in Zoho, before editing the note
-   again. Check the current version number. If it is past v1142, save the
-   current version too. `adhoc/zoho_notebook.py` can fetch it if the note is
-   still shared publicly. If they are still listed, re-save v1091 (2024-04-17),
-   v1132 (2025-10-11) and v1133 (2025-10-29). Then rename `2023-11-23.html` to
-   `2024-11-23.html` and delete the two v1142 copies.
-2. **Fix the converter.** Read the version number and timestamp from each
-   page, sort by version, and skip duplicate versions. Decode as cp1252,
-   handle both markups, turn NBSP into spaces, and stop on unexpected tags.
-   Instead of per-date `.txt` files, write one table of distinct entries with
-   the version that first and last contains each. Assert known counts: v1142
-   gives 1,845 blocks, 1,809 distinct texts and 1,792 letter-only keys, and
-   v1074 gives 1,664 blocks. Add tests for both markups. Prototypes are in
-   `zoho-history/investigation-2026-10-05/fidelity/proto_extract.py` and
-   `dating/leafdiv.py`.
-3. **Remove the 37 INBOX duplicates.** Fix up `3daa724` before pushing.
-4. **Decide the import rules.** My recommendations:
-   - Target file: a new `database/zoho-inbox.yaml`, so that ~1,700 entries
-     don't bury the 151 curated INBOX ones. Nothing reads either file yet.
-   - `created`: leave it out for entries already in v1049. For later ones,
-     store the first version that contains them, in a separate key such as
-     `zoho_first_seen`, since that date is only an upper bound.
-   - Variants: import every member and group them with `series:`. Never drop
-     one automatically.
-   - Fragments and near-palindromes: leave them in Zoho. Import only finished
-     palindromes.
-   - Multi-line blocks: generate a review sheet with a proposed split
-     (palindrome lines, translation lines, language), and confirm all 202 by
-     hand.
-5. **Import.** Use the new converter's table. Deduplicate inside the note by
-   letter-only key, preferring the form that passes `is_palindrome()`, then
-   the topmost one. Skip entries already in the database. Compare after
-   splitting off translation lines, and treat a text contained in another only
-   as a flag for review. Use author "Antti Kaihola" and `translations: []`.
-   Review the diff, commit, then push.
-6. **Tidy up.** These can happen at any time:
-   - Delete the untracked `analyze_zoho_html.py` and
-     `extract_zoho_revisions.py` from the repo root. They only did exploration
-     that this document now covers, they read a hard-coded export, and one of
-     them decodes the file wrongly.
-   - Delete `lock.json` and `flake.lock`, left over from the Nix setup removed
-     in `eaa78ee`.
-   - CI: `linting.yaml` installs the `-e .[test]` extra, which no longer
-     exists, and deploy installs with unpinned `pip`. Consider
-     `uv sync --frozen`. `render.py` imports `pkg_resources`, which
-     recent setuptools releases no longer ship.
+The remaining work is tracked in [`TASKS.md`][tasks] as tasks 1 to 6, with
+details in `docs/tasks/`. In short: refresh the exports, fix the converter,
+remove the INBOX duplicates before pushing, decide the import rules, then import.
+Publishing the imported palindromes, with translations and grading, is a separate
+curation job after that.
 
-Publishing imported palindromes, with translations and grading, is a separate
-curation job after this.
+[tasks]: ../TASKS.md
