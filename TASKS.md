@@ -29,10 +29,6 @@ Rules for TASKS.md usage are at the bottom of the file.
     - Depends on: [6]
   <!-- hai:{"updatedAt":"2026-10-06T20:03:28.971Z"} -->
 
-- [~] [7] Fix the failing Linting workflow.
-    - Depends on: [6]
-  <!-- hai:{"updatedAt":"2026-10-06T20:02:58.385Z"} -->
-
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
 - [~] [4] Decide the rules for importing Zoho palindromes.
@@ -42,16 +38,20 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## Completed / Accepted
 
-- [ ] [*] Replace `pkg_resources.resource_filename` in `render.py` with
+- [x] [7] Fix the failing Linting workflow.
+    - Depends on: [6]
+  <!-- hai:{"updatedAt":"2026-10-07T04:11:55.742Z"} -->
+
+- [x] [*] Replace `pkg_resources.resource_filename` in `render.py` with
   `importlib.resources`. Recent setuptools no longer ships `pkg_resources`.
-  <!-- hai:{"id":"simple-68788e48c58089d7","updatedAt":"2026-10-06T19:56:23.795Z"} -->
+  <!-- hai:{"id":"simple-68788e48c58089d7","updatedAt":"2026-10-07T04:08:32.633Z"} -->
 
-- [ ] [*] Delete `lock.json` and `flake.lock`, left over from the Nix setup removed in
+- [x] [*] Delete `lock.json` and `flake.lock`, left over from the Nix setup removed in
   `eaa78ee`.
-  <!-- hai:{"id":"simple-cedf4f66511832e1","updatedAt":"2026-10-06T20:00:01.254Z"} -->
+  <!-- hai:{"id":"simple-cedf4f66511832e1","updatedAt":"2026-10-07T04:09:00.483Z"} -->
 
-- [ ] [6] Fix dependency installs in CI.
-  <!-- hai:{"updatedAt":"2026-10-06T19:58:54.924Z"} -->
+- [x] [6] Fix dependency installs in CI.
+  <!-- hai:{"updatedAt":"2026-10-07T04:03:00.426Z"} -->
 
 - [ ] [3] Remove the reflowed duplicates that `3daa724` added to `INBOX.yaml`, before
   pushing `main`.
