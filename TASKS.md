@@ -9,9 +9,6 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## Ordered backlog
 
-- [*] Fix the unintended `<nnnnn>.bin` download when tapping the page. A page tap
-  must display the next palindrome and must not download a file.
-
 - [2] Rewrite the Zoho converter to order exports by their embedded version.
     - Depends on: [1]
 
@@ -25,6 +22,10 @@ Rules for TASKS.md usage are at the bottom of the file.
     - Depends on: [9]
 
 ## Scheduled
+
+- [*] Fix the unintended `<nnnnn>.bin` download when tapping the page. A page tap
+  must display the next palindrome and must not download a file.
+  <!-- hai:{"id":"simple-2b77e5d9f1b0c0a9","updatedAt":"2026-10-15T20:02:50.206Z"} -->
 
 ## In Progress
 
