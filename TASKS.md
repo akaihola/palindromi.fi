@@ -23,11 +23,11 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## Scheduled
 
-- [*] Fix the unintended `<nnnnn>.bin` download when tapping the page. A page tap
-  must display the next palindrome and must not download a file.
-  <!-- hai:{"id":"simple-2b77e5d9f1b0c0a9","updatedAt":"2026-10-15T20:02:50.206Z"} -->
-
 ## In Progress
+
+- [~] [*] Fix the unintended `<nnnnn>.bin` download when tapping the page. A page tap
+  must display the next palindrome and must not download a file.
+  <!-- hai:{"id":"simple-2b77e5d9f1b0c0a9","updatedAt":"2026-10-15T20:03:55.203Z"} -->
 
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
