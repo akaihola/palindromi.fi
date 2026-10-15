@@ -20,11 +20,11 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## Scheduled
 
-- [9] Move the workflows to action versions that run on Node.js 24.
-    - Depends on: [6], [7], [8]
-  <!-- hai:{"updatedAt":"2026-10-15T20:05:29.035Z"} -->
-
 ## In Progress
+
+- [~] [9] Move the workflows to action versions that run on Node.js 24.
+    - Depends on: [6], [7], [8]
+  <!-- hai:{"updatedAt":"2026-10-15T20:05:46.059Z"} -->
 
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
