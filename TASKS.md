@@ -15,13 +15,14 @@ Rules for TASKS.md usage are at the bottom of the file.
 - [5] Import the Zoho palindromes into the database.
     - Depends on: [1], [2], [3], [4]
 
-- [9] Move the workflows to action versions that run on Node.js 24.
-    - Depends on: [6], [7], [8]
-
 - [10] Get CI passing on Ubuntu 26 before `ubuntu-latest` switches on 2026-10-19.
     - Depends on: [9]
 
 ## Scheduled
+
+- [9] Move the workflows to action versions that run on Node.js 24.
+    - Depends on: [6], [7], [8]
+  <!-- hai:{"updatedAt":"2026-10-15T20:05:29.035Z"} -->
 
 ## In Progress
 
