@@ -50,9 +50,13 @@ exclusions. A frozen production install on CPython 3.11.16 and the exact Deploy
 build command, `uv run --no-sync --no-dev make build`, both passed.
 `git diff --check` passed. No application code or dependency lock changed.
 
-Remote validation is pending. After fetching origin, local main contains six
-unpublished commits, including the earlier page-download fix and tracker updates.
-Publishing task 9 would publish those commits too, so approval for that expanded
-scope was requested. Keep task 9 In Progress until Deploy, Formatting and Linting
-all pass without Node.js 20 annotations and the deployed site is checked.
-No deployment guide exists; a push to main triggers the Pages deployment.
+Remote validation is blocked. The user authorized publishing local main,
+including the six earlier unpublished commits, on 2026-10-15. The push was
+rejected by GitHub because the configured Personal Access Token lacks the
+`workflow` scope required to update `.github/workflows/deploy.yaml`. Existing
+SSH credentials also failed with `Permission denied (publickey)`. No remote
+workflow run or deployment was triggered.
+
+Keep task 9 In Progress until credentials permit the push, Deploy, Formatting
+and Linting all pass without Node.js 20 annotations, and the deployed site is
+checked. No deployment guide exists; a push to main triggers Pages deployment.
