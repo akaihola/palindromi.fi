@@ -9,6 +9,9 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## Ordered backlog
 
+- [*] Fix the unintended `<nnnnn>.bin` download when tapping the page. A page tap
+  must display the next palindrome and must not download a file.
+
 - [2] Rewrite the Zoho converter to order exports by their embedded version.
     - Depends on: [1]
 
@@ -25,10 +28,6 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## In Progress
 
-- [~] [8] Fix the failing Formatting workflow.
-    - Depends on: [6]
-  <!-- hai:{"updatedAt":"2026-10-06T20:03:28.971Z"} -->
-
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
 - [~] [4] Decide the rules for importing Zoho palindromes.
@@ -37,6 +36,10 @@ Rules for TASKS.md usage are at the bottom of the file.
   from the repo root.
 
 ## Completed / Accepted
+
+- [x] [8] Fix the failing Formatting workflow.
+    - Depends on: [6]
+  <!-- hai:{"updatedAt":"2026-10-07T04:15:04.064Z"} -->
 
 - [x] [7] Fix the failing Linting workflow.
     - Depends on: [6]
