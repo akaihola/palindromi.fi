@@ -25,10 +25,6 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## In Progress
 
-- [~] [*] Fix the unintended `<nnnnn>.bin` download when tapping the page. A page tap
-  must display the next palindrome and must not download a file.
-  <!-- hai:{"id":"simple-2b77e5d9f1b0c0a9","updatedAt":"2026-10-15T20:03:55.203Z"} -->
-
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
 - [~] [4] Decide the rules for importing Zoho palindromes.
@@ -37,6 +33,10 @@ Rules for TASKS.md usage are at the bottom of the file.
   from the repo root.
 
 ## Completed / Accepted
+
+- [ ] [*] Fix the unintended `<nnnnn>.bin` download when tapping the page. A page tap
+  must display the next palindrome and must not download a file.
+  <!-- hai:{"id":"simple-2b77e5d9f1b0c0a9","updatedAt":"2026-10-15T20:05:15.457Z"} -->
 
 - [x] [8] Fix the failing Formatting workflow.
     - Depends on: [6]
