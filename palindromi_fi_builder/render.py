@@ -11,7 +11,10 @@ from palindromi_fi_builder.database import SitePalindrome, read_database
 from palindromi_fi_builder.syncer import Syncer
 from palindromi_fi_builder.typography import add_typography
 
-PAGE_EXTENSION = ""
+# GitHub Pages serves files without an extension as ``application/octet-stream``, so
+# a tap on the full-page navigation link made browsers download ``<id>.bin`` instead
+# of showing the next palindrome. The extension makes Pages send ``text/html``.
+PAGE_EXTENSION = ".html"
 
 
 def render_palindrome_page(
