@@ -15,9 +15,6 @@ Rules for TASKS.md usage are at the bottom of the file.
 - [5] Import the Zoho palindromes into the database.
     - Depends on: [1], [2], [3], [4]
 
-- [9] Move the workflows to action versions that run on Node.js 24.
-    - Depends on: [6], [7], [8]
-
 - [10] Get CI passing on Ubuntu 26 before `ubuntu-latest` switches on 2026-10-19.
     - Depends on: [9]
 
@@ -25,9 +22,9 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## In Progress
 
-- [~] [8] Fix the failing Formatting workflow.
-    - Depends on: [6]
-  <!-- hai:{"updatedAt":"2026-10-06T20:03:28.971Z"} -->
+- [~] [9] Move the workflows to action versions that run on Node.js 24.
+    - Depends on: [6], [7], [8]
+  <!-- hai:{"updatedAt":"2026-10-15T20:05:46.059Z"} -->
 
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
@@ -37,6 +34,14 @@ Rules for TASKS.md usage are at the bottom of the file.
   from the repo root.
 
 ## Completed / Accepted
+
+- [x] [*] Fix the unintended `<nnnnn>.bin` download when tapping the page. A page tap
+  must display the next palindrome and must not download a file.
+  <!-- hai:{"id":"simple-2b77e5d9f1b0c0a9","updatedAt":"2026-10-15T20:36:52.107Z"} -->
+
+- [x] [8] Fix the failing Formatting workflow.
+    - Depends on: [6]
+  <!-- hai:{"updatedAt":"2026-10-07T04:15:04.064Z"} -->
 
 - [x] [7] Fix the failing Linting workflow.
     - Depends on: [6]
