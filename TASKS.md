@@ -35,9 +35,9 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## Completed / Accepted
 
-- [ ] [*] Fix the unintended `<nnnnn>.bin` download when tapping the page. A page tap
+- [x] [*] Fix the unintended `<nnnnn>.bin` download when tapping the page. A page tap
   must display the next palindrome and must not download a file.
-  <!-- hai:{"id":"simple-2b77e5d9f1b0c0a9","updatedAt":"2026-10-15T20:05:15.457Z"} -->
+  <!-- hai:{"id":"simple-2b77e5d9f1b0c0a9","updatedAt":"2026-10-15T20:36:52.107Z"} -->
 
 - [x] [8] Fix the failing Formatting workflow.
     - Depends on: [6]
