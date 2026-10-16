@@ -60,3 +60,23 @@ workflow run or deployment was triggered.
 Keep task 9 In Progress until credentials permit the push, Deploy, Formatting
 and Linting all pass without Node.js 20 annotations, and the deployed site is
 checked. No deployment guide exists; a push to main triggers Pages deployment.
+
+## Remote validation and completion, 2026-10-16
+
+The user pushed manually, resolving the publishing blocker above. All three
+workflows succeeded on `0aee125bd1c1a21fa46f2847694a1af1aeb539f5`:
+
+- [Formatting, run 38931186754](https://github.com/akaihola/palindromi.fi/actions/runs/38931186754).
+- [Deploy, run 38931186757](https://github.com/akaihola/palindromi.fi/actions/runs/38931186757),
+  including both build and deployment jobs.
+- [Linting, run 38931186772](https://github.com/akaihola/palindromi.fi/actions/runs/38931186772).
+
+Inspected every job's check-run annotations and all three run logs. None contains
+a Node.js 20 warning. The remaining annotations are Ubuntu 26 migration notices
+and setup-uv cache reservation collisions. Deploy also logs a punycode module
+deprecation; this is unrelated to the action runtime migration.
+
+The live homepage redirects to `https://www.palindromi.fi/` and returns HTTP 200
+with `text/html`. Its next-page link, `2N1xFx.html`, also returns HTTP 200 with
+`text/html`, and the navigation JavaScript returns HTTP 200 with
+`application/javascript`. Task 9 is complete, pending user acceptance.

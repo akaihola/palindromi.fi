@@ -22,10 +22,6 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## In Progress
 
-- [~] [9] Move the workflows to action versions that run on Node.js 24.
-    - Depends on: [6], [7], [8]
-  <!-- hai:{"updatedAt":"2026-10-15T20:05:46.059Z"} -->
-
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
 - [~] [4] Decide the rules for importing Zoho palindromes.
@@ -34,6 +30,10 @@ Rules for TASKS.md usage are at the bottom of the file.
   from the repo root.
 
 ## Completed / Accepted
+
+- [ ] [9] Move the workflows to action versions that run on Node.js 24.
+    - Depends on: [6], [7], [8]
+  <!-- hai:{"updatedAt":"2026-10-16T16:25:03.747Z"} -->
 
 - [x] [*] Fix the unintended `<nnnnn>.bin` download when tapping the page. A page tap
   must display the next palindrome and must not download a file.
