@@ -19,9 +19,6 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## In Progress
 
-- [~] [12] Gather acceptance evidence for the 4 review-queue items
-      <!-- hai:{"id":"simple-a7fd5257-eb4d-44f3-bdd3-a1101c25f55a","labels":["steward"],"createdAt":"2026-10-17T20:09:28.739Z","updatedAt":"2026-10-17T20:14:25.384Z"} -->
-
 - [~] [11] Validate Ubuntu 26 workflows and remove Ubuntu 24.04 pins.
     - Depends on: [10]
 
@@ -35,6 +32,9 @@ Rules for TASKS.md usage are at the bottom of the file.
   from the repo root.
 
 ## Completed / Accepted
+
+- [ ] [12] Gather acceptance evidence for the 4 review-queue items
+      <!-- hai:{"id":"simple-a7fd5257-eb4d-44f3-bdd3-a1101c25f55a","labels":["steward"],"createdAt":"2026-10-17T20:09:28.739Z","updatedAt":"2026-10-17T20:21:10.684Z"} -->
 
 - [ ] [*] Solve
   `Post Run astral-sh/setup-uv@v10.2.0 Failed to save: Unable to reserve cache with key setup-uv-2-x86_64-unknown-linux-gnu-ubuntu-24.04-3.11-607d7b8ed2ba5be0b3bfc7e58c92addb1438c976c37a6086996897ab76979748, another job may be creating this cache.`
