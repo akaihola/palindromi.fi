@@ -25,6 +25,8 @@ jobs:
         with:
           version: "0.12.17"
           python-version: "3.11"
+          # The pages concurrency group serializes this sole shared-cache writer.
+          save-cache: "true"
       - name: Install dependencies
         run: uv sync --frozen --no-dev
       - name: Build site

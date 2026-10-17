@@ -21,6 +21,8 @@ jobs:
        with:
          version: "0.12.17"
          python-version: "3.11"
+         # Only the serialized Deploy workflow writes the shared uv cache.
+         save-cache: "false"
      - name: Install dependencies
        run: uv sync --frozen
      - name: Check formatting of changed code
