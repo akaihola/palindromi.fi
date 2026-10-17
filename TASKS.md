@@ -36,10 +36,10 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## Completed / Accepted
 
-- [ ] [9] Move the workflows to action versions that run on Node.js 24.
+- [x] [9] Move the workflows to action versions that run on Node.js 24.
     - Depends on: [6], [7], [8]
 
-      <!-- hai:{"updatedAt":"2026-10-16T16:25:03.747Z"} -->
+  <!-- hai:{"updatedAt":"2026-10-17T07:09:32.992Z"} -->
 
 - [x] [*] Fix the unintended `<nnnnn>.bin` download when tapping the page. A page tap
       must display the next palindrome and must not download a file.
@@ -66,9 +66,9 @@ Rules for TASKS.md usage are at the bottom of the file.
 - [x] [6] Fix dependency installs in CI.
       <!-- hai:{"updatedAt":"2026-10-07T04:03:00.426Z"} -->
 
-- [ ] [3] Remove the reflowed duplicates that `3daa724` added to `INBOX.yaml`, before
+- [x] [3] Remove the reflowed duplicates that `3daa724` added to `INBOX.yaml`, before
       pushing `main`.
-      <!-- hai:{"updatedAt":"2026-10-06T16:06:17.092Z"} -->
+  <!-- hai:{"updatedAt":"2026-10-17T07:09:34.015Z"} -->
 
 - [ ] [*] Investigate the unfinished Zoho import work and record the findings in
       `docs/zoho-import.md`.
