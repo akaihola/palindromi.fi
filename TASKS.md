@@ -15,12 +15,12 @@ Rules for TASKS.md usage are at the bottom of the file.
 - [5] Import the Zoho palindromes into the database.
     - Depends on: [1], [2], [3], [4]
 
+## Scheduled
+
 - [11] Validate Ubuntu 26 workflows and remove Ubuntu 24.04 pins.
     - Depends on: [10]
 
-  <!-- hai:{"id":"simple-4053a1a4-bd08-458a-8ec2-5e3f7c40f353","createdAt":"2026-10-17T07:39:51.958Z","updatedAt":"2026-10-17T07:39:51.958Z"} -->
-
-## Scheduled
+  <!-- hai:{"id":"simple-4053a1a4-bd08-458a-8ec2-5e3f7c40f353","createdAt":"2026-10-17T07:39:51.958Z","updatedAt":"2026-10-17T07:42:38.233Z"} -->
 
 ## In Progress
 
