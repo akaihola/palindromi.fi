@@ -18,6 +18,11 @@ Rules for TASKS.md usage are at the bottom of the file.
 - [10] Get CI passing on Ubuntu 26 before `ubuntu-latest` switches on 2026-10-19.
     - Depends on: [9]
 
+- [*] Solve
+  `Post Run astral-sh/setup-uv@v10.2.0 Failed to save: Unable to reserve cache with key setup-uv-2-x86_64-unknown-linux-gnu-ubuntu-24.04-3.11-607d7b8ed2ba5be0b3bfc7e58c92addb1438c976c37a6086996897ab76979748, another job may be creating this cache.`
+  seen in in
+  [build for MR #79](https://github.com/akaihola/palindromi.fi/actions/runs/38931186757/job/117075274768)
+
 ## Scheduled
 
 ## In Progress
@@ -33,40 +38,43 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 - [ ] [9] Move the workflows to action versions that run on Node.js 24.
     - Depends on: [6], [7], [8]
-  <!-- hai:{"updatedAt":"2026-10-16T16:25:03.747Z"} -->
+
+      <!-- hai:{"updatedAt":"2026-10-16T16:25:03.747Z"} -->
 
 - [x] [*] Fix the unintended `<nnnnn>.bin` download when tapping the page. A page tap
-  must display the next palindrome and must not download a file.
-  <!-- hai:{"id":"simple-2b77e5d9f1b0c0a9","updatedAt":"2026-10-15T20:36:52.107Z"} -->
+      must display the next palindrome and must not download a file.
+      <!-- hai:{"id":"simple-2b77e5d9f1b0c0a9","updatedAt":"2026-10-15T20:36:52.107Z"} -->
 
 - [x] [8] Fix the failing Formatting workflow.
     - Depends on: [6]
-  <!-- hai:{"updatedAt":"2026-10-07T04:15:04.064Z"} -->
+
+      <!-- hai:{"updatedAt":"2026-10-07T04:15:04.064Z"} -->
 
 - [x] [7] Fix the failing Linting workflow.
     - Depends on: [6]
-  <!-- hai:{"updatedAt":"2026-10-07T04:11:55.742Z"} -->
+
+      <!-- hai:{"updatedAt":"2026-10-07T04:11:55.742Z"} -->
 
 - [x] [*] Replace `pkg_resources.resource_filename` in `render.py` with
-  `importlib.resources`. Recent setuptools no longer ships `pkg_resources`.
-  <!-- hai:{"id":"simple-68788e48c58089d7","updatedAt":"2026-10-07T04:08:32.633Z"} -->
+      `importlib.resources`. Recent setuptools no longer ships `pkg_resources`.
+      <!-- hai:{"id":"simple-68788e48c58089d7","updatedAt":"2026-10-07T04:08:32.633Z"} -->
 
 - [x] [*] Delete `lock.json` and `flake.lock`, left over from the Nix setup removed in
-  `eaa78ee`.
-  <!-- hai:{"id":"simple-cedf4f66511832e1","updatedAt":"2026-10-07T04:09:00.483Z"} -->
+      `eaa78ee`.
+      <!-- hai:{"id":"simple-cedf4f66511832e1","updatedAt":"2026-10-07T04:09:00.483Z"} -->
 
 - [x] [6] Fix dependency installs in CI.
-  <!-- hai:{"updatedAt":"2026-10-07T04:03:00.426Z"} -->
+      <!-- hai:{"updatedAt":"2026-10-07T04:03:00.426Z"} -->
 
 - [ ] [3] Remove the reflowed duplicates that `3daa724` added to `INBOX.yaml`, before
-  pushing `main`.
-  <!-- hai:{"updatedAt":"2026-10-06T16:06:17.092Z"} -->
+      pushing `main`.
+      <!-- hai:{"updatedAt":"2026-10-06T16:06:17.092Z"} -->
 
 - [ ] [*] Investigate the unfinished Zoho import work and record the findings in
-  `docs/zoho-import.md`.
+      `docs/zoho-import.md`.
 
 - [ ] [*] Ignore `zoho-history/`, `.env` and `.claude/settings.local.json`, and commit
-  `uv.lock` with `requires-python = ">=3.11"`.
+      `uv.lock` with `requires-python = ">=3.11"`.
 
 [1]: docs/tasks/1-refresh-zoho-exports.md
 [2]: docs/tasks/2-fix-zoho-converter.md
