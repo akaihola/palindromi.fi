@@ -4,13 +4,14 @@ on:
   push:
     branches:
       - main
+      - pacer-f1387035-ea93-4f1e-99b4-4a37e3892914
   pull_request:
     branches:
       - main
 
 jobs:
  darker:
-   runs-on: ubuntu-latest
+   runs-on: ubuntu-26.04
    steps:
      - uses: actions/checkout@v7
        with:
