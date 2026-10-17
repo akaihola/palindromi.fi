@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main
+      - validate-ubuntu-26-issue-11
 
 permissions:
   contents: read
@@ -16,9 +16,7 @@ concurrency:
 
 jobs:
   build:
-    # 2026-10-17: Ubuntu 26 CI validation is blocked by workflow-token scope.
-    # Keep the validated image until TASKS.md [11] verifies Ubuntu 26.
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v10.2.0
@@ -35,16 +33,3 @@ jobs:
         uses: actions/upload-pages-artifact@v5
         with:
           path: html/
-
-  deploy:
-    needs: build
-    # 2026-10-17: Ubuntu 26 CI validation is blocked by workflow-token scope.
-    # Keep the validated image until TASKS.md [11] verifies Ubuntu 26.
-    runs-on: ubuntu-24.04
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
