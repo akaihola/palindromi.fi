@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - pacer-f1387035-ea93-4f1e-99b4-4a37e3892914
 
 permissions:
   contents: read
@@ -17,7 +16,9 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-26.04
+    # 2026-10-17: Ubuntu 26 CI validation is blocked by workflow-token scope.
+    # Keep the validated image until TASKS.md [11] verifies Ubuntu 26.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v10.2.0
@@ -33,3 +34,15 @@ jobs:
         with:
           path: html/
 
+  deploy:
+    needs: build
+    # 2026-10-17: Ubuntu 26 CI validation is blocked by workflow-token scope.
+    # Keep the validated image until TASKS.md [11] verifies Ubuntu 26.
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
