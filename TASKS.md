@@ -15,6 +15,9 @@ Rules for TASKS.md usage are at the bottom of the file.
 - [5] Import the Zoho palindromes into the database.
     - Depends on: [1], [2], [3], [4]
 
+- [12] Gather acceptance evidence for the 4 review-queue items
+  <!-- hai:{"id":"simple-a7fd5257-eb4d-44f3-bdd3-a1101c25f55a","labels":["steward"],"createdAt":"2026-10-17T20:09:28.739Z","updatedAt":"2026-10-17T20:09:28.739Z"} -->
+
 ## Scheduled
 
 ## In Progress
@@ -96,9 +99,11 @@ Rules for TASKS.md usage are at the bottom of the file.
 [10]: docs/tasks/10-ubuntu-26-runner.md
 [*]: TASKS.md
 
-<!-- hai:reserved-numbers:1,2,3,4,5,6,7,8,9,10,11 -->
+<!-- hai:reserved-numbers:1,2,3,4,5,6,7,8,9,10,11,12 -->
 
 [11]: docs/tasks/11-validate-ubuntu-26-workflows-and-remove-ubuntu-24-04-pins.md
+
+[12]: docs/tasks/12-gather-acceptance-evidence-for-the-4-review-queue-items.md
 
 ## Rules
 
