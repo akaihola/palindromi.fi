@@ -17,10 +17,10 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## Scheduled
 
-- [12] Gather acceptance evidence for the 4 review-queue items
-  <!-- hai:{"id":"simple-a7fd5257-eb4d-44f3-bdd3-a1101c25f55a","labels":["steward"],"createdAt":"2026-10-17T20:09:28.739Z","updatedAt":"2026-10-17T20:13:46.368Z"} -->
-
 ## In Progress
+
+- [~] [12] Gather acceptance evidence for the 4 review-queue items
+      <!-- hai:{"id":"simple-a7fd5257-eb4d-44f3-bdd3-a1101c25f55a","labels":["steward"],"createdAt":"2026-10-17T20:09:28.739Z","updatedAt":"2026-10-17T20:14:25.384Z"} -->
 
 - [~] [11] Validate Ubuntu 26 workflows and remove Ubuntu 24.04 pins.
     - Depends on: [10]
