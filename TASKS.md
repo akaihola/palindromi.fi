@@ -20,14 +20,14 @@ Rules for TASKS.md usage are at the bottom of the file.
   seen in in
   [build for MR #79](https://github.com/akaihola/palindromi.fi/actions/runs/38931186757/job/117075274768)
 
+- [11] Validate Ubuntu 26 workflows and remove Ubuntu 24.04 pins.
+    - Depends on: [10]
+
+  <!-- hai:{"id":"simple-4053a1a4-bd08-458a-8ec2-5e3f7c40f353","createdAt":"2026-10-17T07:39:51.958Z","updatedAt":"2026-10-17T07:39:51.958Z"} -->
+
 ## Scheduled
 
 ## In Progress
-
-- [~] [10] Get CI passing on Ubuntu 26 before `ubuntu-latest` switches on 2026-10-19.
-    - Depends on: [9]
-
-      <!-- hai:{"updatedAt":"2026-10-17T07:39:03.290Z"} -->
 
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
@@ -37,6 +37,11 @@ Rules for TASKS.md usage are at the bottom of the file.
   from the repo root.
 
 ## Completed / Accepted
+
+- [ ] [10] Get CI passing on Ubuntu 26 before `ubuntu-latest` switches on 2026-10-19.
+    - Depends on: [9]
+
+      <!-- hai:{"updatedAt":"2026-10-17T07:40:14.640Z"} -->
 
 - [x] [9] Move the workflows to action versions that run on Node.js 24.
     - Depends on: [6], [7], [8]
@@ -90,7 +95,9 @@ Rules for TASKS.md usage are at the bottom of the file.
 [10]: docs/tasks/10-ubuntu-26-runner.md
 [*]: TASKS.md
 
-<!-- hai:reserved-numbers:1,2,3,4,5,6,7,8,9,10 -->
+<!-- hai:reserved-numbers:1,2,3,4,5,6,7,8,9,10,11 -->
+
+[11]: docs/tasks/11-validate-ubuntu-26-workflows-and-remove-ubuntu-24-04-pins.md
 
 ## Rules
 
