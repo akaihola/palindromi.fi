@@ -24,12 +24,6 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## In Progress
 
-- [~] [*] Solve
-  `Post Run astral-sh/setup-uv@v10.2.0 Failed to save: Unable to reserve cache with key setup-uv-2-x86_64-unknown-linux-gnu-ubuntu-24.04-3.11-607d7b8ed2ba5be0b3bfc7e58c92addb1438c976c37a6086996897ab76979748, another job may be creating this cache.`
-  seen in in
-  [build for MR #79](https://github.com/akaihola/palindromi.fi/actions/runs/38931186757/job/117075274768)
-      <!-- hai:{"id":"simple-a04a202b0d896f17","updatedAt":"2026-10-17T07:41:20.704Z"} -->
-
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
 - [~] [4] Decide the rules for importing Zoho palindromes.
@@ -38,6 +32,12 @@ Rules for TASKS.md usage are at the bottom of the file.
   from the repo root.
 
 ## Completed / Accepted
+
+- [ ] [*] Solve
+  `Post Run astral-sh/setup-uv@v10.2.0 Failed to save: Unable to reserve cache with key setup-uv-2-x86_64-unknown-linux-gnu-ubuntu-24.04-3.11-607d7b8ed2ba5be0b3bfc7e58c92addb1438c976c37a6086996897ab76979748, another job may be creating this cache.`
+  seen in in
+  [build for MR #79](https://github.com/akaihola/palindromi.fi/actions/runs/38931186757/job/117075274768)
+      <!-- hai:{"id":"simple-a04a202b0d896f17","updatedAt":"2026-10-17T07:42:15.804Z"} -->
 
 - [ ] [10] Get CI passing on Ubuntu 26 before `ubuntu-latest` switches on 2026-10-19.
     - Depends on: [9]
