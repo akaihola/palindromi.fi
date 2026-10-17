@@ -22,11 +22,12 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## Scheduled
 
-- [10] Get CI passing on Ubuntu 26 before `ubuntu-latest` switches on 2026-10-19.
-    - Depends on: [9]
-  <!-- hai:{"updatedAt":"2026-10-17T07:38:45.005Z"} -->
-
 ## In Progress
+
+- [~] [10] Get CI passing on Ubuntu 26 before `ubuntu-latest` switches on 2026-10-19.
+    - Depends on: [9]
+
+      <!-- hai:{"updatedAt":"2026-10-17T07:39:03.290Z"} -->
 
 - [~] [1] Refresh the Zoho exports before editing the note again.
 
