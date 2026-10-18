@@ -42,10 +42,10 @@ Rules for TASKS.md usage are at the bottom of the file.
   [build for MR #79](https://github.com/akaihola/palindromi.fi/actions/runs/38931186757/job/117075274768)
       <!-- hai:{"id":"simple-a04a202b0d896f17","updatedAt":"2026-10-17T07:42:15.804Z"} -->
 
-- [ ] [10] Get CI passing on Ubuntu 26 before `ubuntu-latest` switches on 2026-10-19.
+- [x] [10] Get CI passing on Ubuntu 26 before `ubuntu-latest` switches on 2026-10-19.
     - Depends on: [9]
 
-      <!-- hai:{"updatedAt":"2026-10-17T07:40:14.640Z"} -->
+      <!-- hai:{"updatedAt":"2026-10-18T09:50:49.354Z"} -->
 
 - [x] [9] Move the workflows to action versions that run on Node.js 24.
     - Depends on: [6], [7], [8]
