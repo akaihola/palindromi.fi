@@ -86,3 +86,16 @@ of Ubuntu 26 compatibility or failure. Keep issue 11 In Progress and retain
 the normal workflows' Ubuntu 24.04 pins until the three validation runs pass.
 Then restore normal triggers and the deploy job on Ubuntu 26 and verify main
 deployment before completing the issue.
+
+## Partial validation results, 2026-10-19
+
+[Linting](https://github.com/akaihola/palindromi.fi/actions/runs/39279782024)
+and [Formatting](https://github.com/akaihola/palindromi.fi/actions/runs/39279782382)
+completed successfully on commit `444e623`. Both Set up job logs report
+Ubuntu 26.04.1, image `ubuntu-26.04`, image version `20261012.163.1`.
+The runner image provisioner reports version `20261012.601`.
+
+At 16:12 UTC the build-only Deploy run remains queued. Transcrypt, rendered
+site output and main deployment are still pending validation. Keep all four
+normal Ubuntu 24.04 pins and issue 11 In Progress until the remaining required
+validation succeeds.
