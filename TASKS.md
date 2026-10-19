@@ -19,9 +19,6 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## In Progress
 
-- [~] [15] Add a short README and reconcile operating documentation
-      <!-- hai:{"id":"simple-e47ca29e-3695-4c65-9673-739113afec90","labels":["steward"],"createdAt":"2026-10-19T11:18:17.859Z","updatedAt":"2026-10-19T12:15:37.884Z"} -->
-
 - [~] [11] Validate Ubuntu 26 workflows and remove Ubuntu 24.04 pins.
     - Depends on: [10]
 
@@ -35,6 +32,9 @@ Rules for TASKS.md usage are at the bottom of the file.
   from the repo root.
 
 ## Completed / Accepted
+
+- [ ] [15] Add a short README and reconcile operating documentation
+      <!-- hai:{"id":"simple-e47ca29e-3695-4c65-9673-739113afec90","labels":["steward"],"createdAt":"2026-10-19T11:18:17.859Z","updatedAt":"2026-10-19T12:18:50.451Z"} -->
 
 - [ ] [14] Make build rerender after any site input changes
       <!-- hai:{"id":"simple-4bea8bf7-7400-4913-a060-928d90ce4d05","labels":["steward"],"createdAt":"2026-10-19T11:18:17.273Z","updatedAt":"2026-10-19T11:24:58.832Z"} -->

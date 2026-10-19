@@ -114,5 +114,6 @@ change, not a failure of the passing incremental lint check. Full mypy was not
 repeated; the review records its existing baseline errors. Draft I and the
 existing script-cleanup issue retain ownership.
 
-No push or deployment was performed. Completion requires a local merge to main
-and the tracker move to Completed / Accepted with `[ ]`, pending acceptance.
+Implementation commit `b813fc5` was merged locally to `main`. The tracker moved
+to Completed / Accepted with `[ ]`, pending acceptance. No push or deployment
+was performed.
