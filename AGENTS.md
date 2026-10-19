@@ -8,36 +8,64 @@ This is a static site generator for palindromi.fi, a Finnish palindrome collecti
 
 ## Commands
 
-### Setup
+Use the [README](README.md) for the supported Python 3.11 setup and complete
+`uv run --no-sync make build` path. Direct rendering does not compile navigation
+JavaScript. Transcrypt is known to fail on Python 3.14.
+
+### Command scopes
+
+Run these from the repository root after `uv sync --frozen --python 3.11`:
+
 ```bash
-uv sync                             # Install all dependencies (includes dev by default)
-uv sync --no-dev                    # Install only production dependencies
+uv run --no-sync make build
+uv run --no-sync python -m palindromi_fi_builder render ./database -o ./html
+uv run --no-sync python -m palindromi_fi_builder load ./database
+uv run --no-sync python -m palindromi_fi_builder format ./database/palindromes
+uv run --no-sync python -m palindromi_fi_builder format ./database/INBOX.yaml
+uv run --no-sync python -m palindromi_fi_builder.server --bind 127.0.0.1 -d ./html 8000
 ```
 
-### CLI Commands
+- `make build` compiles JavaScript as needed and always renders the curated site.
+- `render` and `load` read only `database/palindromes/*.yaml`, in sorted filename
+  and row order. Neither reads the unpublished `database/INBOX.yaml`.
+- `render` is useful after compilation, but use Make for a complete build.
+- `load` emits derived site YAML with identifiers and navigation. It drops fields
+  such as grading and series, so it is not a lossless database backup.
+- `format` rewrites the given file or the directory's immediate `*.yaml` files.
+  Its default is the curated `./database/palindromes` directory. Give the explicit
+  INBOX path to format drafts. It preserves scalar values; block chomping depends
+  on trailing newlines. It does not validate or publish entries.
+- Both local server commands serve generated output only. The README uses
+  Python's standard HTTP server; the package server also supports legacy
+  extensionless HTML pages.
+
+### Tests and lint
+
+Dev dependencies are included by default. A production-only install uses
+`uv sync --frozen --python 3.11 --no-dev`; sync again without `--no-dev` for checks.
+
 ```bash
-uv run python -m palindromi_fi_builder render ./database -o ./html  # Render site to HTML
-uv run python -m palindromi_fi_builder load ./database              # Dump database as YAML to stdout
-uv run python -m palindromi_fi_builder.server -d ./html             # Serve rendered site (port 8000)
+uv run --no-sync pytest
+uv run --no-sync pytest palindromi_fi_builder/tests/test_syncer.py
+uv run --no-sync graylint --revision origin/main... -L flake8 -L mypy -L pylint ./palindromi_fi_builder
+uv run --no-sync darker --check --diff --isort --revision origin/main... ./palindromi_fi_builder
 ```
 
-### Testing and Linting
-```bash
-uv run pytest                                    # Run all tests
-uv run pytest palindromi_fi_builder/tests/test_syncer.py  # Run single test file
-uv run flake8                                    # Lint
-uv run mypy .                                    # Type check
-```
+These lint and formatting commands match incremental CI. Full diagnostics with
+`uv run --no-sync flake8 --extend-exclude .venv` and `uv run --no-sync mypy .` have known baseline
+findings, recorded in the architecture review. Their failure does not invalidate
+the accepted incremental CI fixes. `make lint` is a legacy entry point requiring
+undeclared darglint2; review draft I owns its reconciliation.
 
-Dev dependencies (pytest, flake8, mypy, pylint, type stubs) are installed by default with `uv sync`.
+See [deployment](docs/deployment.md) for Antti's publishing workflow.
 
 ## Architecture
 
 ### Data Flow
 1. **Database** (`database/palindromes/*.yaml`): YAML files containing palindromes with text, author, translations, illustrations, and creation dates
-2. **database.py**: Reads YAML files, converts `DbPalindrome` to `SitePalindrome` format, generates Base58-encoded identifiers from SHA256 hash of text
+2. **database.py**: Reads YAML files, converts `DbPalindrome` to `SitePalindrome` format, generates Base58 identifiers from the first four bytes of the exact UTF-8 text's SHA-256 digest
 3. **render.py**: Uses Jinja2 templates to generate HTML pages, manages static assets
-4. **syncer.py**: Handles incremental file updates (only writes changed files to preserve timestamps for `gsutil rsync`)
+4. **syncer.py**: Handles incremental file updates (only writes changed files to preserve timestamps; historically used with `gsutil rsync`, now deployed through GitHub Pages artifacts)
 
 ### Key Types (database.py)
 - `DbPalindrome`: Database format with text, author, translations, illustrations, created date
@@ -56,7 +84,7 @@ Extracts palindrome content from Zoho Notebook HTML exports. Each export contain
 
 Usage:
 ```bash
-uv run python -m palindromi_fi_builder.adhoc.convert_zoho_html
+uv run --no-sync python -m palindromi_fi_builder.adhoc.convert_zoho_html
 ```
 
 Processes all `YYYY-MM-DD.html` files in the local, git-ignored `zoho-history/` directory and writes a `YYYY-MM-DD.txt` per export containing only entries not seen in earlier files.

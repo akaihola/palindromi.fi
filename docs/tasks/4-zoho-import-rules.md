@@ -26,3 +26,9 @@ decisions in this file.
   such as "Tää poni… sanat".
 - **Cleanup in Zoho.** Optionally remove the duplicated section in the note first.
   It was added on 2024-04-17/18 and pasted again with edits on 2025-05-03.
+
+## Count correction, 2026-10-19
+
+The 151-entry INBOX premise above predates task 3's duplicate cleanup. The
+current INBOX has 109 rows, all graded. This correction does not settle the
+pending import rules or change task 4's scope.

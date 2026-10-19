@@ -32,7 +32,7 @@ dev = [
 ]
 
 [project.urls]
-Home = "https://github.com/akaihola/palindromi_fi_builder"
+Home = "https://github.com/akaihola/palindromi.fi"
 
 [tool.darker]
 src = ["palindromi_fi_builder"]

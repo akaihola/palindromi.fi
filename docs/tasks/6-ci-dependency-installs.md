@@ -53,3 +53,10 @@ Merged into local main on 2026-10-06. A concurrent scheduling change in
 TASKS.md was preserved during rebase. Remote CI and deployment were not run:
 main already contained 20 unpublished commits before this task, so pushing
 would publish unrelated work as well. Completion is pending user acceptance.
+
+## Operating-documentation correction, 2026-10-19
+
+The requirements and validation notes above record this task's history. Current
+setup and checks are in the README and AGENTS.md. Workflows now use frozen uv
+installs, Python 3.11, checkout v7 and CLI Graylint/Darker. Earlier action and
+installer descriptions are superseded, not regressions in the accepted work.

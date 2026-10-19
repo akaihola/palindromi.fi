@@ -470,6 +470,52 @@ match the code. Their coverage gaps are B. The empty main-push incremental diff
 is intentional in accepted tasks 6-8, not an accidental regression to "fix".
 The lack of a PR build and tests remains significant despite that policy.
 
+### Dispositions recorded by task 15, 2026-10-19
+
+The numbered inventory above preserves the review snapshot. These resolutions
+record current instructions and ownership without changing historical outcomes.
+
+1. README and AGENTS now require Python 3.11 for the build and warn about 3.14.
+   The broader package metadata remains unchanged for pure Python helpers.
+2. README and AGENTS use Make for the complete build. Direct render is documented
+   as requiring prior compilation. CI coverage remains draft B's work.
+3. Resolved by task 14, commit `4ad7c0a`. Build is phony, always renders and
+   preserves unchanged output through Syncer. README can use `make build`.
+4. README and AGENTS explain that `load` emits derived site data, adds identifiers
+   and navigation, and drops fields such as grading and series. It is not a backup.
+   The CLI's broad "dump" wording refers to this output. Draft G remains separate.
+5. AGENTS and the new deployment guide describe Pages artifacts and retain gsutil
+   as historical motivation. Syncer's example corrections remain draft I's work.
+6. AGENTS documents the actual incremental Graylint/Darker CI commands and labels
+   full-tree findings as baseline debt. Legacy `make lint` and undeclared darglint2
+   remain draft I's work; no accepted lint task is reopened. Task 15's source-only
+   full flake8 check found the same seven package findings plus 21 in the tracked
+   root scripts. An unqualified run also scans `.venv`; AGENTS excludes it for
+   full diagnostics. The original seven-finding observation above is package scope.
+7. AGENTS avoids the universal `|-` claim and explains trailing-newline behavior.
+   The code docstrings and dumper-policy tests remain draft H's work.
+8. Added dated corrections to the Zoho investigation and task 4. INBOX has 109
+   graded rows; task 3 removed the reflowed duplicates. Earlier counts stay dated.
+9. The Zoho document now labels the unpushed warning as the October 5 snapshot.
+   Cached origin/main contains `3daa724`; this establishes no current remote
+   freshness or permission to push.
+10. Existing task 2 owns support for task 1's versioned export names. The current
+    converter accepts date-only names; no import or converter work is added here.
+11. The existing known-broken warning stays in README and AGENTS. Task 2 owns the
+    empty-div parsing, ordering and metadata fixes, including the broad docstring.
+12. The root scripts are tracked. The existing cleanup issue retains ownership;
+    this dated correction supersedes its "untracked" premise. No scripts are
+    deleted and no duplicate task is created by task 15.
+13. Added historical-context notes to completed CI tasks 6 through 9. Current
+    commands live in README, AGENTS and the workflows; original requirements stay.
+14. Added dated notes to tasks 7 and 8 pointing to task 9's successful remote-run
+    evidence. Old stop instructions are historical; accepted states stay intact.
+15. The deployment guide records the intentional Ubuntu 24.04 pins and task 11's
+    ownership. Task 10's fallback remains historical evidence, not a regression.
+16. Corrected the project Home URL to `https://github.com/akaihola/palindromi.fi`.
+17. Added `docs/deployment.md` at the path named by the tracker rules. It names
+    the main-push trigger, Antti's ownership and task 15's no-push constraint.
+
 ## Honey delete-list
 
 These are candidate cuts, not changes made during this review. Counts exclude

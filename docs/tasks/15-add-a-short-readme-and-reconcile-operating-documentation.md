@@ -78,3 +78,41 @@ use `uv run --no-sync make -B build` until A is complete.
 ## Done when
 
 The draft's acceptance holds, lint and tests pass, and the change is merged to `main` as the Rules describe. No push or deploy.
+
+## Implementation and validation, 2026-10-19
+
+Added the short README and the deployment guide referenced by tracker rules.
+AGENTS now points to the complete Make build, explains curated versus draft
+command scopes and derived `load` output, and documents incremental CI checks.
+Corrected the project Home URL. Added dated dispositions for all 17 review
+inventory items and corrections to import and completed CI notes, preserving
+original requirements, outcomes and acceptance states. Task 14 already landed,
+so the README uses `make build` without `-B`.
+
+Validation with CPython 3.11.16 and frozen dependencies:
+
+- A fresh temporary copy of tracked sources plus these documentation changes,
+  without an environment or compiled assets, passed the README's sync and build.
+  This host configures uv to use only system interpreters, so the clean-copy
+  check set `UV_PYTHON_PREFERENCE=managed` to discover its installed Python 3.11.
+  No repository setup configuration was changed.
+- Output contained 48 HTML pages, navigation JavaScript and five illustrations.
+  Every local HTML link and asset reference resolved. The exact README server
+  command returned HTTP 200 for the homepage, JavaScript and an illustration.
+- All 39 pytest tests passed. Incremental Graylint with flake8, mypy and pylint,
+  and Darker's formatting check passed against `origin/main...`.
+- CLI help confirmed render, load, format and both HTTP servers' arguments.
+  INBOX count was verified as 109 rows, all graded.
+- `git diff --check` passed. No Python implementation or dependency lock changed.
+
+Full-tree flake8 with `.venv` excluded still reports 28 existing findings: seven
+inside the package and 21 in the two tracked root investigation scripts. The
+review's seven-finding count covered the package. An unqualified invocation also
+scans the local virtualenv because the existing exclude setting replaces default
+exclusions; that run was stopped. These are baseline findings outside this docs
+change, not a failure of the passing incremental lint check. Full mypy was not
+repeated; the review records its existing baseline errors. Draft I and the
+existing script-cleanup issue retain ownership.
+
+No push or deployment was performed. Completion requires a local merge to main
+and the tracker move to Completed / Accepted with `[ ]`, pending acceptance.

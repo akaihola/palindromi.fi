@@ -71,3 +71,15 @@ Remote validation remains blocked for the same reason as task 7: local main
 already carries unpublished commits, and pushing would publish unrelated work
 and trigger deployment. Keep task 8 In Progress until the Formatting workflow
 passes on a push to main, then move it to Completed / Accepted with `[ ]`.
+
+## Operating-documentation correction, 2026-10-19
+
+The requirements and validation notes above record this task's history. Current
+setup and checks are in the README and AGENTS.md. Workflows now use frozen uv
+installs, Python 3.11, checkout v7 and CLI Graylint/Darker. Earlier action and
+installer descriptions are superseded, not regressions in the accepted work.
+
+The earlier instruction to keep this task In Progress until remote success is
+superseded by the successful runs in
+[task 9's completion evidence](9-node24-actions.md#remote-validation-and-completion-2026-10-16).
+The accepted tracker state remains valid.

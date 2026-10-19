@@ -10,7 +10,25 @@ git-ignored: 870 MB, and the pages contain an email address and a Zoho user id.
 Investigation scripts and full result tables from 2026-10-05 are in
 `zoho-history/investigation-2026-10-05/`. `DIGEST.txt` there summarises them.
 
-## Where things stand
+## Correction, 2026-10-19
+
+The October 5 findings below are an investigation snapshot. Task 3 removed the
+reflowed duplicates in `bcc051c`; INBOX now contains 109 rows, all graded.
+The old 37-duplicate and unpushed-seven-commit statements are historical.
+Locally cached `origin/main` already contains `3daa724`; this says nothing about
+current remote freshness and grants no permission to push.
+
+Only `database/palindromes/*.yaml` feeds `render` and `load`; INBOX is unpublished.
+Page identifiers encode the first four bytes of the exact UTF-8 text's SHA-256
+digest in Base58, including newlines. `load` adds site navigation and omits fields
+such as grading and series. Keep the source YAML for a lossless backup.
+
+Tasks 1, 2, 4 and 5 still own the remaining import decisions and work. Task 2 must
+add support for task 1's `YYYY-MM-DD-vNNNN.html` names; the current converter only
+accepts date-only names. Its output remains unsafe to import. The plan below
+predates task 3's completion and the separate CI work now recorded in task 6.
+
+## Where things stood on 2026-10-05
 
 - Almost nothing from the note is in the database yet. The newest export has
   1,809 distinct entries. Only two of them are already in the database:

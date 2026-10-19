@@ -80,3 +80,10 @@ The live homepage redirects to `https://www.palindromi.fi/` and returns HTTP 200
 with `text/html`. Its next-page link, `2N1xFx.html`, also returns HTTP 200 with
 `text/html`, and the navigation JavaScript returns HTTP 200 with
 `application/javascript`. Task 9 is complete, pending user acceptance.
+
+## Operating-documentation correction, 2026-10-19
+
+The requirements and validation notes above record this task's history. Current
+setup and checks are in the README and AGENTS.md. Workflows now use frozen uv
+installs, Python 3.11, checkout v7 and CLI Graylint/Darker. Earlier action and
+installer descriptions are superseded, not regressions in the accepted work.
