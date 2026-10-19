@@ -99,3 +99,14 @@ At 16:12 UTC the build-only Deploy run remains queued. Transcrypt, rendered
 site output and main deployment are still pending validation. Keep all four
 normal Ubuntu 24.04 pins and issue 11 In Progress until the remaining required
 validation succeeds.
+
+## Monitoring cutoff, 2026-10-19
+
+At 16:16 UTC the [build-only Deploy run](https://github.com/akaihola/palindromi.fi/actions/runs/39279782145)
+remains queued, beyond the requested 16:15 UTC monitoring cutoff. The temporary
+two-minute monitoring schedule has been disabled. The existing run was left
+intact; no duplicate run was started. Linting and Formatting passed, but
+Transcrypt and site rendering on Ubuntu 26 remain unverified until this build
+finishes. No normal runner pins were changed and no main deployment was
+verified. Issue 11 remains In Progress. Resume by inspecting the existing build
+run, then continue the remaining validation and rollout requirements.
