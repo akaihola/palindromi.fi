@@ -17,10 +17,10 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## Scheduled
 
-- [13] Review palindromi.fi's architecture and docs, and draft the fixes
-  <!-- hai:{"id":"simple-c8564ae1-1f95-42f2-a18a-bd43861ddb6e","labels":["steward"],"createdAt":"2026-10-19T08:13:11.863Z","updatedAt":"2026-10-19T08:27:44.629Z"} -->
-
 ## In Progress
+
+- [~] [13] Review palindromi.fi's architecture and docs, and draft the fixes
+      <!-- hai:{"id":"simple-c8564ae1-1f95-42f2-a18a-bd43861ddb6e","labels":["steward"],"createdAt":"2026-10-19T08:13:11.863Z","updatedAt":"2026-10-19T08:28:03.601Z"} -->
 
 - [~] [11] Validate Ubuntu 26 workflows and remove Ubuntu 24.04 pins.
     - Depends on: [10]
