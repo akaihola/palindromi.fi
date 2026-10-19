@@ -33,14 +33,14 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## Completed / Accepted
 
-- [ ] [15] Add a short README and reconcile operating documentation
-      <!-- hai:{"id":"simple-e47ca29e-3695-4c65-9673-739113afec90","labels":["steward"],"createdAt":"2026-10-19T11:18:17.859Z","updatedAt":"2026-10-19T12:18:50.451Z"} -->
+- [x] [15] Add a short README and reconcile operating documentation
+      <!-- hai:{"id":"simple-e47ca29e-3695-4c65-9673-739113afec90","labels":["steward"],"createdAt":"2026-10-19T11:18:17.859Z","updatedAt":"2026-10-19T14:05:43.503Z"} -->
 
-- [ ] [14] Make build rerender after any site input changes
-      <!-- hai:{"id":"simple-4bea8bf7-7400-4913-a060-928d90ce4d05","labels":["steward"],"createdAt":"2026-10-19T11:18:17.273Z","updatedAt":"2026-10-19T11:24:58.832Z"} -->
+- [x] [14] Make build rerender after any site input changes
+      <!-- hai:{"id":"simple-4bea8bf7-7400-4913-a060-928d90ce4d05","labels":["steward"],"createdAt":"2026-10-19T11:18:17.273Z","updatedAt":"2026-10-19T14:05:43.787Z"} -->
 
-- [ ] [13] Review palindromi.fi's architecture and docs, and draft the fixes
-      <!-- hai:{"id":"simple-c8564ae1-1f95-42f2-a18a-bd43861ddb6e","labels":["steward"],"createdAt":"2026-10-19T08:13:11.863Z","updatedAt":"2026-10-19T08:31:54.988Z"} -->
+- [x] [13] Review palindromi.fi's architecture and docs, and draft the fixes
+      <!-- hai:{"id":"simple-c8564ae1-1f95-42f2-a18a-bd43861ddb6e","labels":["steward"],"createdAt":"2026-10-19T08:13:11.863Z","updatedAt":"2026-10-19T14:05:44.077Z"} -->
 
 - [ ] [12] Gather acceptance evidence for the 4 review-queue items
       <!-- hai:{"id":"simple-a7fd5257-eb4d-44f3-bdd3-a1101c25f55a","labels":["steward"],"createdAt":"2026-10-17T20:09:28.739Z","updatedAt":"2026-10-17T20:21:10.684Z"} -->
