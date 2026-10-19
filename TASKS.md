@@ -15,10 +15,10 @@ Rules for TASKS.md usage are at the bottom of the file.
 - [5] Import the Zoho palindromes into the database.
     - Depends on: [1], [2], [3], [4]
 
-- [15] Add a short README and reconcile operating documentation
-  <!-- hai:{"id":"simple-e47ca29e-3695-4c65-9673-739113afec90","labels":["steward"],"createdAt":"2026-10-19T11:18:17.859Z","updatedAt":"2026-10-19T11:18:17.859Z"} -->
-
 ## Scheduled
+
+- [15] Add a short README and reconcile operating documentation
+  <!-- hai:{"id":"simple-e47ca29e-3695-4c65-9673-739113afec90","labels":["steward"],"createdAt":"2026-10-19T11:18:17.859Z","updatedAt":"2026-10-19T12:15:26.185Z"} -->
 
 ## In Progress
 
