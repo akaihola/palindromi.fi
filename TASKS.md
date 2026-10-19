@@ -17,10 +17,10 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## Scheduled
 
-- [15] Add a short README and reconcile operating documentation
-  <!-- hai:{"id":"simple-e47ca29e-3695-4c65-9673-739113afec90","labels":["steward"],"createdAt":"2026-10-19T11:18:17.859Z","updatedAt":"2026-10-19T12:15:26.185Z"} -->
-
 ## In Progress
+
+- [~] [15] Add a short README and reconcile operating documentation
+      <!-- hai:{"id":"simple-e47ca29e-3695-4c65-9673-739113afec90","labels":["steward"],"createdAt":"2026-10-19T11:18:17.859Z","updatedAt":"2026-10-19T12:15:37.884Z"} -->
 
 - [~] [11] Validate Ubuntu 26 workflows and remove Ubuntu 24.04 pins.
     - Depends on: [10]
