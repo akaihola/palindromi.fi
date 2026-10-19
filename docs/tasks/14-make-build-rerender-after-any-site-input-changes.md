@@ -33,3 +33,32 @@ What changes: Contributors can trust local builds after content edits.
 ## Done when
 
 The draft's acceptance holds, lint and tests pass, and the change is merged to `main` as the Rules describe. No push or deploy.
+
+## Result, 2026-10-19
+
+`build` now depends only on the compiled JavaScript and always runs
+`python -m palindromi_fi_builder render`; Syncer keeps unchanged files untouched.
+`all` builds without cleaning. `all`, `build`, `clean` and `lint` are phony. The
+Transcrypt rule still rebuilds only when `static/palindrome.py` changes.
+
+Validation in a throwaway copy of the worktree with a CPython 3.11.15 venv, using
+`uv run --no-sync --no-dev make`:
+
+- Plain `make -n` lists the render and no `rm`. A first plain `make` wrote 64
+  files (48 top-level pages). A second plain `make` and a `make build` changed
+  no file's mtime or content.
+- Editing a translation in `02-additional.yaml` changed one page. Appending to
+  `main.css` changed only `static/main.css`. Appending bytes to `neito.jpg`
+  changed only its `static/*.jpg` copy. Adding a comment to `palindrome.html`
+  changed all 48 pages and nothing else. No unchanged file was rewritten.
+- Appending a new entry to `99-illustrated.yaml` added its page and updated
+  `index.html` and the pages of its two neighbours, both of which link to it.
+  Removing the entry deleted the page and restored those three files to their
+  earlier content, with no remaining links to it.
+- The old Makefile, run against the same copy, printed "Nothing to be done for
+  'build'" after touching the YAML, CSS, template and illustration. The new one
+  renders.
+- `make clean` still empties `html/` and removes `static/__target__`.
+- `uv run pytest`: 39 passed. `graylint --revision main... -L flake8 -L mypy -L
+  pylint ./palindromi_fi_builder` (the CI lint gate) exits 0. No Python file
+  changed, so whole-tree flake8 and mypy failures are the same as on `main`.
