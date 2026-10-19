@@ -68,3 +68,21 @@ No remote validation branch or Actions runs were created. Ubuntu 26 runner
 image versions, Transcrypt, site rendering and deployment remain unverified.
 Issue 11 stays In Progress and all four Ubuntu 24.04 pins remain. The token
 used for publishing still needs workflow permission before validation can resume.
+
+## Manual publishing succeeded, 2026-10-19
+
+Antti manually pushed `validate-ubuntu-26-issue-11-retry` at `444e623`.
+The remote branch is confirmed. Workflow publishing is no longer blocking
+this validation candidate. GitHub created these runs:
+
+- [Formatting](https://github.com/akaihola/palindromi.fi/actions/runs/39279782382)
+- [Linting](https://github.com/akaihola/palindromi.fi/actions/runs/39279782024)
+- [Deploy, build only](https://github.com/akaihola/palindromi.fi/actions/runs/39279782145)
+
+As of 15:43 UTC, all three runs remain queued with no executed steps or
+assigned runner image versions. Earlier Ubuntu 24.04 main jobs are also
+queued without assigned runners. This is pending validation, not evidence
+of Ubuntu 26 compatibility or failure. Keep issue 11 In Progress and retain
+the normal workflows' Ubuntu 24.04 pins until the three validation runs pass.
+Then restore normal triggers and the deploy job on Ubuntu 26 and verify main
+deployment before completing the issue.
