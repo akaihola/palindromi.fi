@@ -22,9 +22,6 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## In Progress
 
-- [~] [14] Make build rerender after any site input changes
-      <!-- hai:{"id":"simple-4bea8bf7-7400-4913-a060-928d90ce4d05","labels":["steward"],"createdAt":"2026-10-19T11:18:17.273Z","updatedAt":"2026-10-19T11:19:46.591Z"} -->
-
 - [~] [11] Validate Ubuntu 26 workflows and remove Ubuntu 24.04 pins.
     - Depends on: [10]
 
@@ -38,6 +35,9 @@ Rules for TASKS.md usage are at the bottom of the file.
   from the repo root.
 
 ## Completed / Accepted
+
+- [ ] [14] Make build rerender after any site input changes
+      <!-- hai:{"id":"simple-4bea8bf7-7400-4913-a060-928d90ce4d05","labels":["steward"],"createdAt":"2026-10-19T11:18:17.273Z","updatedAt":"2026-10-19T11:24:58.832Z"} -->
 
 - [ ] [13] Review palindromi.fi's architecture and docs, and draft the fixes
       <!-- hai:{"id":"simple-c8564ae1-1f95-42f2-a18a-bd43861ddb6e","labels":["steward"],"createdAt":"2026-10-19T08:13:11.863Z","updatedAt":"2026-10-19T08:31:54.988Z"} -->
