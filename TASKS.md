@@ -15,6 +15,12 @@ Rules for TASKS.md usage are at the bottom of the file.
 - [5] Import the Zoho palindromes into the database.
     - Depends on: [1], [2], [3], [4]
 
+- [14] Make build rerender after any site input changes
+  <!-- hai:{"id":"simple-4bea8bf7-7400-4913-a060-928d90ce4d05","labels":["steward"],"createdAt":"2026-10-19T11:18:17.273Z","updatedAt":"2026-10-19T11:18:17.273Z"} -->
+
+- [15] Add a short README and reconcile operating documentation
+  <!-- hai:{"id":"simple-e47ca29e-3695-4c65-9673-739113afec90","labels":["steward"],"createdAt":"2026-10-19T11:18:17.859Z","updatedAt":"2026-10-19T11:18:17.859Z"} -->
+
 ## Scheduled
 
 ## In Progress
@@ -102,13 +108,17 @@ Rules for TASKS.md usage are at the bottom of the file.
 [10]: docs/tasks/10-ubuntu-26-runner.md
 [*]: TASKS.md
 
-<!-- hai:reserved-numbers:1,2,3,4,5,6,7,8,9,10,11,12,13 -->
+<!-- hai:reserved-numbers:1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 -->
 
 [11]: docs/tasks/11-validate-ubuntu-26-workflows-and-remove-ubuntu-24-04-pins.md
 
 [12]: docs/tasks/12-gather-acceptance-evidence-for-the-4-review-queue-items.md
 
 [13]: docs/tasks/13-review-palindromi-fi-s-architecture-and-docs-and-draft-the-fixes.md
+
+[14]: docs/tasks/14-make-build-rerender-after-any-site-input-changes.md
+
+[15]: docs/tasks/15-add-a-short-readme-and-reconcile-operating-documentation.md
 
 ## Rules
 
