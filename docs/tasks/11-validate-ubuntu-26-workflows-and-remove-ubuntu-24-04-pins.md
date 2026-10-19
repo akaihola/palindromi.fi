@@ -48,3 +48,23 @@ with credentials permitted to publish workflow files, run the retained
 validation branch, then remove the fallback pins only after all three runs
 pass. Record each run URL and its Set up job image version, restore the normal
 triggers and deploy job, and verify deployment on main before completion.
+
+## Validation retry, 2026-10-19
+
+Rebased the validation candidate onto current main, `edca600`, and prepared
+`validate-ubuntu-26-issue-11-retry` at `444e623`. The branch targets Ubuntu 26
+for Formatting, Linting and Deploy's build job, omits the deploy job, and
+preserves Python 3.11 and frozen installs. `git diff --check main` passed.
+
+Both the configured Git credential helper and an explicit retry using
+`gh auth git-credential` were rejected by GitHub with the same error:
+
+```text
+refusing to allow a Personal Access Token to create or update workflow
+`.github/workflows/deploy.yaml` without `workflow` scope
+```
+
+No remote validation branch or Actions runs were created. Ubuntu 26 runner
+image versions, Transcrypt, site rendering and deployment remain unverified.
+Issue 11 stays In Progress and all four Ubuntu 24.04 pins remain. The token
+used for publishing still needs workflow permission before validation can resume.
