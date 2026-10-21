@@ -30,11 +30,11 @@ Rules for TASKS.md usage are at the bottom of the file.
 
 ## Completed / Accepted
 
-- [ ] [*] Delete the untracked `analyze_zoho_html.py` and
+- [x] [*] Delete the untracked `analyze_zoho_html.py` and
       `extract_zoho_revisions.py` from the repo root. Obsolete: Antti committed
       both scripts in `454fc17` on 2026-10-14 (B2, board clean-up, approved by
       Antti 2026-10-19).
-      <!-- hai:{"id":"simple-87dd7661e7632a2b","updatedAt":"2026-10-19T15:29:03.024Z"} -->
+      <!-- hai:{"id":"simple-87dd7661e7632a2b","updatedAt":"2026-10-21T05:29:48.764Z"} -->
 
 - [x] [15] Add a short README and reconcile operating documentation
       <!-- hai:{"id":"simple-e47ca29e-3695-4c65-9673-739113afec90","labels":["steward"],"createdAt":"2026-10-19T11:18:17.859Z","updatedAt":"2026-10-19T14:05:43.503Z"} -->
@@ -96,8 +96,9 @@ Rules for TASKS.md usage are at the bottom of the file.
 - [ ] [*] Investigate the unfinished Zoho import work and record the findings in
       `docs/zoho-import.md`.
 
-- [ ] [*] Ignore `zoho-history/`, `.env` and `.claude/settings.local.json`, and commit
+- [x] [*] Ignore `zoho-history/`, `.env` and `.claude/settings.local.json`, and commit
       `uv.lock` with `requires-python = ">=3.11"`.
+      <!-- hai:{"id":"simple-537e971dbd4914ab","updatedAt":"2026-10-21T05:29:51.074Z"} -->
 
 [1]: docs/tasks/1-refresh-zoho-exports.md
 [2]: docs/tasks/2-fix-zoho-converter.md
