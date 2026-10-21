@@ -110,3 +110,44 @@ Transcrypt and site rendering on Ubuntu 26 remain unverified until this build
 finishes. No normal runner pins were changed and no main deployment was
 verified. Issue 11 remains In Progress. Resume by inspecting the existing build
 run, then continue the remaining validation and rollout requirements.
+
+## Validation passed and rollout prepared, 2026-10-21
+
+The existing [build-only Deploy run][ubuntu26-build] is now confirmed successful,
+alongside [Formatting][ubuntu26-format] and [Linting][ubuntu26-lint], all at
+commit `444e623`. No run was retried. All three used Ubuntu 26.04.1, image
+`ubuntu-26.04`, image version `20261012.163.1`. The build reports runner
+`2.337.0` and image provisioner `20261012.601`.
+
+The build log confirms CPython 3.11.16 and Transcrypt 3.9.4:
+`transcrypt -b -m -n` completed with `Ready`, followed by the site renderer.
+The Pages artifact upload succeeded, artifact ID `12202377027`, 534510 bytes.
+This verifies compilation, rendering and artifact production on Ubuntu 26.
+
+The [Deploy workflow][deploy-workflow], [Formatting workflow][format-workflow]
+and [Linting workflow][lint-workflow] now use Ubuntu 26.04 for all four jobs.
+Removed the dated fallback comments. Normal main/PR triggers, the deploy job,
+Python 3.11, frozen installs, cache settings and concurrency are preserved.
+Updated the [deployment instructions][deployment-guide].
+
+Local validation with Python 3.11.16 passed all 39 tests and the complete
+`uv run --no-sync make build`, including Transcrypt compilation. Parsed YAML
+comparison against main verified that runner labels are the only semantic
+workflow changes. Generated index HTML and navigation JavaScript exist.
+`git diff --check` passed. Commands ran sequentially under the requested
+memory/swap limits.
+
+Publishing belongs to Antti; no push was attempted. The rollout is prepared
+for local merge to main. After Antti pushes main, verify the new Deploy run,
+record its URL and both jobs' actual image versions, and only then move this
+issue to Completed / Accepted with an unchecked acceptance box.
+Issue 11 remains In Progress because main deployment on Ubuntu 26 is still
+an unmet completion requirement.
+
+[ubuntu26-build]: https://github.com/akaihola/palindromi.fi/actions/runs/39279782145
+[ubuntu26-format]: https://github.com/akaihola/palindromi.fi/actions/runs/39279782382
+[ubuntu26-lint]: https://github.com/akaihola/palindromi.fi/actions/runs/39279782024
+[deploy-workflow]: ../../.github/workflows/deploy.yaml
+[format-workflow]: ../../.github/workflows/formatting.yaml
+[lint-workflow]: ../../.github/workflows/linting.yaml
+[deployment-guide]: ../deployment.md
