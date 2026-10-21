@@ -45,8 +45,8 @@ Rules for TASKS.md usage are at the bottom of the file.
 - [x] [13] Review palindromi.fi's architecture and docs, and draft the fixes
       <!-- hai:{"id":"simple-c8564ae1-1f95-42f2-a18a-bd43861ddb6e","labels":["steward"],"createdAt":"2026-10-19T08:13:11.863Z","updatedAt":"2026-10-19T14:05:44.077Z"} -->
 
-- [ ] [12] Gather acceptance evidence for the 4 review-queue items
-      <!-- hai:{"id":"simple-a7fd5257-eb4d-44f3-bdd3-a1101c25f55a","labels":["steward"],"createdAt":"2026-10-17T20:09:28.739Z","updatedAt":"2026-10-17T20:21:10.684Z"} -->
+- [x] [12] Gather acceptance evidence for the 4 review-queue items
+      <!-- hai:{"id":"simple-a7fd5257-eb4d-44f3-bdd3-a1101c25f55a","labels":["steward"],"createdAt":"2026-10-17T20:09:28.739Z","updatedAt":"2026-10-21T17:11:43.870Z"} -->
 
 - [ ] [*] Solve
   `Post Run astral-sh/setup-uv@v10.2.0 Failed to save: Unable to reserve cache with key setup-uv-2-x86_64-unknown-linux-gnu-ubuntu-24.04-3.11-607d7b8ed2ba5be0b3bfc7e58c92addb1438c976c37a6086996897ab76979748, another job may be creating this cache.`
@@ -93,8 +93,9 @@ Rules for TASKS.md usage are at the bottom of the file.
       pushing `main`.
   <!-- hai:{"updatedAt":"2026-10-17T07:09:34.015Z"} -->
 
-- [ ] [*] Investigate the unfinished Zoho import work and record the findings in
+- [x] [*] Investigate the unfinished Zoho import work and record the findings in
       `docs/zoho-import.md`.
+      <!-- hai:{"id":"simple-0b9d62ec27a7861d","updatedAt":"2026-10-21T17:11:45.369Z"} -->
 
 - [x] [*] Ignore `zoho-history/`, `.env` and `.claude/settings.local.json`, and commit
       `uv.lock` with `requires-python = ">=3.11"`.
