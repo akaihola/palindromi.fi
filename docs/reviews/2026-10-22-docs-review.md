@@ -101,7 +101,9 @@ Each entry names the implementation that the revised text describes.
   export-time live content, empty-br versus empty-div handling, first-match
   extraction, filename ordering, same-export duplicates and output-file deletion.
   Matches `ContentExtractor`, `extract_from_main_html()` and `main()`; makes no
-  claim that the already-owned converter rewrite has landed.
+  claim that the already-owned converter rewrite has landed. The owner approved
+  swapping its two existing standard-library imports as the sole text-only scope
+  exception, so the required Darker check also passes.
 - **[Public-note downloader]:** `parse_block()` now documents the first passing
   prefix, optional remainder and actual `NoPalindromeFound` exception. Its
   exception-class docstring uses the same prefix condition. API wording matches
@@ -129,13 +131,15 @@ suite passed 11. Required incremental Graylint, Darker and the complete build
 passed. After text edits, both suites, Graylint and the build passed again.
 The 64 generated files, including 48 HTML pages, have identical SHA-256 hashes.
 Executable ASTs for all 11 edited Python files match baseline after stripping
-only docstrings; tests, configuration and database content are unchanged.
+docstrings and accounting for the exact owner-approved two-import swap. Tests,
+configuration and database content are unchanged.
 
-Darker currently reports one existing import-order defect in the HTML converter.
-Its installed `apply_isort()` uses the first-to-last edited-line range, so edits
-to docstrings before and after the imports expose that otherwise untouched block.
-The text-only scope forbids the requested two-import swap; an explicit scope
-question is pending. Final formatting approval and merge are not yet complete.
+Darker initially exposed an existing import-order defect in the HTML converter
+because its `apply_isort()` uses the first-to-last edited-line range. On
+October 22, the owner approved swapping the two existing standard-library imports
+as the sole text-only scope exception. After that swap, the full 39-test suite,
+11-test Syncer subset, required Graylint and Darker commands, build and executable
+comparison all passed. No formatter suppression or configuration change was made.
 
 An automatic edit hook also reported existing Ruff/ty diagnostics in unchanged
 imports, annotations and executable statements. These are outside the repository's
@@ -205,14 +209,6 @@ the steward can extend their scope instead of creating duplicates.
   downloader remains limited, or traverse actual parents with nested fixtures if
   it is reused. Do not use it as the historical-export importer. Multi-line
   palindrome/translation choices remain with the [import rules].
-
-- **D6 — Reconcile formatting with text-only edits.** Required Darker exposes an
-  existing import-order defect when converter documentation spans its imports.
-  The candidate is otherwise text-only and the executable AST is unchanged.
-
-  **Recommendation:** permit the isolated standard-library import reorder, then
-  rerun required checks, or retain this as a merge blocker under strict text-only
-  scope. No formatter suppression or configuration change has been introduced.
 
 [task record]: ../tasks/16-check-palindromi-fi-s-documents-docstrings-and-comments-against-curren.md
 [task descriptions]: ../tasks/

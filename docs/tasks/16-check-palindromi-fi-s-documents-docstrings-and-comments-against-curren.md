@@ -27,8 +27,9 @@ Tracker: [the palindromi.fi tracker](../../TASKS.md).
 The [documentation review] inventories all five original in-scope Markdown
 files, all 20 Python sources, source/configuration comments, and every corrected
 file with its matching code. Added a [development guide] to centralize command
-scopes, data contracts and required checks. Tests, executable statements,
-configuration and database content are unchanged.
+scopes, data contracts and required checks. Tests, configuration and database
+content are unchanged. The only executable-source change is the owner-approved
+reordering of two existing standard-library imports.
 
 The canonical start move was committed on main as `c82d6fb`, then this worktree
 was rebased onto it. Baseline `origin/main` was the cached `edca600`; no fetch,
@@ -42,10 +43,10 @@ reviews are unchanged; this appendix records the required evidence only.
 | `uv run --no-sync pytest` | 39 passed | 39 passed, final rerun also passed |
 | `uv run --no-sync pytest palindromi_fi_builder/tests/test_syncer.py` | 11 passed | 11 passed |
 | `uv run --no-sync graylint --revision origin/main... -L flake8 -L mypy -L pylint ./palindromi_fi_builder` | exit 0 | exit 0, final rerun also passed |
-| `uv run --no-sync darker --check --diff --isort --revision origin/main... ./palindromi_fi_builder` | exit 0 | exit 1: existing converter import order |
+| `uv run --no-sync darker --check --diff --isort --revision origin/main... ./palindromi_fi_builder` | exit 0 | exit 0 after the approved import-order exception |
 | `uv run --no-sync make build` | exit 0; compiled JS and rendered | exit 0; all 64 output hashes identical, including 48 HTML pages |
-| Executable AST comparison excluding docstrings | baseline recorded | identical for all 11 edited Python files |
-| Relative file/heading links | not applicable | 109 checked; 10 private-export targets unavailable, explicitly historical |
+| Executable AST comparison excluding docstrings | baseline recorded | identical for all 11 files after accounting for the exact approved import swap |
+| Relative file/heading links | not applicable | 113 checked; 10 private-export targets unavailable, explicitly historical |
 | `git diff --check` | clean | passed |
 
 Frozen dependencies use CPython 3.11.16. Setup first failed because the host
@@ -69,28 +70,26 @@ Syncer repeated-write/copy limitations, and nested-break failure in the legacy
 API helper. Current curated and INBOX text/translation values contain no CR.
 See the review's draft issues for proposed follow-ups; none were filed.
 
-### Pending scope decision and handoff
+### Approved scope exception, 2026-10-22
 
-The required Darker check wants to swap `from html.parser import HTMLParser`
-and `from pathlib import Path` in the [HTML converter]. They were already out
-of order on main. Darker's installed `apply_isort()` considers the span from
-the first to last edited line, so docstring edits on both sides now expose the
-unchanged import block. The task's text-only constraint forbids making that
-code edit without an exception. No suppression or formatter configuration
-change was made.
+The required Darker check initially requested a swap of
+`from html.parser import HTMLParser` and `from pathlib import Path` in the
+[HTML converter]. Darker's installed `apply_isort()` considers the span from
+the first to last edited line, so docstring edits on both sides exposed the
+existing unsorted import block. No suppression or configuration change was made.
 
-Asked the owner whether to allow that isolated, behavior-neutral import reorder
-or keep the text-only scope and record the formatting blocker. No answer has
-arrived yet. The candidate is committed for review; it has not been merged,
-and the issue remains In Progress. Unmet acceptance: required formatting pass,
-review present on main, and completion transition. The final tests and build
-already match main; the broader draft issues are steward-owned follow-ups.
+The owner answered “Allow the import-order-only exception.” Swapped exactly
+those two existing standard-library imports; the converter otherwise matches
+the reviewed candidate in `6e39ded` byte for byte. Reran the full suite (39
+passed), focused Syncer suite (11 passed), required Graylint and Darker commands,
+and complete build: all passed. After allowing only that swap, the executable
+AST comparison still matches baseline, and all 64 generated file hashes remain
+identical. All required checks now match the main baseline's successful results.
 
-If the exception is allowed, the agent should swap only those two import lines,
-rerun the required checks, verify that all other executable code is unchanged,
-update this record and the review, rebase/merge locally, and run the specified
-Hai completion move with unchecked acceptance. Keep the branch and worktree.
-If text-only scope is retained, leave the merge blocked for a scope decision.
+The review's formatting draft was removed because it is resolved. The five
+remaining draft issues are steward-owned follow-ups; none were filed. The
+implementation is ready for local merge and the specified unchecked Hai
+completion transition; their outcome will be recorded below.
 
 ### Guarded command memory record
 
@@ -124,6 +123,13 @@ are seconds. Output is deliberately excluded from this memory record.
 | final-graylint | `uv run --no-sync graylint --revision origin/main... -L flake8 -L mypy -L pylint ./palindromi_fi_builder` | started at once | 0.0 | 2138.9 → 2137.9 | 2300.4 / +16.5 / 16.5 | 57.2 | exit 0 |
 | final-equivalence | `.venv/bin/python /tmp/palindromi-docs-review-20261022/verify.py` | started at once | 0.0 | 2137.3 → 2137.0 | 2316.9 / -0.2 / 0.0 | 1.0 | exit 0 |
 | document-links-final | `python3 /tmp/palindromi-docs-review-20261022/check-docs.py` | started at once | 0.0 | 2200.8 → 2200.7 | 2316.6 / +0.0 / 0.0 | 0.5 | exit 0 |
+| approved-tests | `uv run --no-sync pytest` | started at once | 0.0 | 2338.2 → 2326.5 | 2409.6 / +0.0 / 0.0 | 1.0 | exit 0 |
+| approved-syncer | `uv run --no-sync pytest palindromi_fi_builder/tests/test_syncer.py` | started at once | 0.0 | 2324.6 → 2240.2 | 2409.6 / +0.0 / 0.0 | 1.0 | exit 0 |
+| approved-graylint | `uv run --no-sync graylint --revision origin/main... -L flake8 -L mypy -L pylint ./palindromi_fi_builder` | started at once | 0.0 | 2244.2 → 2457.8 | 2409.6 / +36.0 / 36.2 | 35.1 | exit 0 |
+| approved-darker | `uv run --no-sync darker --check --diff --isort --revision origin/main... ./palindromi_fi_builder` | started at once | 0.0 | 2462.0 → 2353.3 | 2445.6 / -0.2 / 0.0 | 1.5 | exit 0 |
+| approved-build | `uv run --no-sync make build` | started at once | 0.0 | 2355.0 → 2336.9 | 2445.3 / +0.0 / 0.0 | 1.0 | exit 0 |
+| approved-equivalence | `.venv/bin/python /tmp/palindromi-docs-review-20261022/verify.py` | started at once | 0.0 | 2343.0 → 2362.9 | 2445.3 / +0.0 / 0.0 | 0.5 | exit 0 |
+| approved-document-links | `python3 /tmp/palindromi-docs-review-20261022/check-docs.py` | started at once | 0.0 | 2639.3 → 2715.5 | 2541.4 / +2.8 / 2.8 | 0.5 | exit 0 |
 
 [documentation review]: ../reviews/2026-10-22-docs-review.md
 [development guide]: ../development.md

@@ -18,8 +18,8 @@ Usage:
 
 import html
 import re
-from pathlib import Path
 from html.parser import HTMLParser
+from pathlib import Path
 
 
 class ContentExtractor(HTMLParser):
