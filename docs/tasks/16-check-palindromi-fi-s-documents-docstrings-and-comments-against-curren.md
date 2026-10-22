@@ -87,9 +87,20 @@ AST comparison still matches baseline, and all 64 generated file hashes remain
 identical. All required checks now match the main baseline's successful results.
 
 The review's formatting draft was removed because it is resolved. The five
-remaining draft issues are steward-owned follow-ups; none were filed. The
-implementation is ready for local merge and the specified unchecked Hai
-completion transition; their outcome will be recorded below.
+remaining draft issues are steward-owned follow-ups; none were filed.
+
+### Completion
+
+The initial review and text fixes are commit `6e39ded`; the approved import
+reorder and successful verification are commit `1c2f44a`. Rebased against the
+unchanged local main, then fast-forwarded main to `1c2f44a`. The review is now
+on main. Hai completion commit `4196028` moved this issue to Completed / Accepted
+with `[ ]`, without marking user acceptance. The tracker has no uncommitted
+changes. The feature branch and worktree are retained.
+
+All required acceptance conditions are met. No owner action is needed and the
+thread can be closed. Publishing, live imports and CI were not run, as required;
+the five proposed follow-ups remain for the steward to evaluate.
 
 ### Guarded command memory record
 
