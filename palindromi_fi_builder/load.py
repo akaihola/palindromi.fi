@@ -1,4 +1,4 @@
-"""Subcommand for loading a YAML palindrome database and dumping it to the output"""
+"""Dump derived site YAML, including identifiers and navigation, to stdout."""
 
 import sys
 from pathlib import Path
@@ -12,8 +12,11 @@ from palindromi_fi_builder.yaml_utils import create_yaml_dumper
 @click.command()
 @click.argument("database_directory", default="./database")
 def load(database_directory: str) -> None:
-    """Load a YAML palindrome database and dump it to the output
+    """Dump derived site YAML, not a lossless database backup
     \f
+
+    Reads curated palindromes/*.yaml through read_database(). Source fields such
+    as grading and series are omitted. The default database directory is ./database.
 
     :param database_directory: Path to the directory with the palindrome database
 

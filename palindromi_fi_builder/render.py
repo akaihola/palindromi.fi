@@ -48,8 +48,12 @@ def render_palindrome_page(
     help="The directory to render the static webpages into",
 )
 def render(database_directory: str, output_directory: str) -> None:
-    """Render all palindromes and images to HTML pages, don't touch unmodified ones
+    """Render curated palindromes and images, keeping unchanged output files
     \f
+
+    Defaults to ./database and ./html. Copies existing static assets without
+    compiling JavaScript, uses the final row as the homepage, and removes obsolete
+    output. Use a dedicated output directory.
 
     :param database_directory: Path to the directory with the palindrome database
     :param output_directory: Path to the output directory for the HTML pages and static
@@ -85,7 +89,7 @@ def render_palindrome_and_illustrations(
 ) -> Path:
     """Render one palindrome and its illustrations to files in the destination directory
 
-    Don't touch unmodified files, return the path to the rendered
+    Keep unchanged files untouched and return the rendered HTML page's path.
 
     :param db_dir: Path to the database directory
     :param html_root: Path to the root of the HTML directory

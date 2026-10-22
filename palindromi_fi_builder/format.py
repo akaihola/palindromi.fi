@@ -25,24 +25,19 @@ def reformat_yaml_file(yaml_file: Path, syncer: Syncer) -> bool:
     with yaml_file.open() as f:
         palindromes: list[DbPalindrome] = yaml.load(f) or []
 
-    # Apply formatting rules to text fields
     for palindrome in palindromes:
-        # Format the main palindrome text
         if "text" in palindrome and isinstance(palindrome["text"], str):
             palindrome["text"] = maybe_preserve_literal(palindrome["text"])
 
-        # Format all translation texts
         if "translations" in palindrome:
             for translation in palindrome["translations"]:
                 if "text" in translation and isinstance(translation["text"], str):
                     translation["text"] = maybe_preserve_literal(translation["text"])
 
-    # Dump with formatted YAML
     buffer = StringIO()
     yaml.dump(palindromes, buffer)
     formatted_yaml = buffer.getvalue()
 
-    # Write if changed, preserving timestamps
     return syncer.write_text(formatted_yaml, yaml_file)
 
 
@@ -52,16 +47,18 @@ def format(path: str) -> None:
     """Reformat palindrome database files with consistent YAML formatting
     \f
 
-    Reformats YAML files using standard formatting rules:
-    - Short text values (≤50 characters) stay inline
-    - Longer/multi-line text uses YAML block literal format (|-)
-    - Line width set to 88 characters (matching Black formatter)
+    Applies maybe_preserve_literal() to palindrome and translation text fields.
+    Values of at most 50 characters without LF newlines are left by the helper;
+    other values use literal blocks with chomping based on trailing newlines. Conversion
+    normalizes CRLF/CR to LF. The dumper's preferred line width is 88 characters.
 
     Only writes files that have changed, preserving timestamps for unchanged files.
 
     PATH can be:
-    - A directory (reformats all *.yaml files in it)
+    - A directory (reformats its immediate *.yaml files)
     - A single YAML file (reformats that file only)
+
+    Defaults to ./database/palindromes. Does not validate or publish entries.
 
     :param path: Path to a YAML file or directory containing YAML files
 
@@ -69,7 +66,6 @@ def format(path: str) -> None:
     target = Path(path)
 
     if target.is_file():
-        # Single file
         if not target.suffix == ".yaml":
             click.echo(f"Error: Not a YAML file: {target}", err=True)
             sys.exit(1)
@@ -81,7 +77,6 @@ def format(path: str) -> None:
             click.echo(f"Unchanged: {target.name}")
 
     elif target.is_dir():
-        # Directory
         syncer = Syncer(target)
         yaml_files = sorted(target.glob("*.yaml"))
 

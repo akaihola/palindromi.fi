@@ -10,11 +10,13 @@ from ruamel.yaml.scalarstring import LiteralScalarString, preserve_literal
 def maybe_preserve_literal(text: str) -> Union[str, LiteralScalarString]:
     """Use a multi-line YAML literal if the text contains a newline or is too long.
 
-    Short text values (≤50 characters with no newlines) are stored inline on the same line.
-    Longer text or multi-line text uses the `|-` YAML block literal format.
+    Values of at most 50 characters without LF newlines are returned unchanged,
+    including any existing scalar style. Other values use a literal scalar;
+    ruamel's helper normalizes CRLF/CR to LF. Trailing newlines determine chomping
+    (|- without one, | with one, |+ with additional trailing newlines).
 
     :param text: The text to check
-    :return: The text, possibly wrapped in a YAML literal scalar
+    :return: Unchanged text, or a literal scalar with normalized line endings
 
     """
     if "\n" in text or len(text) > 50:
@@ -26,8 +28,11 @@ def create_yaml_dumper() -> YAML:
     """Create a YAML dumper configured with standard settings.
 
     Configuration:
-    - Line width: 88 characters (matching Black formatter width)
-    - Preserves literal scalars for long/multi-line text
+    - Preferred line width: 88 characters (not a limit for literal blocks)
+    - Round-trip YAML retains existing literal/folded scalar wrappers
+
+    Call maybe_preserve_literal() explicitly to convert text fields to literals;
+    this factory does not choose styles based on text length or newlines.
 
     :return: A configured YAML instance
 

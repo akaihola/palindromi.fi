@@ -7,14 +7,11 @@
 # ///
 """Deep analysis script for Zoho Notebook HTML exports.
 
-This script was used during investigation to understand the HTML structure
-and locate where palindrome content is stored. It helped discover that:
-- Content is in entity-encoded `parsed-html` attributes
-- Each export contains a single snapshot (no embedded version history)
-- Different export files contain different document versions
-- Blank lines between palindromes are preserved through `<div>` and `<br>` tags
-
-For actual extraction, use convert_zoho_html.py instead.
+Exploratory marker searches, not a verified version extractor. See
+docs/zoho-import.md for the later distinction between selected historical
+content and the live-note snapshot in each export. The existing converter is
+unsafe to import from. These diagnostics decode as UTF-8 with replacement,
+so they do not preserve the investigated Windows-1252 exports exactly.
 """
 
 import html
@@ -26,7 +23,7 @@ from bs4 import BeautifulSoup
 
 
 def extract_text_from_html(html_content: str) -> str:
-    """Extract plain text from HTML, removing tags and normalizing whitespace."""
+    """Strip tags and each text line, discarding blank lines and script/style text."""
     soup = BeautifulSoup(html_content, "lxml")
 
     # Remove script and style elements
@@ -75,7 +72,7 @@ def find_all_json_objects(content: str) -> None:
 
 
 def analyze_script_tags(filepath: Path) -> None:
-    """Deep analysis of all script tags."""
+    """Inspect scripts over 10,000 characters containing selected text markers."""
     print("\n" + "=" * 60)
     print("DEEP SCRIPT TAG ANALYSIS")
     print("=" * 60)
@@ -118,7 +115,12 @@ def analyze_script_tags(filepath: Path) -> None:
 
 
 def find_version_content_blocks(filepath: Path) -> list[tuple[int, str]]:
-    """Find all entity-encoded content blocks that represent versions."""
+    """Find candidate encoded blocks in scripts containing the Oudosti marker.
+
+    Returns (character offset within the script, decoded HTML, has_naksui,
+    has_naatti) tuples. Candidates are not verified distinct document versions.
+
+    """
     content = filepath.read_text(encoding="utf-8", errors="replace")
 
     print("\n" + "=" * 60)
@@ -129,7 +131,7 @@ def find_version_content_blocks(filepath: Path) -> list[tuple[int, str]]:
     # The content appears to be in format: "content":"<entity-encoded-html>"
     # or as values in JSON objects
 
-    # Find the script that contains the version data
+    # Inspect scripts for candidate content; version identity is not established.
     soup = BeautifulSoup(content, "lxml")
     scripts = soup.find_all("script")
 
@@ -143,7 +145,7 @@ def find_version_content_blocks(filepath: Path) -> list[tuple[int, str]]:
         print(f"\nAnalyzing Script {i} for version data...")
 
         # Look for patterns like "content":"<escaped-html>"
-        # The HTML is double-escaped: first JSON string escaping, then HTML entity escaping
+        # Probe content-like strings; only HTML entities are decoded below.
 
         # Pattern 1: Direct content assignments
         content_pattern = r'"content"\s*:\s*"([^"]+)"'
@@ -180,7 +182,7 @@ def find_version_content_blocks(filepath: Path) -> list[tuple[int, str]]:
 
 
 def count_palindrome_markers(filepath: Path) -> None:
-    """Count test palindrome occurrences to understand version count."""
+    """Count marker occurrences; repeated copies need not be distinct versions."""
     content = filepath.read_text(encoding="utf-8", errors="replace")
 
     print("\n" + "=" * 60)
@@ -226,7 +228,7 @@ def count_palindrome_markers(filepath: Path) -> None:
 
 
 def extract_from_large_script(filepath: Path) -> None:
-    """Extract version blocks from the large script containing content."""
+    """Summarize quoted HTML candidates in scripts containing the Oudosti marker."""
     content = filepath.read_text(encoding="utf-8", errors="replace")
     soup = BeautifulSoup(content, "lxml")
 

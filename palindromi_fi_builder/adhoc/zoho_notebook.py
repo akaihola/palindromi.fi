@@ -22,7 +22,7 @@ class Namespace(argparse.Namespace):  # pylint: disable=too-few-public-methods
 
 
 def load_zoho_notebook_palindromes() -> Iterable[DbPalindrome]:
-    """Load palindromes from a Zoho Notebook.
+    """Load palindrome blocks from the public Zoho notecard API.
 
     The notebook URL is expected to be passed as the first argument to the script.
 
@@ -100,15 +100,18 @@ def split_by_empty_lines(content_stream: Iterable[str]) -> Iterable[list[str]]:
 
 
 class NoPalindromeFound(Exception):
-    """Raised when a block of text does not contain a palindrome"""
+    """Raised when no prefix of a block passes is_palindrome()"""
 
 
 def parse_block(lines: list[str]) -> tuple[str, str]:
-    """Parse a block of text into a palindrome and its translation
+    """Use the first palindrome prefix as text and the remaining lines as translation
+
+    This heuristic can split a multi-line palindrome too early. The translation
+    may be empty; no translation-language detection is performed.
 
     :param lines: The lines of the block
     :return: A tuple of the palindrome and its translation
-    :raises ValueError: If the block does not contain a palindrome
+    :raises NoPalindromeFound: If no prefix of the block passes is_palindrome()
 
     """
     for num_palindrome_lines in range(1, len(lines) + 1):

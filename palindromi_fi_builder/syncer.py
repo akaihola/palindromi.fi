@@ -1,8 +1,11 @@
 """Update contents of a target directory with minimal changes
 
-The purpose of minimizing changes is to enable ``gsutil rsync`` to skip
-unchanged files. ``gsutil rsync`` doesn't look at contents, only timestamps, so
-we need to make sure local unchanged files are not touched.
+Preserves timestamps for unchanged files, originally to support rsync-based
+publishing. Current deployment uploads a GitHub Pages artifact.
+
+Process each destination once per Syncer instance. Repeated writes are not
+idempotent, and repeating a directory-tree copy can raise KeyError. Destinations
+must be under the root. Deletion occurs only when remove_deleted() is called.
 
 Supports three operations:
 - writing contents to a file
@@ -17,13 +20,13 @@ Makes sure that:
 Usage::
 
     from pathlib import Path
-    from syncer import Syncer
+    from palindromi_fi_builder.syncer import Syncer
 
-    syncr = Syncer(Path('/my/target'))
-    syncr.write_text('foo', Path('/my/target/subdir/foo.txt'))
-    syncr.copy(Path('bar.txt'), Path('/my/target/bar.txt'))
-    syncr.copytree(Path('mytree'), Path('/my/target/mytree'))
-    sync.remove_deleted()
+    syncer = Syncer(Path('/my/target'))
+    syncer.write_text('foo', Path('/my/target/subdir/foo.txt'))
+    syncer.copy(Path('bar.txt'), Path('/my/target/bar.txt'))
+    syncer.copytree(Path('mytree'), Path('/my/target/mytree'))
+    syncer.remove_deleted()
 
 """
 
@@ -58,7 +61,7 @@ class Syncer:
 
         :param new_content: Content to write
         :param dest: Path to the file to write
-        :return: ``True`` if the file was written, ``False`` if content didn't change
+        :return: True if written; False if the first write matches an existing file
 
         """
         dest = dest.absolute()
@@ -73,11 +76,11 @@ class Syncer:
         return True
 
     def write_text(self, new_content: str, dest: Path) -> bool:
-        """Write text to a file and update tracking of old/new files
+        """Write UTF-8 text to a file and update tracking of old/new files
 
         :param new_content: Content to write
         :param dest: Path to the file to write
-        :return: ``True`` if the file was written, ``False`` if content didn't change
+        :return: True if written; False if the first write matches an existing file
 
         """
         return self.write_bytes(new_content.encode("UTF-8"), dest)
@@ -87,7 +90,7 @@ class Syncer:
 
         :param src: Path to the source file
         :param dest: Path to the destination file
-        :return: ``True`` if the file was written, ``False`` if content didn't change
+        :return: True if written; False if the first write matches an existing file
 
         """
         new_content = src.read_bytes()
@@ -98,7 +101,8 @@ class Syncer:
 
         :param src_root: Path to the source directory
         :param dest_root: Path to the destination directory
-        :return: Set of paths that were copied, whether new, modified or unchanged
+        :return: Absolute destination paths for files and subdirectories, including
+                 unchanged entries, but excluding dest_root itself
 
         """
         copied = set()
@@ -117,7 +121,7 @@ class Syncer:
         return copied
 
     def remove_deleted(self) -> None:
-        """Remove files that were in the target directory but not in the new files"""
+        """Remove initial files and directories not registered by write/copy calls"""
         for path in sorted(self.old_files - self.new_files, reverse=True):
             if path.is_dir():
                 path.rmdir()

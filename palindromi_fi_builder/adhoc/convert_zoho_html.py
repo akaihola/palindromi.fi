@@ -5,15 +5,15 @@
 # ///
 """Convert Zoho Notebook HTML exports to plaintext.
 
-Extracts palindrome content from entity-encoded `parsed-html` attributes
-in the main HTML files. Each export contains a snapshot of the document
-at export time.
+Extracts the first entity-encoded `parsed-html` attribute from each main HTML
+file. In the investigated exports this holds the selected historical version.
 
-Preserves blank lines between palindromes to maintain document structure,
-while collapsing consecutive empty lines that result from nested HTML tags.
+Preserves separators made by empty <br> tags and collapses consecutive blank
+lines. Empty <div> tags do not create separators, so phone exports are misread.
+Filename ordering is also unreliable; see docs/zoho-import.md before using output.
 
 Usage:
-    uv run python -m palindromi_fi_builder.adhoc.convert_zoho_html
+    uv run --no-sync python -m palindromi_fi_builder.adhoc.convert_zoho_html
 """
 
 import html
@@ -23,14 +23,10 @@ from html.parser import HTMLParser
 
 
 class ContentExtractor(HTMLParser):
-    """Extract text from HTML with proper handling of <br/> and <div> tags.
+    """Flush accumulated text at opening <br>/<div> tags.
 
-    Handles two HTML variants:
-    - text</div><div>text (no <br> between lines)
-    - text<br></div><div>text<br> (with <br> between lines)
-
-    Both <br> and <div> can mark line boundaries, but we only flush when
-    there's content to avoid duplicate blank lines.
+    An empty <br> also emits a blank line. Empty <div> tags and closing tags do
+    not emit separators, so notes using empty divs lose their block boundaries.
     """
 
     def __init__(self):
@@ -84,7 +80,7 @@ class ContentExtractor(HTMLParser):
 
 
 def extract_from_main_html(html_path: Path) -> str:
-    """Extract content from entity-encoded blocks in the main HTML file."""
+    """Decode the first parsed-html match, or return empty text when absent."""
     # Try UTF-8 first, fall back to Windows-1252 (declared charset)
     raw_bytes = html_path.read_bytes()
     try:
@@ -108,7 +104,13 @@ def extract_from_main_html(html_path: Path) -> str:
 
 
 def main():
-    """Process all YYYY-MM-DD.html files in zoho-history/, outputting only new palindromes"""
+    """Process date-only exports in filename order, omitting previously seen blocks.
+
+    Reads zoho-history/YYYY-MM-DD.html relative to the repository, writing a .txt
+    beside each input or deleting it if no new blocks remain. Does not validate
+    palindromes or deduplicate repetitions within the same export.
+
+    """
     zoho_dir = Path(__file__).parent.parent.parent / "zoho-history"
 
     # Find all main HTML files

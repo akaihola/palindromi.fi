@@ -7,14 +7,11 @@
 # ///
 """Analyze Zoho Notebook HTML export structure.
 
-This script examines the HTML structure to understand how content is stored.
-Each export contains a snapshot of the document at export time, with content
-stored in entity-encoded `parsed-html` attributes.
-
-Note: The convert_zoho_html.py script preserves blank lines between palindromes
-by treating consecutive `<div>` and `<br>` tags appropriately.
-
-For actual extraction, use convert_zoho_html.py instead.
+Exploratory diagnostics, not an importer. The later findings and current import
+plan are in docs/zoho-import.md. The existing converter loses empty-div block
+separators and orders exports by unreliable filenames; its output is unsafe to
+import. These diagnostics decode as UTF-8 with replacement, so they do not
+preserve the investigated Windows-1252 exports exactly.
 """
 
 import json
@@ -159,7 +156,7 @@ def analyze_html(filepath: Path) -> None:
 
 
 def extract_script_data(filepath: Path) -> None:
-    """Extract and analyze the large script tag with revision data."""
+    """Inspect scripts over 100,000 characters for possible revision data."""
     print("\n" + "=" * 60)
     print("DETAILED SCRIPT ANALYSIS")
     print("=" * 60)

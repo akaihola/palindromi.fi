@@ -52,7 +52,10 @@ class SitePalindrome(DbPalindrome):
 
 
 def db_to_site_palindrome(db_palindrome: DbPalindrome) -> SitePalindrome:
-    """Convert a palindrome from the database format to the site format
+    """Copy supported database fields and add an identifier and empty links
+
+    Editorial fields such as grading and series are omitted. Navigation is
+    populated by read_database().
 
     :param db_palindrome: A palindrome in the database format
     :return: The palindrome in the site format
@@ -73,7 +76,10 @@ def db_to_site_palindrome(db_palindrome: DbPalindrome) -> SitePalindrome:
 
 
 def read_database(database_directory: Path) -> List[SitePalindrome]:
-    """Read a palindrome YAML database and return palindromes in the site format
+    """Read curated YAML in filename/row order and add circular site navigation
+
+    Reads only immediate palindromes/*.yaml files, not INBOX.yaml. Requires at
+    least one row. Next points to the preceding row; previous to the following.
 
     :param database_directory: Path to the directory with the palindrome database
     :return: List of palindromes in the site format
@@ -91,14 +97,14 @@ def read_database(database_directory: Path) -> List[SitePalindrome]:
     for older, newer in zip(
         site_palindromes, site_palindromes[1:] + [site_palindromes[0]]
     ):
-        # reverse order: last one is newest, forwards goes back in time
+        # Next moves backward in row order; the last row becomes the homepage.
         newer["links"]["next"] = older["identifier"]
         older["links"]["previous"] = newer["identifier"]
     return site_palindromes
 
 
 def calculate_identifier(text: str) -> str:
-    """Calculate the identifier for a palindrome from its text
+    """Base58-encode the first four bytes of the exact UTF-8 text's SHA-256
 
     :param text: The palindrome text
     :return: The palindrome identifier
